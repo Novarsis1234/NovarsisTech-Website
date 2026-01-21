@@ -1,28 +1,29 @@
-import { useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
-import { useSelector, useDispatch } from "react-redux";
-import { getContactUs, removeContactUs } from "../slice/contactUsSlice";
-import AdminTable from "common/AdminTable";
-import TruncatedMessage from "common/TruncatedMessage";
+import { useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  getContactUs,
+  removeContactUs,
+} from '../slice/contactUsSlice';
+import AdminTable from 'common/AdminTable';
+import TruncatedMessage from 'common/TruncatedMessage';
 
 /* =========================
    Message Cell Component
 ========================= */
-const MessageCell = ({ row }) => {
-  return (
-    <TruncatedMessage
-      text={row?.original?.message || ""}
-      maxLength={10}
-    />
-  );
-};
+const MessageCell = ({ row }) => (
+  <TruncatedMessage
+    text={row?.original?.message || ''}
+    maxLength={10}
+  />
+);
 
 MessageCell.propTypes = {
   row: PropTypes.shape({
     original: PropTypes.shape({
-      message: PropTypes.string
-    })
-  }).isRequired
+      message: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 /* =========================
@@ -38,7 +39,10 @@ const RemoveButton = ({ row }) => {
   }, [dispatch, row]);
 
   return (
-    <button className="btn removebtn" onClick={handleRemove}>
+    <button
+      className="btn removebtn"
+      onClick={handleRemove}
+    >
       Remove
     </button>
   );
@@ -47,9 +51,12 @@ const RemoveButton = ({ row }) => {
 RemoveButton.propTypes = {
   row: PropTypes.shape({
     original: PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    })
-  }).isRequired
+      id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+      ]),
+    }),
+  }).isRequired,
 };
 
 /* =========================
@@ -58,24 +65,24 @@ RemoveButton.propTypes = {
 const Contactus = () => {
   const dispatch = useDispatch();
   const { data = [], loading, error } = useSelector(
-    (state) => state.contactus
+    (state) => state.contactus,
   );
 
   const tableHeaders = [
-    { Header: "ID", accessor: "id" },
-    { Header: "Name", accessor: "name" },
-    { Header: "Mobile", accessor: "mobile" },
-    { Header: "Subject", accessor: "subject" },
+    { Header: 'ID', accessor: 'id' },
+    { Header: 'Name', accessor: 'name' },
+    { Header: 'Mobile', accessor: 'mobile' },
+    { Header: 'Subject', accessor: 'subject' },
     {
-      Header: "Message",
-      accessor: "message",
-      Cell: (props) => <MessageCell {...props} />
+      Header: 'Message',
+      accessor: 'message',
+      Cell: (props) => <MessageCell {...props} />,
     },
     {
-      Header: "Actions",
-      accessor: "actions",
-      Cell: (props) => <RemoveButton {...props} />
-    }
+      Header: 'Actions',
+      accessor: 'actions',
+      Cell: (props) => <RemoveButton {...props} />,
+    },
   ];
 
   useEffect(() => {
@@ -83,7 +90,11 @@ const Contactus = () => {
   }, [dispatch]);
 
   if (loading) {
-    return <p className="text-white px-4">Loading enquiries...</p>;
+    return (
+      <p className="text-white px-4">
+        Loading enquiries...
+      </p>
+    );
   }
 
   if (error) {

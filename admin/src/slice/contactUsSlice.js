@@ -1,13 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   data: [],
   loading: false,
-  error: null
+  error: null,
 };
 
 const contactUsSlice = createSlice({
-  name: "contactus",
+  name: 'contactUs',
   initialState,
   reducers: {
     getContactUs: (state) => {
@@ -27,15 +27,15 @@ const contactUsSlice = createSlice({
 
     removeContactUs: (state) => {
       state.loading = true;
-    }
-  }
+    },
+  },
 });
 
 export const {
   getContactUs,
   successContactUs,
   failedContactUs,
-  removeContactUs
+  removeContactUs,
 } = contactUsSlice.actions;
 
 export default contactUsSlice.reducer;

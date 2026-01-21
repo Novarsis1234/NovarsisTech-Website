@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { getRequest, patchRequest } from "../../apis/ApiInstence";
-import { toast } from "react-toastify";
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { getRequest, patchRequest } from '../../apis/ApiInstence';
+import { toast } from 'react-toastify';
 
 const UpdateOurteam = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: "",
-    title: "",
+    name: '',
+    title: '',
     image: null,
-    existingImage: ""
+    existingImage: '',
   });
 
   /* ================= FETCH TEAM MEMBER ================= */
@@ -22,13 +22,13 @@ const UpdateOurteam = () => {
         const team = res.data.data;
 
         setFormData({
-          name: team.name || "",
-          title: team.title || "",
+          name: team.name || '',
+          title: team.title || '',
           image: null,
-          existingImage: team.image || ""
+          existingImage: team.image || '',
         });
       } catch (error) {
-        toast.error("Failed to load team member");
+        toast.error('Failed to load team member');
       }
     };
 
@@ -38,9 +38,10 @@ const UpdateOurteam = () => {
   /* ================= HANDLE CHANGE ================= */
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+
     setFormData({
       ...formData,
-      [name]: name === "image" ? files[0] : value
+      [name]: name === 'image' ? files[0] : value,
     });
   };
 
@@ -49,21 +50,20 @@ const UpdateOurteam = () => {
     e.preventDefault();
 
     const fd = new FormData();
-    fd.append("name", formData.name);
-    fd.append("title", formData.title);
+    fd.append('name', formData.name);
+    fd.append('title', formData.title);
 
     if (formData.image) {
-      fd.append("image", formData.image);
+      fd.append('image', formData.image);
     }
 
     try {
       await patchRequest(`team/${id}`, fd, true);
-      toast.success("Team member updated successfully");
-      navigate("/ourteam");
+      toast.success('Team member updated successfully');
+      navigate('/ourteam');
     } catch (error) {
       toast.error(
-        error?.response?.data?.message ||
-        "Update failed"
+        error?.response?.data?.message || 'Update failed',
       );
     }
   };

@@ -3,8 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const PrivateRouter = () => {
   const token =
-    localStorage.getItem('userToken') ||
-    sessionStorage.getItem('userToken');
+    localStorage.getItem('userToken') || sessionStorage.getItem('userToken');
 
   return token ? (
     <Layout>

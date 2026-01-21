@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { getRequest, patchRequest } from "../../apis/ApiInstence";
-import { toast } from "react-toastify";
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { getRequest, patchRequest } from '../../apis/ApiInstence';
+import { toast } from 'react-toastify';
 
 const UpdateBlog = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    content: "",
-    date: "",
+    title: '',
+    description: '',
+    content: '',
+    date: '',
     image: null,
-    existingImage: ""
+    existingImage: '',
   });
 
   /* ================= FETCH BLOG ================= */
@@ -24,15 +24,15 @@ const UpdateBlog = () => {
         const blog = res.data.data;
 
         setFormData({
-          title: blog.title || "",
-          description: blog.description || "",
-          content: blog.content || "",
-          date: blog.date ? blog.date.slice(0, 10) : "",
+          title: blog.title || '',
+          description: blog.description || '',
+          content: blog.content || '',
+          date: blog.date ? blog.date.slice(0, 10) : '',
           image: null,
-          existingImage: blog.image || ""
+          existingImage: blog.image || '',
         });
       } catch (err) {
-        toast.error("Failed to load blog");
+        toast.error('Failed to load blog');
       }
     };
 
@@ -42,9 +42,10 @@ const UpdateBlog = () => {
   /* ================= HANDLE CHANGE ================= */
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+
     setFormData({
       ...formData,
-      [name]: name === "image" ? files[0] : value
+      [name]: name === 'image' ? files[0] : value,
     });
   };
 
@@ -53,23 +54,22 @@ const UpdateBlog = () => {
     e.preventDefault();
 
     const fd = new FormData();
-    fd.append("title", formData.title);
-    fd.append("description", formData.description);
-    fd.append("content", formData.content);
-    fd.append("date", formData.date);
+    fd.append('title', formData.title);
+    fd.append('description', formData.description);
+    fd.append('content', formData.content);
+    fd.append('date', formData.date);
 
     if (formData.image) {
-      fd.append("image", formData.image);
+      fd.append('image', formData.image);
     }
 
     try {
       await patchRequest(`blog/${id}`, fd, true);
-
-      toast.success("Blog updated successfully");
-      navigate("/blogs/list");
+      toast.success('Blog updated successfully');
+      navigate('/blogs/list');
     } catch (err) {
       toast.error(
-        err?.response?.data?.message || "Update failed"
+        err?.response?.data?.message || 'Update failed',
       );
     }
   };
@@ -78,7 +78,10 @@ const UpdateBlog = () => {
     <div className="container mt-5">
       <h3 className="mb-4">Update Blog</h3>
 
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
+      <form
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+      >
         <input
           className="form-control mb-2"
           name="title"

@@ -1,8 +1,8 @@
-import axios from "axios";
-import Cookies from "js-cookie";
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL
+  baseURL: process.env.REACT_APP_BACKEND_URL,
 });
 
 /* =========================
@@ -11,17 +11,17 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     const token =
-      localStorage.getItem("userToken") ||
-      sessionStorage.getItem("userToken");
+      localStorage.getItem('userToken') ||
+      sessionStorage.getItem('userToken');
 
     // login / refresh endpoints me token nahi bhejna
-    if (token && !config.url.includes("/auth/")) {
+    if (token && !config.url.includes('/auth/')) {
       config.headers.Authorization = `Bearer ${token}`;
     }
 
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 /* =========================
@@ -32,23 +32,26 @@ axiosInstance.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    if (
+      error.response?.status === 401 &&
+      !originalRequest._retry
+    ) {
       originalRequest._retry = true;
 
       try {
-        const refreshToken = Cookies.get("refreshToken");
+        const refreshToken = Cookies.get('refreshToken');
 
         const response = await axios.post(
           `${process.env.REACT_APP_BACKEND_URL}/admin/refresh`,
           { token: refreshToken },
-          { withCredentials: true }
+          { withCredentials: true },
         );
 
         const newToken = response.data?.access_token;
 
         if (newToken) {
           // ✅ SAME KEY
-          localStorage.setItem("userToken", newToken);
+          localStorage.setItem('userToken', newToken);
 
           // Update headers
           axiosInstance.defaults.headers.Authorization = `Bearer ${newToken}`;
@@ -57,15 +60,15 @@ axiosInstance.interceptors.response.use(
           return axiosInstance(originalRequest);
         }
       } catch (err) {
-        localStorage.removeItem("userToken");
-        sessionStorage.removeItem("userToken");
-        window.location.href = "/signin";
+        localStorage.removeItem('userToken');
+        sessionStorage.removeItem('userToken');
+        window.location.href = '/signin';
         return Promise.reject(err);
       }
     }
 
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

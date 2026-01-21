@@ -59,7 +59,6 @@ export function postRequest(URL, payload, headers = {}) {
   });
 }
 
-
 export function patchRequest(URL, payload, headers = null) {
   return axiosInstance
     .patch(`${URL}`, payload, { headers }) // ✅ removed the extra "/"

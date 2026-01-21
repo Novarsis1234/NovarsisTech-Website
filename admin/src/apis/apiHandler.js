@@ -1,5 +1,5 @@
 import {call , put, takeLatest } from 'redux-saga/effects';
-import {  signin, success, failed } from '../slice/userSlice';
+import { signin, success, failed } from '../slice/userSlice';
 import { postRequest, getRequest, deleteRequest, patchRequest } from './ApiInstence';
 import { toast } from 'react-toastify';
 import { getContactUs, successContactUs, failedContactUs, removeContactUs } from '../slice/contactUsSlice';
