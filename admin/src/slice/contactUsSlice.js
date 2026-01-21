@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   data: [],
   loading: false,
-  error: null,
+  error: null
 };
 
 const contactUsSlice = createSlice({
@@ -17,7 +17,7 @@ const contactUsSlice = createSlice({
 
     successContactUs: (state, action) => {
       state.loading = false;
-      state.data = action.payload; // ✅ ALWAYS ARRAY
+      state.data = action.payload;
     },
 
     failedContactUs: (state, action) => {
@@ -27,15 +27,10 @@ const contactUsSlice = createSlice({
 
     removeContactUs: (state) => {
       state.loading = true;
-    },
-  },
+    }
+  }
 });
 
-export const {
-  getContactUs,
-  successContactUs,
-  failedContactUs,
-  removeContactUs,
-} = contactUsSlice.actions;
+export const { getContactUs, successContactUs, failedContactUs, removeContactUs } = contactUsSlice.actions;
 
 export default contactUsSlice.reducer;

@@ -13,7 +13,7 @@ const UpdateBlog = () => {
     content: '',
     date: '',
     image: null,
-    existingImage: '',
+    existingImage: ''
   });
 
   /* ================= FETCH BLOG ================= */
@@ -29,7 +29,7 @@ const UpdateBlog = () => {
           content: blog.content || '',
           date: blog.date ? blog.date.slice(0, 10) : '',
           image: null,
-          existingImage: blog.image || '',
+          existingImage: blog.image || ''
         });
       } catch (err) {
         toast.error('Failed to load blog');
@@ -45,7 +45,7 @@ const UpdateBlog = () => {
 
     setFormData({
       ...formData,
-      [name]: name === 'image' ? files[0] : value,
+      [name]: name === 'image' ? files[0] : value
     });
   };
 
@@ -68,9 +68,7 @@ const UpdateBlog = () => {
       toast.success('Blog updated successfully');
       navigate('/blogs/list');
     } catch (err) {
-      toast.error(
-        err?.response?.data?.message || 'Update failed',
-      );
+      toast.error(err?.response?.data?.message || 'Update failed');
     }
   };
 
@@ -78,69 +76,27 @@ const UpdateBlog = () => {
     <div className="container mt-5">
       <h3 className="mb-4">Update Blog</h3>
 
-      <form
-        onSubmit={handleSubmit}
-        encType="multipart/form-data"
-      >
-        <input
-          className="form-control mb-2"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-          required
-        />
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <input className="form-control mb-2" name="title" value={formData.title} onChange={handleChange} required />
 
-        <textarea
-          className="form-control mb-2"
-          rows="3"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          required
-        />
+        <textarea className="form-control mb-2" rows="3" name="description" value={formData.description} onChange={handleChange} required />
 
-        <textarea
-          className="form-control mb-2"
-          rows="6"
-          name="content"
-          value={formData.content}
-          onChange={handleChange}
-          required
-        />
+        <textarea className="form-control mb-2" rows="6" name="content" value={formData.content} onChange={handleChange} required />
 
-        <input
-          type="date"
-          className="form-control mb-2"
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
-          required
-        />
+        <input type="date" className="form-control mb-2" name="date" value={formData.date} onChange={handleChange} required />
 
-        <input
-          type="file"
-          className="form-control mb-2"
-          name="image"
-          accept="image/*"
-          onChange={handleChange}
-        />
+        <input type="file" className="form-control mb-2" name="image" accept="image/*" onChange={handleChange} />
 
         {(formData.image || formData.existingImage) && (
           <img
-            src={
-              formData.image
-                ? URL.createObjectURL(formData.image)
-                : formData.existingImage
-            }
+            src={formData.image ? URL.createObjectURL(formData.image) : formData.existingImage}
             width="180"
             alt="preview"
             className="mt-2 rounded"
           />
         )}
 
-        <button className="btn btn-primary mt-3">
-          Update Blog
-        </button>
+        <button className="btn btn-primary mt-3">Update Blog</button>
       </form>
     </div>
   );

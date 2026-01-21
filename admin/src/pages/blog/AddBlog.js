@@ -12,7 +12,7 @@ const AddBlog = () => {
     description: '',
     content: '',
     date: '',
-    image: null,
+    image: null
   });
 
   /* ================= HANDLE CHANGE ================= */
@@ -21,7 +21,7 @@ const AddBlog = () => {
 
     setFormData({
       ...formData,
-      [name]: name === 'image' ? files[0] : value,
+      [name]: name === 'image' ? files[0] : value
     });
   };
 
@@ -53,9 +53,7 @@ const AddBlog = () => {
   return (
     <div className="container-fluid mt-5">
       <div className="mainheadig mx-4">
-        <h4 className="text-white font-weight-bold">
-          Add Blog
-        </h4>
+        <h4 className="text-white font-weight-bold">Add Blog</h4>
       </div>
 
       <form onSubmit={handleSubmit} encType="multipart/form-data">
@@ -64,21 +62,11 @@ const AddBlog = () => {
             <label htmlFor="title" className="adminlables">
               Title
             </label>
-            <input
-              id="title"
-              name="title"
-              className="form-control"
-              value={formData.title}
-              onChange={handleChange}
-              required
-            />
+            <input id="title" name="title" className="form-control" value={formData.title} onChange={handleChange} required />
           </div>
 
           <div className="col-sm-12 mt-3">
-            <label
-              htmlFor="description"
-              className="adminlables"
-            >
+            <label htmlFor="description" className="adminlables">
               Short Description
             </label>
             <textarea
@@ -111,49 +99,25 @@ const AddBlog = () => {
             <label htmlFor="date" className="adminlables">
               Date
             </label>
-            <input
-              id="date"
-              type="date"
-              name="date"
-              className="form-control"
-              value={formData.date}
-              onChange={handleChange}
-              required
-            />
+            <input id="date" type="date" name="date" className="form-control" value={formData.date} onChange={handleChange} required />
           </div>
 
           <div className="col-sm-12 mt-3">
             <label htmlFor="image" className="adminlables">
               Image
             </label>
-            <input
-              id="image"
-              type="file"
-              name="image"
-              className="form-control"
-              accept="image/*"
-              onChange={handleChange}
-              required
-            />
+            <input id="image" type="file" name="image" className="form-control" accept="image/*" onChange={handleChange} required />
           </div>
 
           {formData.image && (
             <div className="col-sm-12 mt-3">
-              <img
-                src={URL.createObjectURL(formData.image)}
-                width="150"
-                alt="Preview"
-                className="rounded"
-              />
+              <img src={URL.createObjectURL(formData.image)} width="150" alt="Preview" className="rounded" />
             </div>
           )}
         </div>
 
         <div className="mt-4 text-right mx-4">
-          <button
-            className="btn btn-lg addbtn"
-            disabled={loading}
-          >
+          <button className="btn btn-lg addbtn" disabled={loading}>
             {loading ? 'Adding...' : 'Add Blog'}
           </button>
         </div>

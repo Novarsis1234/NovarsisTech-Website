@@ -9,7 +9,7 @@ const AddCareer = () => {
     title: '',
     location: '',
     type: 'Full-Time',
-    description: '',
+    description: ''
   });
 
   const dispatch = useDispatch();
@@ -37,9 +37,7 @@ const AddCareer = () => {
   return (
     <div className="container-fluid mt-5">
       <div className="mainheadig mx-4 mb-4">
-        <h4 className="text-white font-weight-bold">
-          Add Career
-        </h4>
+        <h4 className="text-white font-weight-bold">Add Career</h4>
       </div>
 
       <form onSubmit={handleSubmit} className="mx-4">
@@ -48,32 +46,15 @@ const AddCareer = () => {
           <label htmlFor="title" className="adminlables">
             Title
           </label>
-          <input
-            id="title"
-            name="title"
-            className="form-control"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
+          <input id="title" name="title" className="form-control" value={formData.title} onChange={handleChange} required />
         </div>
 
         {/* Location */}
         <div className="form-group mt-3">
-          <label
-            htmlFor="location"
-            className="adminlables"
-          >
+          <label htmlFor="location" className="adminlables">
             Location
           </label>
-          <input
-            id="location"
-            name="location"
-            className="form-control"
-            value={formData.location}
-            onChange={handleChange}
-            required
-          />
+          <input id="location" name="location" className="form-control" value={formData.location} onChange={handleChange} required />
         </div>
 
         {/* Type */}
@@ -81,13 +62,7 @@ const AddCareer = () => {
           <label htmlFor="type" className="adminlables">
             Type
           </label>
-          <select
-            id="type"
-            name="type"
-            className="form-control"
-            value={formData.type}
-            onChange={handleChange}
-          >
+          <select id="type" name="type" className="form-control" value={formData.type} onChange={handleChange}>
             <option>Full-Time</option>
             <option>Part-Time</option>
             <option>Internship</option>
@@ -98,10 +73,7 @@ const AddCareer = () => {
 
         {/* Description */}
         <div className="form-group mt-3">
-          <label
-            htmlFor="description"
-            className="adminlables"
-          >
+          <label htmlFor="description" className="adminlables">
             Description
           </label>
           <textarea
@@ -116,10 +88,7 @@ const AddCareer = () => {
         </div>
 
         <div className="text-right mt-4">
-          <button
-            className="btn btn-lg addbtn"
-            disabled={loading}
-          >
+          <button className="btn btn-lg addbtn" disabled={loading}>
             {loading ? 'Adding...' : 'Add Career'}
           </button>
         </div>

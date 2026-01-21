@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL,
+  baseURL: process.env.REACT_APP_BACKEND_URL
 });
 
 /* =========================
@@ -10,9 +10,7 @@ const axiosInstance = axios.create({
 ========================= */
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token =
-      localStorage.getItem('userToken') ||
-      sessionStorage.getItem('userToken');
+    const token = localStorage.getItem('userToken') || sessionStorage.getItem('userToken');
 
     // login / refresh endpoints me token nahi bhejna
     if (token && !config.url.includes('/auth/')) {
@@ -21,7 +19,7 @@ axiosInstance.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error),
+  (error) => Promise.reject(error)
 );
 
 /* =========================
@@ -32,10 +30,7 @@ axiosInstance.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    if (
-      error.response?.status === 401 &&
-      !originalRequest._retry
-    ) {
+    if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
 
       try {
@@ -44,7 +39,7 @@ axiosInstance.interceptors.response.use(
         const response = await axios.post(
           `${process.env.REACT_APP_BACKEND_URL}/admin/refresh`,
           { token: refreshToken },
-          { withCredentials: true },
+          { withCredentials: true }
         );
 
         const newToken = response.data?.access_token;
@@ -68,7 +63,7 @@ axiosInstance.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default axiosInstance;

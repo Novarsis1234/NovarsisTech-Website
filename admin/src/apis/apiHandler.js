@@ -1,4 +1,4 @@
-import {call , put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { signin, success, failed } from '../slice/userSlice';
 import { postRequest, getRequest, deleteRequest, patchRequest } from './ApiInstence';
 import { toast } from 'react-toastify';
@@ -59,42 +59,17 @@ import { updateOrderAPI } from './orderAPI/orderAPI';
 // Generator function
 function* signinUser({ payload }) {
   try {
-    console.log("LOGIN PAYLOAD =>", payload);
+    console.log('LOGIN PAYLOAD =>', payload);
 
-    const response = yield call(
-      postRequest,
-      "/admin/signin",
-      payload
-    );
+    const response = yield call(postRequest, '/admin/signin', payload);
 
-    console.log("LOGIN RESPONSE =>", response.data);
+    console.log('LOGIN RESPONSE =>', response.data);
 
     yield put(success(response.data));
   } catch (error) {
-    console.log("LOGIN ERROR =>", error?.response?.data);
+    console.log('LOGIN ERROR =>', error?.response?.data);
 
-    yield put(
-      failed(
-        error?.response?.data?.message ||
-        error?.message ||
-        "Login failed"
-      )
-    );
-  }
-}
-
-
-function* signupUser({ payload }) {
-  try {
-    const response = yield postRequest('register', payload);
-    if (response?.status == 200) {
-      yield put(success(response?.data));
-    } else {
-      yield put(failed(response));
-    }
-  } catch (error) {
-    console.log(error);
-    toast('resposnse.message');
+    yield put(failed(error?.response?.data?.message || error?.message || 'Login failed'));
   }
 }
 
@@ -293,7 +268,7 @@ export function* getOneCareerFun({ payload }) {
 // ✅ Add career
 export function* addCareerFun({ payload }) {
   try {
-    const response = yield postRequest("career", payload);
+    const response = yield postRequest('career', payload);
 
     // ✅ Accept 200 OR 201
     if (response?.status === 200 || response?.status === 201) {
@@ -304,29 +279,21 @@ export function* addCareerFun({ payload }) {
       yield put(getCareer());
 
       // (Optional) toast yahin rakhna ho to
-      toast.success(
-        response.data?.message || "Career added successfully!"
-      );
+      toast.success(response.data?.message || 'Career added successfully!');
     } else {
-      const errorMsg =
-        response?.data?.message || "Failed to add career";
-
+      const errorMsg = response?.data?.message || 'Failed to add career';
       yield put(failedCareer(errorMsg));
       toast.error(errorMsg);
     }
   } catch (error) {
-    const errorMsg =
-      error?.response?.data?.message ||
-      error?.message ||
-      "Something went wrong";
+    const errorMsg = error?.response?.data?.message || error?.message || 'Something went wrong';
 
-    console.error("Add career error:", error);
+    console.error('Add career error:', error);
 
     yield put(failedCareer(errorMsg));
     toast.error(errorMsg);
   }
 }
-
 
 // ✅ Update career
 export function* updateCareerFun({ payload }) {
@@ -363,22 +330,18 @@ export function* removeCareerFun({ payload }) {
 
 function* getContactUsFun() {
   try {
-    const response = yield getRequest("contactus");
+    const response = yield getRequest('contactus');
 
     if (response?.status === 200 && Array.isArray(response?.data?.data)) {
       // ✅ ALWAYS ARRAY
       yield put(successContactUs(response.data.data));
     } else {
-      yield put(failedContactUs("Invalid response format"));
-      toast.error("Invalid server response");
+      yield put(failedContactUs('Invalid response format'));
+      toast.error('Invalid server response');
     }
   } catch (error) {
-    yield put(
-      failedContactUs(
-        error?.response?.data?.message || error.message || "Something went wrong"
-      )
-    );
-    toast.error("Something went wrong");
+    yield put(failedContactUs(error?.response?.data?.message || error.message || 'Something went wrong'));
+    toast.error('Something went wrong');
   }
 }
 
@@ -388,33 +351,29 @@ function* getContactUsFun() {
 function* removeContactUsFun({ payload }) {
   try {
     if (!payload) {
-      throw new Error("Invalid contact ID");
+      throw new Error('Invalid contact ID');
     }
 
     const deleteResponse = yield deleteRequest(`contactus/${payload}`);
 
     if (deleteResponse?.status === 200) {
       // 🔁 Re-fetch updated list
-      const listResponse = yield getRequest("contactus");
+      const listResponse = yield getRequest('contactus');
 
       if (listResponse?.status === 200 && Array.isArray(listResponse?.data?.data)) {
         yield put(successContactUs(listResponse.data.data));
-        toast.success("Contact removed successfully");
+        toast.success('Contact removed successfully');
       } else {
-        yield put(failedContactUs("Failed to refresh list"));
-        toast.error("Failed to refresh list");
+        yield put(failedContactUs('Failed to refresh list'));
+        toast.error('Failed to refresh list');
       }
     } else {
-      yield put(failedContactUs("Delete failed"));
-      toast.error("Delete failed");
+      yield put(failedContactUs('Delete failed'));
+      toast.error('Delete failed');
     }
   } catch (error) {
-    yield put(
-      failedContactUs(
-        error?.response?.data?.message || error.message || "Delete failed"
-      )
-    );
-    toast.error("Delete failed");
+    yield put(failedContactUs(error?.response?.data?.message || error.message || 'Delete failed'));
+    toast.error('Delete failed');
   }
 }
 
@@ -445,8 +404,6 @@ function* getOneProductFun({ payload }) {
     toast('resposnse.message');
   }
 }
-
-
 
 function* removeProductFun({ payload }) {
   try {
@@ -801,34 +758,31 @@ function* getOneBlogFun({ payload }) {
 export function* addBlogFun({ payload }) {
   try {
     // ✅ TOKEN
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token');
 
     // ✅ HEADERS (VERY IMPORTANT)
     const headers = {
-      "Content-Type": "multipart/form-data",
+      'Content-Type': 'multipart/form-data',
       Authorization: `Bearer ${token}`
     };
 
     // ✅ API CALL
-    const response = yield postRequest("blog", payload, headers);
+    const response = yield postRequest('blog', payload, headers);
 
     if (response?.status === 200 || response?.status === 201) {
       yield put(successBlog(response.data.data));
-      toast.success("Blog added successfully!");
+      toast.success('Blog added successfully!');
       yield put(getBlog()); // refresh list
     } else {
-      yield put(failedBlog("Failed to add blog"));
-      toast.error("Failed to add blog");
+      yield put(failedBlog('Failed to add blog'));
+      toast.error('Failed to add blog');
     }
-
   } catch (error) {
-    console.error("Add blog error:", error);
-    yield put(failedBlog(error.message || "Add blog failed"));
-    toast.error("Add blog failed");
+    console.error('Add blog error:', error);
+    yield put(failedBlog(error.message || 'Add blog failed'));
+    toast.error('Add blog failed');
   }
 }
-
-
 
 // ✅ Update blog
 function* updateBlogFun({ payload }) {
@@ -1126,7 +1080,7 @@ function* updateEventFun({ payload }) {
 //Ourteam Start
 function* getOurteamFun() {
   try {
-    const response = yield getRequest("team");
+    const response = yield getRequest('team');
 
     if (response?.status === 200) {
       // ✅ SAME AS BLOG
@@ -1136,13 +1090,9 @@ function* getOurteamFun() {
     }
   } catch (error) {
     console.log(error);
-    yield put(
-      failedOurteam(error?.message || "Failed to fetch team")
-    );
+    yield put(failedOurteam(error?.message || 'Failed to fetch team'));
   }
 }
-
-
 
 // ✅ Get single team member
 function* getOneOurteamFun({ payload }) {
@@ -1181,46 +1131,36 @@ function* updateOurteamFun({ payload }) {
     const formData = new FormData();
 
     if (payload?.data?.name) {
-      formData.append("name", payload.data.name);
+      formData.append('name', payload.data.name);
     }
 
     if (payload?.data?.title) {
-      formData.append("title", payload.data.title);
+      formData.append('title', payload.data.title);
     }
 
     if (payload?.data?.image instanceof File) {
-      formData.append("image", payload.data.image);
+      formData.append('image', payload.data.image);
     }
 
-    const response = yield patchRequest(
-      `team/${payload.id}`,
-      formData,
-      true
-    );
+    const response = yield patchRequest(`team/${payload.id}`, formData, true);
 
     if (response?.status === 200 || response?.status === 201) {
       yield put(successOurteam(response.data.data));
-      toast.success("Team member updated successfully!");
+      toast.success('Team member updated successfully!');
       yield put(getOurteam()); // refresh list
     } else {
-      const msg =
-        response?.data?.message ||
-        "Failed to update team member";
+      const msg = response?.data?.message || 'Failed to update team member';
       yield put(failedOurteam(msg));
       toast.error(msg);
     }
   } catch (error) {
-    console.error("Update team error:", error);
-    const msg =
-      error?.response?.data?.message ||
-      error?.message ||
-      "Failed to update team member";
+    console.error('Update team error:', error);
+    const msg = error?.response?.data?.message || error?.message || 'Failed to update team member';
 
     yield put(failedOurteam(msg));
     toast.error(msg);
   }
 }
-
 
 // ✅ Delete team member
 function* removeOurteamFun({ payload }) {
@@ -1397,12 +1337,10 @@ function* getOrderDeatilsDBFun({ payload }) {
 export function* watchGetUser() {
   yield takeLatest(signin.type, signinUser);
 
-
   // contact us
   yield takeLatest(getContactUs, getContactUsFun);
- 
-  yield takeLatest(removeContactUs, removeContactUsFun);
 
+  yield takeLatest(removeContactUs, removeContactUsFun);
   //contact
   yield takeLatest(getApplyForm, getApplyFormFun);
   yield takeLatest(removeApplyForm, removeApplyFormFun);

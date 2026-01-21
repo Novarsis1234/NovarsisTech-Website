@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getBlog, removeBlog } from "../../slice/blogSlice";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBlog, removeBlog } from '../../slice/blogSlice';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ListBlog = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const ListBlog = () => {
 
   const handleDelete = async (id) => {
     await dispatch(removeBlog(id));
-    toast.success("Blog deleted");
+    toast.success('Blog deleted');
   };
 
   const toggleContent = (id) => {
@@ -40,35 +40,19 @@ const ListBlog = () => {
         {data.map((blog) => (
           <div className="col-12 col-md-6 mb-4" key={blog.id}>
             <div className="card h-100">
-              <img
-                src={blog.image}
-                className="card-img-top"
-                alt={blog.title}
-                style={{ height: "250px", objectFit: "cover" }}
-              />
+              <img src={blog.image} className="card-img-top" alt={blog.title} style={{ height: '250px', objectFit: 'cover' }} />
 
               <div className="card-body">
                 <h5>{blog.title}</h5>
                 <p>{blog.description}</p>
 
                 {/* BLOG CONTENT */}
-                <p
-                  className={
-                    expandedId === blog.id ? "" : "line-clamp-4"
-                  }
-                >
-                  {blog.content}
-                </p>
+                <p className={expandedId === blog.id ? '' : 'line-clamp-4'}>{blog.content}</p>
 
                 {/* VIEW MORE / LESS */}
                 {blog.content?.length > 150 && (
-                  <button
-                    className="btn btn-link p-0"
-                    onClick={() => toggleContent(blog.id)}
-                  >
-                    {expandedId === blog.id
-                      ? "View Less"
-                      : "View More"}
+                  <button className="btn btn-link p-0" onClick={() => toggleContent(blog.id)}>
+                    {expandedId === blog.id ? 'View Less' : 'View More'}
                   </button>
                 )}
 
@@ -76,21 +60,11 @@ const ListBlog = () => {
                 <small>{blog.date}</small>
 
                 <div className="mt-3">
-                  <button
-                    className="btn editbtn mr-2"
-                    onClick={() =>
-                      navigate(`/blogs/update/${blog.id}`)
-                    }
-                  >
+                  <button className="btn editbtn mr-2" onClick={() => navigate(`/blogs/update/${blog.id}`)}>
                     Edit
                   </button>
 
-                  <button
-                    className="btn removebtn"
-                    onClick={() =>
-                      handleDelete(blog.id)
-                    }
-                  >
+                  <button className="btn removebtn" onClick={() => handleDelete(blog.id)}>
                     Delete
                   </button>
                 </div>

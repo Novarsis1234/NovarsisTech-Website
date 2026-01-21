@@ -12,7 +12,7 @@ const UpdateCareer = () => {
     title: '',
     location: '',
     type: 'Full-Time',
-    description: '',
+    description: ''
   });
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const UpdateCareer = () => {
         title: d.title,
         location: d.location,
         type: d.type,
-        description: d.description,
+        description: d.description
       });
     });
   }, [id, BASE_URL]);
@@ -42,31 +42,14 @@ const UpdateCareer = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-8">
-      <h2 className="text-2xl font-bold text-center mb-6">
-        Update Career
-      </h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Update Career</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="title"
-          className="form-control"
-          value={formData.title}
-          onChange={handleChange}
-        />
+        <input name="title" className="form-control" value={formData.title} onChange={handleChange} />
 
-        <input
-          name="location"
-          className="form-control"
-          value={formData.location}
-          onChange={handleChange}
-        />
+        <input name="location" className="form-control" value={formData.location} onChange={handleChange} />
 
-        <select
-          name="type"
-          className="form-control"
-          value={formData.type}
-          onChange={handleChange}
-        >
+        <select name="type" className="form-control" value={formData.type} onChange={handleChange}>
           <option>Full-Time</option>
           <option>Part-Time</option>
           <option>Internship</option>
@@ -74,18 +57,10 @@ const UpdateCareer = () => {
           <option>Contract</option>
         </select>
 
-        <textarea
-          name="description"
-          className="form-control"
-          rows="4"
-          value={formData.description}
-          onChange={handleChange}
-        />
+        <textarea name="description" className="form-control" rows="4" value={formData.description} onChange={handleChange} />
 
         <div className="text-center">
-          <button className="btn btn-primary px-5">
-            Update Career
-          </button>
+          <button className="btn btn-primary px-5">Update Career</button>
         </div>
       </form>
     </div>

@@ -35,29 +35,17 @@ const ListOurteam = () => {
           <div className="col-md-4 mb-4" key={member.id}>
             <div className="card">
               {/* ✅ SAME AS BLOG */}
-              <img
-                src={member.image}
-                className="card-img-top"
-                alt={member.name}
-              />
+              <img src={member.image} className="card-img-top" alt={member.name} />
 
               <div className="card-body">
                 <h5>{member.name}</h5>
                 <p>{member.title}</p>
 
-                <button
-                  className="btn editbtn mr-2"
-                  onClick={() =>
-                    navigate(`/ourteam/update/${member.id}`)
-                  }
-                >
+                <button className="btn editbtn mr-2" onClick={() => navigate(`/ourteam/update/${member.id}`)}>
                   Edit
                 </button>
 
-                <button
-                  className="btn removebtn"
-                  onClick={() => handleDelete(member.id)}
-                >
+                <button className="btn removebtn" onClick={() => handleDelete(member.id)}>
                   Delete
                 </button>
               </div>

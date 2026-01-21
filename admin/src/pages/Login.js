@@ -14,9 +14,7 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, response, message } = useSelector(
-    (state) => state.user,
-  );
+  const { loading, error, response, message } = useSelector((state) => state.user);
 
   useEffect(() => {
     const token = response?.data?.access_token;
@@ -49,8 +47,8 @@ function Login() {
         username: email.trim(),
         email: email.trim(),
         password,
-        secretKey: process.env.REACT_APP_ADMIN_SECRET,
-      }),
+        secretKey: process.env.REACT_APP_ADMIN_SECRET
+      })
     );
   };
 
@@ -63,11 +61,7 @@ function Login() {
               <div className="card-body p-0">
                 <div className="row mt-5">
                   <div className="col-lg-6 d-none d-lg-block text-center">
-                    <img
-                      src={signinimage}
-                      alt="login"
-                      className="img-fluid"
-                    />
+                    <img src={signinimage} alt="login" className="img-fluid" />
                   </div>
 
                   <div className="col-lg-6">
@@ -78,19 +72,14 @@ function Login() {
                         </h1>
                       </div>
 
-                      <form
-                        className="user"
-                        onSubmit={loginHandler}
-                      >
+                      <form className="user" onSubmit={loginHandler}>
                         <div className="form-group">
                           <input
                             type="email"
                             className="form-control form-control-user"
                             placeholder="Enter Email Address..."
                             value={email}
-                            onChange={(e) =>
-                              setEmail(e.target.value)
-                            }
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
 
@@ -100,9 +89,7 @@ function Login() {
                             className="form-control form-control-user"
                             placeholder="Password"
                             value={password}
-                            onChange={(e) =>
-                              setPassword(e.target.value)
-                            }
+                            onChange={(e) => setPassword(e.target.value)}
                           />
                         </div>
 
@@ -113,16 +100,9 @@ function Login() {
                               className="custom-control-input"
                               id="rememberMe"
                               checked={rememberMe}
-                              onChange={(e) =>
-                                setRememberMe(
-                                  e.target.checked,
-                                )
-                              }
+                              onChange={(e) => setRememberMe(e.target.checked)}
                             />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="rememberMe"
-                            >
+                            <label className="custom-control-label" htmlFor="rememberMe">
                               Remember Me
                             </label>
                           </div>
@@ -132,11 +112,7 @@ function Login() {
                           type="submit"
                           disabled={loading}
                           className="btn addbtn btn-user btn-block"
-                          text={
-                            loading
-                              ? 'Logging in...'
-                              : 'Login'
-                          }
+                          text={loading ? 'Logging in...' : 'Login'}
                         />
                       </form>
                     </div>

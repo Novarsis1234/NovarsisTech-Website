@@ -5,7 +5,7 @@ const initialState = {
   error: false,
   message: '',
   response: null,
-  token: null,
+  token: null
 };
 
 const userSlice = createSlice({
@@ -36,8 +36,8 @@ const userSlice = createSlice({
       state.token = null;
       localStorage.removeItem('userToken');
       sessionStorage.removeItem('userToken');
-    },
-  },
+    }
+  }
 });
 
 export const { signin, success, failed, logout } = userSlice.actions;
