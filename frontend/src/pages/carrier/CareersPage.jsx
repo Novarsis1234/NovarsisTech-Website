@@ -35,7 +35,7 @@ const CareersPage = () => {
           loop
           muted
           playsInline
-          poster="/Images/novarsis-home1.webp"
+          poster="/Images/bannerImage.png"
         />
         <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 

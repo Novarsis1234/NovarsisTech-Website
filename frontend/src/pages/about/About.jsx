@@ -24,7 +24,7 @@ const About = () => {
             loop
             muted
             playsInline
-            poster="/Images/novarsis-home3.webp"
+            poster="/Images/bannerImage.png"
           />
 
           {/* Dark Overlay */}

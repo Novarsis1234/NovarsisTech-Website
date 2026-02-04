@@ -16,7 +16,7 @@ const Contact = () => {
           loop
           muted
           playsInline
-          poster="/Images/novarsis-home3.webp"
+          poster="/Images/bannerImage.png"
         />
 
         <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>

@@ -11,6 +11,8 @@ import ChooseUsSection from "./ChooseUsSection";
 import Section from "./Section";
 import OwnerSection from "./OwnerSection";
 import HomeSectionPage from "./HomeSectionPage";
+import AutoScrollPreview from "../../components/AutoScrollPreview";
+
 
 const Home = () => {
   return (
@@ -27,6 +29,7 @@ const Home = () => {
        <Section />
        <ChooseUsSection />
        <TestimonialsSection />
+      <AutoScrollPreview/>
     </div>
   );
 };

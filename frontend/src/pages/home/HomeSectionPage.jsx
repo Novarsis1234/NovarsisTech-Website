@@ -18,7 +18,7 @@ const HomeSectionPage = () => {
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src="/Images/video-forward.mp4"
-        poster="/Images/novarsis-home2.webp"   // 👈 poster added
+        poster="/Images/HomeSection.png"   // 👈 poster added
         autoPlay
         muted
         loop

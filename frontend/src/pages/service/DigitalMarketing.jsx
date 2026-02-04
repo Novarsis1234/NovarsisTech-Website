@@ -36,7 +36,7 @@ const DigitalMarketing = () => {
           autoPlay
           loop
           muted
-          poster="/Images/novarsis-home2.webp" 
+          poster="/Images/bannerImage.png" 
         />
         <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 

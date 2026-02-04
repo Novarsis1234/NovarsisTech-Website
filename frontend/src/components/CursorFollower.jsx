@@ -79,7 +79,7 @@ const CursorFollower = () => {
           transition: "transform 0.12s ease-out",
           clipPath:
             "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
-          border: "2px solid #0cee2b",
+          border: "2px solid #008300",
           background:
             "radial-gradient(circle at 50% 50%, rgba(80, 240, 35, 0.22), transparent 70%)",
           boxShadow:
@@ -97,9 +97,9 @@ const CursorFollower = () => {
           transform: `translate(${pos.x - 5}px, ${pos.y - 5}px)`,
           transition: "transform 0.05s linear",
           background:
-            "linear-gradient(45deg, #1bf543, #0bf20f, #20ef05)",
+            "linear-gradient(45deg, #008300, #008300, #008300)",
           boxShadow:
-            "0 0 10px #1eea08, 0 0 28px rgba(4, 236, 89, 0.85), 0 0 46px rgba(14, 243, 98, 0.6)",
+            "0 0 10px #008300, 0 0 28px rgba(4, 236, 89, 0.85), 0 0 46px rgba(14, 243, 98, 0.6)",
         }}
       />
 
