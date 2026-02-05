@@ -94,7 +94,7 @@ const UiUxDesigner = () => {
       <div className="flex justify-center md:justify-end">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
           <img
-            src="/Images/uiux-dev.webp"
+            src="/Images/s-uiux1.png"
             alt="UI UX Design"
             className="w-full h-full object-cover"
           />
@@ -205,7 +205,7 @@ const UiUxDesigner = () => {
         <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
 
         <img
-          src="/Images/uiux-faq.webp"
+          src="/Images/s-uiux2.png"
           alt="UI UX FAQ"
           className="
             relative z-10

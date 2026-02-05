@@ -85,7 +85,7 @@ const GraphicDesigning = () => {
       <div className="flex justify-center md:justify-end">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
           <img
-            src="/Images/graphic-design.webp"
+            src="/Images/s-GD2.png"
             alt="Graphic Designing"
             className="w-full h-full object-cover"
           />
@@ -180,7 +180,7 @@ const GraphicDesigning = () => {
         <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
 
         <img
-          src="/Images/graphic-faq.webp"
+          src="/Images/s-GD1.png"
           alt="Graphic Design FAQ"
           className="
             relative z-10

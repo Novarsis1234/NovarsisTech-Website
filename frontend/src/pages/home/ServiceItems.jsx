@@ -18,49 +18,49 @@ const services = [
     title: "Web Development",
     desc: "We build fast, secure, and scalable websites using modern technologies to deliver seamless performance and excellent user experience.",
     icon: <FaGlobe size={20} />,
-    img: "/Images/service-web.webp",
+    img: "/Images/s-webdevelpment2.png",
     path: "/webdeveloper",
   },
   {
     title: "App Development",
     desc: "High-performance Android and iOS applications with intuitive UI, strong backend architecture, and scalable performance.",
     icon: <FaMobileAlt size={20} />,
-    img: "/Images/service-app.webp",
+    img: "/Images/s-appdevelopment2.png",
     path: "/appdevelopment",
   },
   {
     title: "UI / UX Design",
     desc: "User-centric UI/UX designs that enhance engagement, usability, and customer satisfaction across all platforms.",
     icon: <FaPaintBrush size={20} />,
-    img: "/Images/service-uiux.webp",
+    img: "/Images/s-uiux2.png",
     path: "/uiuxdesign",
   },
   {
     title: "CMS Development",
     desc: "Custom WordPress & CMS solutions that are easy to manage, secure, and perfectly aligned with business goals.",
     icon: <FaShoppingCart size={20} />,
-    img: "/Images/service-cms.webp",
+    img: "/Images/s-CMS1.png",
     path: "/cmsdevelopment",
   },
   {
     title: "Digital Marketing",
     desc: "Result-driven digital marketing strategies to increase brand visibility, leads, and conversions online.",
     icon: <FaRocket size={20} />,
-    img: "/Images/service-digital.webp",
+    img: "/Images/s-dm2.png",
     path: "/digitalmarketing",
   },
   {
     title: "SEO Optimization",
     desc: "Advanced SEO techniques to improve rankings, drive organic traffic, and ensure long-term online growth.",
     icon: <FaSearch size={20} />,
-    img: "/Images/service-seo.webp",
+    img: "/Images/s-SEO2.png",
     path: "/seooptimization",
   },
   {
     title: "Graphic Designing",
     desc: "Creative branding, logo design, and marketing visuals that communicate clearly and convert effectively.",
     icon: <FaChartLine size={20} />,
-    img: "/Images/service-graphic.webp",
+    img: "/Images/s-GD2.png",
     path: "/graphicdesigning",
   },
 ];
@@ -93,12 +93,12 @@ const ServiceItems = () => {
         {/* HEADER */}
         <div className="text-center mb-14 px-6">
           <Reveal>
-            <p className="text-[#008300] font-semibold uppercase tracking-wide">
+            <p className="text-[#008300] font-extrabold uppercase tracking-wide">
               What We’re Offering
             </p>
           </Reveal>
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#008300] mt-2">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
               Dealing in all Professional IT Services
             </h2>
           </Reveal>

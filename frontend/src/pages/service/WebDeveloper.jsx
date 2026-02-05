@@ -19,7 +19,7 @@ const WebDeveloper = () => {
       {/* ================= HERO ================= */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
           src="/Images/banner.mp4"
           autoPlay
           loop
@@ -82,7 +82,7 @@ const WebDeveloper = () => {
       <div className="flex justify-center md:justify-end">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
           <img
-            src="/Images/web-dev.webp"
+            src="/Images/s-webdevelpment1.png"
             alt="Web Development"
             className="w-full h-full object-cover"
           />
@@ -235,7 +235,7 @@ const WebDeveloper = () => {
         <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] -rotate-3"></div>
 
         <img
-          src="/Images/faq.webp"
+          src="/Images/s-webdevelpment2.png"
           alt="FAQ"
           className="
             relative z-10
