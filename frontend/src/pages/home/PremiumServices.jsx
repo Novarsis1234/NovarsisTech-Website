@@ -83,74 +83,80 @@ const PremiumServices = () => {
       </Helmet>
 
    
-    <section
-      className="relative py-28 overflow-hidden bg-fixed bg-center bg-cover"
-      style={{
-        backgroundImage: "url('/Images/novarsis-home2.webp')",
-      }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+   <section
+  className="relative py-28 overflow-hidden bg-fixed bg-center bg-cover"
+  style={{
+    backgroundImage: "url('/Images/novarsis-home2.webp')",
+  }}
+>
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Advanced IT and Creative Services by Novarsis Technology – Premium Capabilities
+  </h2>
 
-      {/* Soft Glow */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-400/20 rounded-full blur-3xl"></div>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-20 relative z-10">
-        <Reveal>
-          <p className="text-[#008300] font-extrabold uppercase tracking-widest">
-            Premium Capabilities
-          </p>
-        </Reveal>
+  {/* Soft Glow */}
+  <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-400/20 rounded-full blur-3xl"></div>
 
-        <Reveal>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-3 leading-tight">
-            Advanced IT <br /> & Creative Services
-          </h2>
-        </Reveal>
+  {/* Header */}
+  <div className="max-w-7xl mx-auto px-6 mb-20 relative z-10">
+    <Reveal>
+      <h4 className="text-[#008300] font-extrabold uppercase tracking-widest">
+        Premium Capabilities
+      </h4>
+    </Reveal>
 
-        <Reveal>
-          <p className="max-w-2xl mt-6 text-gray-200 text-sm md:text-base leading-relaxed">
-            We deliver future-ready IT and creative solutions combining innovation,
-            performance, and scalability to help brands grow with confidence.
-          </p>
-        </Reveal>
-      </div>
+    <Reveal>
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-3 leading-tight">
+        Advanced IT <br /> & Creative Services
+      </h2>
+    </Reveal>
 
-      {/* Cards */}
-      <Reveal>
-        <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 relative z-10">
-          {premiumServices.map((service, i) => (
-            <div
-              key={i}
-              className="relative group bg-white/80 backdrop-blur-xl 
-              rounded-2xl p-8 shadow-xl hover:shadow-2xl 
-              transition-all duration-500 hover:-translate-y-3"
-            >
-              {/* Left Accent Line */}
-              <span className="absolute left-0 top-0 h-full w-1 bg-[#008300] rounded-l-2xl"></span>
+    <Reveal>
+      <p className="max-w-2xl mt-6 text-gray-200 text-sm md:text-base leading-relaxed">
+        We deliver future-ready IT and creative solutions combining innovation,
+        performance, and scalability to help brands grow with confidence.
+      </p>
+    </Reveal>
+  </div>
 
-              {/* Floating Icon */}
-              <div className="absolute -top-6 left-6 w-14 h-14 rounded-xl 
-              bg-[#008300] text-white flex items-center justify-center text-2xl 
-              shadow-lg group-hover:scale-110 transition duration-500">
-                {service.icon}
-              </div>
+  {/* Cards */}
+  <Reveal>
+    <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 relative z-10">
+      {premiumServices.map((service, i) => (
+        <div
+          key={i}
+          className="relative group bg-white/80 backdrop-blur-xl 
+          rounded-2xl p-8 shadow-xl hover:shadow-2xl 
+          transition-all duration-500 hover:-translate-y-3"
+        >
+          {/* Left Accent Line */}
+          <span className="absolute left-0 top-0 h-full w-1 bg-[#008300] rounded-l-2xl"></span>
 
-              <div className="mt-10">
-                <h3 className="font-bold text-lg text-[#0b1b3f] mb-3">
-                  {service.title}
-                </h3>
+          {/* Floating Icon */}
+          <div className="absolute -top-6 left-6 w-14 h-14 rounded-xl 
+          bg-[#008300] text-white flex items-center justify-center text-2xl 
+          shadow-lg group-hover:scale-110 transition duration-500">
+            {service.icon}
+          </div>
 
-                <p className="text-gray-600 text-sm leading-relaxed text-justify">
-                  {service.desc}
-                </p>
-              </div>
-            </div>
-          ))}
+          <div className="mt-10">
+            <h3 className="font-bold text-lg text-[#0b1b3f] mb-3">
+              {service.title}
+            </h3>
+
+            <p className="text-gray-600 text-sm leading-relaxed text-justify">
+              {service.desc}
+            </p>
+          </div>
         </div>
-      </Reveal>
-    </section> </>
+      ))}
+    </div>
+  </Reveal>
+</section>
+ </>
   );
 };
 

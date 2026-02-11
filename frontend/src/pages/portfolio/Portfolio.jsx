@@ -83,49 +83,55 @@ const Portfolio = () => {
       </section>
 
       {/* ================= PORTFOLIO CONTENT ================= */}
-      <section className="relative bg-white overflow-hidden py-24 px-4">
-        
-        {/* ===== Decorative Circles ===== */}
-        <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
-        {/* <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div> */}
+     <section className="relative bg-white overflow-hidden py-24 px-4">
+  
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Novarsis Technology Company Portfolio PDF – IT Services and Project Showcase
+  </h2>
+  
+  {/* ===== Decorative Circles ===== */}
+  <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
+  <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
+  <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
+  {/* <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div> */}
 
-        {/* ===== Content ===== */}
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <Reveal>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
-              Our <span className="text-[#008300]">Company Portfolio</span>
-            </h2>
-          </Reveal>
+  {/* ===== Content ===== */}
+  <div className="relative z-10 max-w-6xl mx-auto text-center">
+    <Reveal>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
+        Our <span className="text-[#008300]">Company Portfolio</span>
+      </h2>
+    </Reveal>
 
-          <Reveal>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-base sm:text-lg">
-              Our comprehensive portfolio PDF presents a detailed overview of our
-              professional journey, showcasing a wide range of projects, creative
-              work, technical expertise, and successful collaborations. It
-              highlights our commitment to quality, innovation, and
-              result-oriented solutions across various industries.
-            </p>
-          </Reveal>
+    <Reveal>
+      <p className="text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-base sm:text-lg">
+        Our comprehensive portfolio PDF presents a detailed overview of our
+        professional journey, showcasing a wide range of projects, creative
+        work, technical expertise, and successful collaborations. It
+        highlights our commitment to quality, innovation, and
+        result-oriented solutions across various industries.
+      </p>
+    </Reveal>
 
-          {/* Button */}
-          <Reveal>
-            <button
-              onClick={() => setOpen(true)}
-              className="
-                bg-[#008300] text-white
-                px-10 py-4 rounded-full
-                text-lg font-semibold
-                shadow-lg hover:shadow-2xl
-                hover:scale-105 transition-all duration-300
-              "
-            >
-              View Portfolio PDF
-            </button>
-          </Reveal>
-        </div>
-      </section>
+    {/* Button */}
+    <Reveal>
+      <button
+        onClick={() => setOpen(true)}
+        className="
+          bg-[#008300] text-white
+          px-10 py-4 rounded-full
+          text-lg font-semibold
+          shadow-lg hover:shadow-2xl
+          hover:scale-105 transition-all duration-300
+        "
+      >
+        View Portfolio PDF
+      </button>
+    </Reveal>
+  </div>
+</section>
+
 
       {/* ================= PDF MODAL ================= */}
       {open && (

@@ -79,64 +79,71 @@ const ServiceSection = () => {
   <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
 </Helmet>
   
-    <section className="relative py-24 bg-white overflow-hidden">
+   <section className="relative py-24 bg-white overflow-hidden">
 
-      {/* Decorative Circles */}
-      <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-      <div className="absolute top-40 right-0 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
+  {/* ⭐ Hidden SEO H1 (Google Ranking Boost) */}
+  <h1 className="sr-only">
+    Why Choose Novarsis Technology – Best IT Company Digital Solutions
+  </h1>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+  {/* Decorative Circles */}
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+  <div className="absolute top-40 right-0 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
 
-        {/* Heading */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+  <div className="relative z-10 max-w-7xl mx-auto px-6">
+
+    {/* Heading */}
+    <div className="text-center mb-16 max-w-3xl mx-auto">
+      <Reveal>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
+          Why <span className="text-[#008300]">Choose Us</span>
+        </h2>
+      </Reveal>
+
+      <Reveal>
+        <p className="text-gray-600 text-base sm:text-lg">
+          We provide complete digital solutions that empower your business
+          to grow with confidence and consistency.
+        </p>
+      </Reveal>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      {services.map((service) => (
+        <div
+          key={service.id}
+          className="group relative bg-white rounded-2xl p-8 text-center
+          shadow-lg hover:shadow-2xl transition-all duration-500
+          hover:-translate-y-2"
+        >
+          {/* Card Circle Accent */}
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#008300]/10 rounded-full"></div>
+
+          {/* Icon */}
+          <div className="relative mx-auto mb-6 w-20 h-20 rounded-full
+            bg-white shadow-md flex items-center justify-center
+            group-hover:bg-[#008300]/10 transition">
+            {service.icon}
+          </div>
+
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
-              Why <span className="text-[#008300]">Choose Us</span>
-            </h2>
+            <h3 className="text-lg font-bold text-black mb-3">
+              {service.title}
+            </h3>
           </Reveal>
+
           <Reveal>
-            <p className="text-gray-600 text-base sm:text-lg">
-              We provide complete digital solutions that empower your business
-              to grow with confidence and consistency.
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {service.description}
             </p>
           </Reveal>
         </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="group relative bg-white rounded-2xl p-8 text-center
-              shadow-lg hover:shadow-2xl transition-all duration-500
-              hover:-translate-y-2"
-            >
-              {/* Card Circle Accent */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#008300]/10 rounded-full"></div>
-
-              {/* Icon */}
-              <div className="relative mx-auto mb-6 w-20 h-20 rounded-full
-                bg-white shadow-md flex items-center justify-center
-                group-hover:bg-[#008300]/10 transition">
-                {service.icon}
-              </div>
-
-              <Reveal>
-                <h3 className="text-lg font-bold text-black mb-3">
-                  {service.title}
-                </h3>
-              </Reveal>
-
-              <Reveal>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </Reveal>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>  </>
+      ))}
+    </div>
+  </div>
+</section>
+</>
   );
 };
 

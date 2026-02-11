@@ -55,146 +55,151 @@ const TestimonialsSection = () => {
 
   return (
     <>
-    <Helmet>
-  <title>Client Testimonials & Reviews | Novarsis Technology</title>
+   <Helmet>
+  <title>Novarsis Technology | Leading IT Services & Software Development Company</title>
 
   <meta
     name="description"
-    content="Read real client testimonials and reviews about Novarsis Technology. Discover how our IT solutions, development services, and expert team help businesses grow successfully."
+    content="Novarsis Technology delivers advanced IT services including web development, app development, UI/UX design, SEO optimization, and digital marketing solutions to help businesses grow faster."
   />
 
   <meta
     name="keywords"
-    content="Novarsis Technology reviews, client testimonials IT company, software development feedback, digital solutions customer reviews"
+    content="Novarsis Technology, IT company India, software development, web development services, digital marketing, SEO optimization, UI UX design"
   />
 
-  <link rel="canonical" href="https://novarsis.com/client-testimonials" />
+  <link rel="canonical" href="https://novarsis.com/" />
 
   <meta name="robots" content="index, follow" />
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Client Testimonials - Novarsis Technology" />
+  <meta property="og:title" content="Novarsis Technology | Innovative IT Solutions" />
   <meta
     property="og:description"
-    content="Trusted by clients across industries — real feedback and experiences with Novarsis Technology."
+    content="Scalable IT services, modern development, and powerful digital solutions designed for business growth."
   />
-  <meta property="og:url" content="https://novarsis.com/client-testimonials" />
+  <meta property="og:url" content="https://novarsis.com/" />
   <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Novarsis Technology Client Reviews" />
+  <meta name="twitter:title" content="Novarsis Technology - IT Services Company" />
   <meta
     name="twitter:description"
-    content="Explore real success stories and client feedback about our IT and digital services."
+    content="Leading IT solutions company offering development, branding, SEO, and digital growth services."
   />
   <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
 </Helmet>
    
     <section className="relative py-28 px-5 sm:px-8 overflow-hidden">
-      
-      {/* FALLBACK IMAGE */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: "url('/Images/parallex10.jpg')" }}
-      />
+  
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Client Testimonials and Reviews for Novarsis Technology IT Services
+  </h2>
 
-     
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/65"></div>
+  {/* FALLBACK IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105"
+    style={{ backgroundImage: "url('/Images/parallex10.jpg')" }}
+  />
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        
-        {/* HEADING */}
-        <div className="text-center max-w-3xl mx-auto">
-          <Reveal>
-            <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
-              Client Testimonials
-            </p>
-          </Reveal>
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/65"></div>
 
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-3 text-white leading-tight">
-              Trusted By Clients <br className="hidden sm:block" />
-              <span className="text-[#008300]">Across Industries</span>
-            </h2>
-          </Reveal>
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto">
+    
+    {/* HEADING */}
+    <div className="text-center max-w-3xl mx-auto">
+      <Reveal>
+        <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+          Client Testimonials
+        </h4>
+      </Reveal>
 
-          <Reveal>
-            <p className="text-gray-300 mt-5 text-base sm:text-lg leading-relaxed">
-              Real experiences from businesses who partnered with us to build
-              powerful digital solutions, scalable systems, and long-term growth.
-              Our focus on quality, transparency, and innovation makes us a
-              trusted IT partner.
-            </p>
-          </Reveal>
-        </div>
+      <Reveal>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-3 text-white leading-tight">
+          Trusted By Clients <br className="hidden sm:block" />
+          <span className="text-[#008300]">Across Industries</span>
+        </h2>
+      </Reveal>
 
-        {/* CARDS – PUSHED DOWN */}
-        <div className="mt-16 md:mt-24 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-6 pb-6 justify-start md:justify-center">
-            {testimonials.map((t, index) => (
-              <div
-                key={index}
-                className="flex-none w-[280px] sm:w-[320px] 
-                bg-white/95 backdrop-blur-xl 
-                rounded-2xl p-6 text-black 
-                shadow-2xl transition-all duration-500 
-                hover:-translate-y-2 hover:shadow-[#008300]/30"
-              >
-                {/* Avatar */}
-                <div className="flex justify-center mb-5">
-                  <Reveal>
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-20 h-20 rounded-full 
-                      border-4 border-[#008300]/70 
-                      shadow-lg bg-white p-1"
-                    />
-                  </Reveal>
-                </div>
+      <Reveal>
+        <p className="text-gray-300 mt-5 text-base sm:text-lg leading-relaxed">
+          Real experiences from businesses who partnered with us to build
+          powerful digital solutions, scalable systems, and long-term growth.
+          Our focus on quality, transparency, and innovation makes us a
+          trusted IT partner.
+        </p>
+      </Reveal>
+    </div>
 
-                {/* Review */}
-                <Reveal>
-                  <p className="text-center italic text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                    “{t.review}”
-                  </p>
-                </Reveal>
+    {/* CARDS – PUSHED DOWN */}
+    <div className="mt-16 md:mt-24 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-6 pb-6 justify-start md:justify-center">
+        {testimonials.map((t, index) => (
+          <div
+            key={index}
+            className="flex-none w-[280px] sm:w-[320px] 
+            bg-white/95 backdrop-blur-xl 
+            rounded-2xl p-6 text-black 
+            shadow-2xl transition-all duration-500 
+            hover:-translate-y-2 hover:shadow-[#008300]/30"
+          >
+            {/* Avatar */}
+            <div className="flex justify-center mb-5">
+              <Reveal>
+                <img
+                  src={t.image}
+                  alt={`${t.name} client testimonial for Novarsis Technology`}
+                  className="w-20 h-20 rounded-full 
+                  border-4 border-[#008300]/70 
+                  shadow-lg bg-white p-1"
+                />
+              </Reveal>
+            </div>
 
-                {/* Name */}
-                <Reveal>
-                  <h4 className="text-center font-semibold text-[#008300] tracking-wide">
-                    {t.name}
-                  </h4>
-                </Reveal>
+            {/* Review */}
+            <Reveal>
+              <p className="text-center italic text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+                “{t.review}”
+              </p>
+            </Reveal>
 
-                {/* Rating */}
-                <div className="flex justify-center mt-3">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar
-                      key={i}
-                      className={`text-lg ${
-                        i < t.rating ? "text-[#FFD700]" : "text-gray-300"
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            ))}
+            {/* Name */}
+            <Reveal>
+              <h3 className="text-center font-semibold text-[#008300] tracking-wide">
+                {t.name}
+              </h3>
+            </Reveal>
+
+            {/* Rating */}
+            <div className="flex justify-center mt-3">
+              {[...Array(5)].map((_, i) => (
+                <FaStar
+                  key={i}
+                  className={`text-lg ${
+                    i < t.rating ? "text-[#FFD700]" : "text-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* SCROLL HINT */}
-        <Reveal>
-          <p className="text-center text-gray-400 mt-6 text-sm">
-            👉 Swipe or scroll to explore more client stories
-          </p>
-        </Reveal>
+        ))}
       </div>
-    </section>
+    </div>
+
+    {/* SCROLL HINT */}
+    <Reveal>
+      <p className="text-center text-gray-400 mt-6 text-sm">
+        👉 Swipe or scroll to explore more client stories
+      </p>
+    </Reveal>
+  </div>
+</section>
+
      </>
   );
 };

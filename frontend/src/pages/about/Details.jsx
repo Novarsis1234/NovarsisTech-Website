@@ -66,77 +66,83 @@ const Details = () => {
         />
         <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
       </Helmet>
-      <section
-        ref={ref}
-        className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
-      >
-        {/* Decorative Circles */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
+     <section
+  ref={ref}
+  className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
+>
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Novarsis Technology Company Insights and Growth Statistics in IT Solutions
+  </h2>
 
-        <div className="relative z-10 max-w-6xl mx-auto">
-          {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <Reveal>
-              <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
-                Company Insights
-              </p>
-            </Reveal>
+  {/* Decorative Circles */}
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
 
-            <Reveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
-                Our Growth in <span className="text-[#008300]">Results</span>
-              </h2>
-            </Reveal>
+  <div className="relative z-10 max-w-6xl mx-auto">
+    {/* Heading */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <Reveal>
+        <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+          Company Insights
+        </h4>
+      </Reveal>
 
-            <Reveal>
-              <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
-                These numbers reflect our experience, dedication, and commitment
-                to delivering reliable IT solutions that help businesses grow
-                and succeed in the digital era.
-              </p>
-            </Reveal>
-          </div>
+      <Reveal>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
+          Our Growth in <span className="text-[#008300]">Results</span>
+        </h2>
+      </Reveal>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
-              transition-all duration-500 p-8 flex flex-col items-center"
-              >
-                <Reveal>
-                  <div className="bg-[#008300]/10 text-[#008300] rounded-full p-6 mb-5">
-                    {item.icon}
-                  </div>
-                </Reveal>
+      <Reveal>
+        <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
+          These numbers reflect our experience, dedication, and commitment
+          to delivering reliable IT solutions that help businesses grow
+          and succeed in the digital era.
+        </p>
+      </Reveal>
+    </div>
 
-                <Reveal>
-                  <h3 className="text-4xl font-extrabold text-black">
-                    {inView ? (
-                      <CountUp
-                        start={0}
-                        end={item.number}
-                        duration={2.5}
-                        suffix="+"
-                      />
-                    ) : (
-                      "0+"
-                    )}
-                  </h3>
-                </Reveal>
+    {/* Stats Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      {stats.map((item, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
+          transition-all duration-500 p-8 flex flex-col items-center"
+        >
+          <Reveal>
+            <div className="bg-[#008300]/10 text-[#008300] rounded-full p-6 mb-5">
+              {item.icon}
+            </div>
+          </Reveal>
 
-                <Reveal>
-                  <p className="mt-3 text-sm sm:text-base font-semibold text-gray-700 tracking-wide">
-                    {item.label}
-                  </p>
-                </Reveal>
-              </div>
-            ))}
-          </div>
+          <Reveal>
+            <h3 className="text-4xl font-extrabold text-black">
+              {inView ? (
+                <CountUp
+                  start={0}
+                  end={item.number}
+                  duration={2.5}
+                  suffix="+"
+                />
+              ) : (
+                "0+"
+              )}
+            </h3>
+          </Reveal>
+
+          <Reveal>
+            <p className="mt-3 text-sm sm:text-base font-semibold text-gray-700 tracking-wide">
+              {item.label}
+            </p>
+          </Reveal>
         </div>
-      </section>{" "}
+      ))}
+    </div>
+  </div>
+</section>
+{" "}
     </>
   );
 };

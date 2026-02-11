@@ -118,107 +118,116 @@ const ServiceItems = () => {
   <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
 </Helmet>
 
-    <section
-      className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/Images/parallex5.jpg')",
-      }}
-    >
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/70"></div>
+   <section
+  className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
+  style={{
+    backgroundImage: "url('/Images/parallex5.jpg')",
+  }}
+>
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Professional IT Services by Novarsis Technology – Web Development, Branding, SEO Solutions
+  </h2>
 
-      {/* CONTENT */}
-      <div className="relative z-10">
+  {/* OVERLAY */}
+  <div className="absolute inset-0 bg-black/70"></div>
 
-        {/* HEADER */}
-        <div className="text-center mb-14 px-6">
-          <Reveal>
-            <p className="text-[#008300] font-extrabold uppercase tracking-wide">
-              What We’re Offering
-            </p>
-          </Reveal>
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
-              Dealing in all Professional IT Services
-            </h2>
-          </Reveal>
-        </div>
+  {/* CONTENT */}
+  <div className="relative z-10">
 
-        {/* SLIDER WRAPPER */}
-        <div className="relative max-w-7xl mx-auto px-6">
+    {/* HEADER */}
+    <div className="text-center mb-14 px-6">
+      <Reveal>
+        <h4 className="text-[#008300] font-extrabold uppercase tracking-wide">
+          What We’re Offering
+        </h4>
+      </Reveal>
 
-          {/* LEFT BUTTON */}
-          <button
-            onClick={prevSlide}
-            disabled={index === 0}
-            className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2
-            w-12 h-12 rounded-full bg-[#008300] text-white
-            items-center justify-center shadow-lg
-            hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
+      <Reveal>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
+          Dealing in all Professional IT Services
+        </h2>
+      </Reveal>
+    </div>
+
+    {/* SLIDER WRAPPER */}
+    <div className="relative max-w-7xl mx-auto px-6">
+
+      {/* LEFT BUTTON */}
+      <button
+        onClick={prevSlide}
+        disabled={index === 0}
+        className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2
+        w-12 h-12 rounded-full bg-[#008300] text-white
+        items-center justify-center shadow-lg
+        hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
+      >
+        <FaChevronLeft />
+      </button>
+
+      {/* RIGHT BUTTON */}
+      <button
+        onClick={nextSlide}
+        disabled={index + visibleCards >= services.length}
+        className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2
+        w-12 h-12 rounded-full bg-[#008300] text-white
+        items-center justify-center shadow-lg
+        hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
+      >
+        <FaChevronRight />
+      </button>
+
+      {/* CARDS */}
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {services.slice(index, index + visibleCards).map((service, i) => (
+          <div
+            key={i}
+            className="group bg-white rounded-2xl shadow-md 
+            hover:shadow-2xl transition-all duration-500 
+            transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
           >
-            <FaChevronLeft />
-          </button>
+            {/* IMAGE */}
+            <div className="relative">
+              <img
+                src={service.img}
+                alt={service.title + " IT Service by Novarsis Technology"}
+                className="w-full h-52 object-cover"
+              />
 
-          {/* RIGHT BUTTON */}
-          <button
-            onClick={nextSlide}
-            disabled={index + visibleCards >= services.length}
-            className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2
-            w-12 h-12 rounded-full bg-[#008300] text-white
-            items-center justify-center shadow-lg
-            hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
-          >
-            <FaChevronRight />
-          </button>
-
-          {/* CARDS */}
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {services.slice(index, index + visibleCards).map((service, i) => (
-              <div
-                key={i}
-                className="group bg-white rounded-2xl shadow-md 
-                hover:shadow-2xl transition-all duration-500 
-                transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
-              >
-                {/* IMAGE */}
-                <div className="relative">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="w-full h-52 object-cover"
-                  />
-
-                  {/* ICON */}
-                  <div className="absolute top-4 right-4 
-                    bg-[#008300] text-white p-3 rounded-lg shadow-md 
-                    group-hover:bg-white group-hover:text-[#008300] transition">
-                    {service.icon}
-                  </div>
-                </div>
-
-                {/* CONTENT */}
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#008300] mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed text-justify">
-                    {service.desc}
-                  </p>
-
-                  <Link to={service.path}>
-                    <div className="mt-5 text-[#008300] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                      <span>Read More</span>
-                      <span>→</span>
-                    </div>
-                  </Link>
-                </div>
+              {/* ICON */}
+              <div className="absolute top-4 right-4 
+                bg-[#008300] text-white p-3 rounded-lg shadow-md 
+                group-hover:bg-white group-hover:text-[#008300] transition">
+                {service.icon}
               </div>
-            ))}
-          </div>
+            </div>
 
-        </div>
+            {/* CONTENT */}
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-[#008300] mb-3">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed text-justify">
+                {service.desc}
+              </p>
+
+              <Link to={service.path}>
+                <div className="mt-5 text-[#008300] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                  <span>Read More</span>
+                  <span>→</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    </section></>
+
+    </div>
+  </div>
+</section>
+
+    </>
   );
 };
 

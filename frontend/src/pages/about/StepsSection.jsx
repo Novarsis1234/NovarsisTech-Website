@@ -80,93 +80,101 @@ const StepsSection = () => {
   <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
 </Helmet>
 
-    <section className="relative bg-white py-24 overflow-hidden">
+   <section className="relative bg-white py-24 overflow-hidden">
 
-      {/* Header */}
-      <div className="max-w-6xl mx-auto text-center px-6">
-        <Reveal>
-          <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
-            In Just 5 Steps
-          </p>
-        </Reveal>
-        <Reveal>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
-            How We <span className="text-[#008300]">Scale Your Business</span>
-          </h2>
-        </Reveal>
-        <Reveal>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
-            From strategy to execution, our proven process helps you build,
-            launch, and scale digital solutions with confidence.
-          </p>
-        </Reveal>
-      </div>
+  {/* ⭐ Hidden SEO Heading */}
+  <h2 className="sr-only">
+    Novarsis Technology Process – How We Scale Your Business in 5 Steps
+  </h2>
 
-      {/* Timeline */}
-      <div className="relative max-w-6xl mx-auto mt-20 px-6">
-        
-        {/* Center Line (Desktop only) */}
-        <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gray-200 -translate-x-1/2"></div>
+  {/* Header */}
+  <div className="max-w-6xl mx-auto text-center px-6">
+    <Reveal>
+      <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+        In Just 5 Steps
+      </h4>
+    </Reveal>
 
-        <div className="space-y-20">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`relative flex flex-col md:flex-row items-center gap-10
-                ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
-            >
-              {/* Image */}
-              <div className="md:w-1/2 w-full">
-                <Reveal>
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="rounded-2xl shadow-xl w-full object-cover
-                    transition-transform duration-500 hover:scale-105"
-                  />
-                </Reveal>
+    <Reveal>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
+        How We <span className="text-[#008300]">Scale Your Business</span>
+      </h2>
+    </Reveal>
+
+    <Reveal>
+      <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
+        From strategy to execution, our proven process helps you build,
+        launch, and scale digital solutions with confidence.
+      </p>
+    </Reveal>
+  </div>
+
+  {/* Timeline */}
+  <div className="relative max-w-6xl mx-auto mt-20 px-6">
+    
+    {/* Center Line (Desktop only) */}
+    <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gray-200 -translate-x-1/2"></div>
+
+    <div className="space-y-20">
+      {steps.map((step, index) => (
+        <div
+          key={index}
+          className={`relative flex flex-col md:flex-row items-center gap-10
+            ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
+        >
+          {/* Image */}
+          <div className="md:w-1/2 w-full">
+            <Reveal>
+              <img
+                src={step.image}
+                alt={`${step.title} – Novarsis Technology Business Scaling Step`}
+                className="rounded-2xl shadow-xl w-full object-cover
+                transition-transform duration-500 hover:scale-105"
+              />
+            </Reveal>
+          </div>
+
+          {/* Content Card */}
+          <div className="md:w-1/2 w-full">
+            <Reveal>
+              <div className="bg-white rounded-2xl shadow-xl p-8 relative">
+                
+                {/* Step Badge */}
+                <span className="inline-block mb-3 text-sm font-semibold text-[#008300]">
+                  Step {step.step}
+                </span>
+
+                <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  {step.description}
+                </p>
+
+                {/* Connector Dot */}
+                <span
+                  className={`hidden md:block absolute top-1/2 w-4 h-4 rounded-full bg-[#008300]
+                    ${index % 2 === 0 ? "-right-12" : "-left-12"}`}
+                ></span>
               </div>
+            </Reveal>
+          </div>
 
-              {/* Content Card */}
-              <div className="md:w-1/2 w-full">
-                <Reveal>
-                  <div className="bg-white rounded-2xl shadow-xl p-8 relative">
-                    
-                    {/* Step Badge */}
-                    <span className="inline-block mb-3 text-sm font-semibold text-[#008300]">
-                      Step {step.step}
-                    </span>
-
-                    <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">
-                      {step.title}
-                    </h3>
-
-                    <p className="text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
-
-                    {/* Connector Dot */}
-                    <span
-                      className={`hidden md:block absolute top-1/2 w-4 h-4 rounded-full bg-[#008300]
-                        ${index % 2 === 0 ? "-right-12" : "-left-12"}`}
-                    ></span>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* Background Step Number */}
-              <span
-                className={`absolute text-[72px] sm:text-[90px] font-extrabold
-                text-[#008300]/10 select-none
-                ${index % 2 === 0 ? "left-0" : "right-0"}`}
-              >
-                {step.step}
-              </span>
-            </div>
-          ))}
+          {/* Background Step Number */}
+          <span
+            className={`absolute text-[72px] sm:text-[90px] font-extrabold
+            text-[#008300]/10 select-none
+            ${index % 2 === 0 ? "left-0" : "right-0"}`}
+          >
+            {step.step}
+          </span>
         </div>
-      </div>
-    </section>    </>
+      ))}
+    </div>
+  </div>
+</section>
+   </>
   );
 };
 
