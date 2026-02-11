@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "../../components/Reveal";
+  import { Helmet } from "react-helmet-async";
 
 /* ================= STATIC FAQ DATA (10) ================= */
 const faqs = [
@@ -60,6 +61,45 @@ const FAQSection = () => {
 
   return (
    <>
+ 
+
+<Helmet>
+  <title>FAQs | Novarsis Technology - Software & IT Services Questions</title>
+
+  <meta
+    name="description"
+    content="Find answers to frequently asked questions about Novarsis Technology services including web development, app development, SEO, UI/UX design, and custom software solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology FAQs, software company questions, IT services FAQ, web development help, mobile app development FAQ"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/faqs" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Frequently Asked Questions - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Get answers about our IT services, development process, technologies, and software solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/faqs" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology FAQs" />
+  <meta
+    name="twitter:description"
+    content="Common questions about web development, mobile apps, SEO, and digital solutions answered by Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
   {/* ================= HERO SECTION ================= */}
   <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
     {/* Background Video */}

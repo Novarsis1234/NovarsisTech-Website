@@ -1,12 +1,48 @@
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const Section = () => {
   return (
+    <>
+    <Helmet>
+  <title>IT Consulting & Meeting Solutions | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Schedule a meeting with Novarsis Technology for better IT solutions, branding, and digital services designed to help your business grow faster."
+  />
+
+  <meta
+    name="keywords"
+    content="IT consulting India, schedule IT meeting, software services company, digital solutions Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/it-meeting" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Better IT Solutions & Services | Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Connect with Novarsis Technology for advanced IT solutions, branding, and scalable digital experiences."
+  />
+  <meta property="og:url" content="https://novarsis.com/it-meeting" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology IT Services" />
+  <meta
+    name="twitter:description"
+    content="Better IT solutions and services at your fingertips with Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
     <section
       className="relative bg-cover bg-center bg-no-repeat bg-fixed py-24 sm:py-28 px-5 sm:px-8 md:px-16"
       style={{
@@ -100,7 +136,7 @@ const Section = () => {
 
         </div>
       </div>
-    </section>
+    </section>    </>
   );
 };
 

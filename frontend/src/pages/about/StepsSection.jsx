@@ -1,5 +1,6 @@
 import React from "react";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const steps = [
   {
@@ -7,46 +8,84 @@ const steps = [
     title: "Contact Us",
     description:
       "Reach out to our team through call, email, or our contact form. Let’s discuss your goals and business needs.",
-    image: "/Images/novarsis-technology1.webp",
+    image: "/Images/AboutStep1.png",
   },
   {
     step: "02",
     title: "Get a Quote",
     description:
       "We analyse your requirements and share a tailored plan. No strings attached, just expert & best advice for your growth.",
-    image: "/Images/novarsis-technology2.webp",
+    image: "/Images/AboutStep2.png",
   },
   {
     step: "03",
     title: "Novarsis Magic Begins",
     description:
       "Our skilled team designs and develops your solution. We keep you updated at every milestone.",
-    image: "/Images/novarsis-technology3.webp",
+    image: "/Images/AboutStep3.png",
   },
   {
     step: "04",
     title: "Testing & Refinement",
     description:
       "Rigorous testing to ensure top performance and quality. We fine-tune everything for your satisfaction.",
-    image: "/Images/novarsis-technology4.webp",
+    image: "/Images/AboutStep4.png",
   },
   {
     step: "05",
     title: "Grow Your Business",
     description:
       "Your project goes live, backed by Novarsis support. Watch your business succeed and scale digitally.",
-    image: "/Images/novarsis-technology5.webp",
+    image: "/Images/AboutStep5.png",
   },
 ];
 
 const StepsSection = () => {
   return (
+    <>
+    <Helmet>
+  <title>Our Process | How Novarsis Technology Scales Your Business</title>
+
+  <meta
+    name="description"
+    content="Discover the 5-step process used by Novarsis Technology to build, test, launch, and scale powerful digital solutions for businesses worldwide."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology process, software development workflow, IT project steps, digital business growth strategy, web development process India"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/our-process" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How We Scale Your Business - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="From consultation to launch, explore our proven 5-step process for building scalable IT solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/our-process" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Development Process" />
+  <meta
+    name="twitter:description"
+    content="A structured approach to designing, developing, testing, and scaling digital products."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
     <section className="relative bg-white py-24 overflow-hidden">
 
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center px-6">
         <Reveal>
-          <p className="text-[#008300] font-semibold uppercase tracking-widest text-sm">
+          <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
             In Just 5 Steps
           </p>
         </Reveal>
@@ -127,7 +166,7 @@ const StepsSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section>    </>
   );
 };
 

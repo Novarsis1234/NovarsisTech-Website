@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
+ import { Helmet } from "react-helmet-async";
 import {
   FaPaintBrush,
   FaPalette,
@@ -18,6 +19,55 @@ const GraphicDesigning = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>
+    Graphic Designing Services | Creative Branding & Visual Design - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Professional Graphic Designing Services by Novarsis Technology. We create logos, branding, social media creatives, marketing visuals, and modern UI graphics that elevate your brand identity."
+  />
+
+  <meta
+    name="keywords"
+    content="Graphic Designing Services, Logo Design, Branding Design, Creative Design Agency, Social Media Design, UI Graphics, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/graphicdesigning" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Graphic Designing Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Creative graphic design solutions including logo design, branding, marketing visuals, and professional digital creatives to grow your business."
+  />
+  <meta property="og:url" content="https://novarsis.com/graphicdesigning" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Graphic Designing Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Enhance your brand identity with professional graphic design services from Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <div className="bg-white">
 
       {/* ================= HERO ================= */}
@@ -229,7 +279,7 @@ const GraphicDesigning = () => {
 </section>
 
 
-    </div>
+    </div> </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 import {
   FaWordpress,
   FaShopify,
@@ -24,6 +25,55 @@ const CMSDevelopment = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+    
+
+<Helmet>
+  <title>
+    CMS Development Services | WordPress & Custom CMS Solutions - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Professional CMS Development Services by Novarsis Technology. We build secure, scalable, and easy-to-manage WordPress and custom CMS websites tailored for business growth."
+  />
+
+  <meta
+    name="keywords"
+    content="CMS Development Services, WordPress Development, Custom CMS Solutions, Website Management System, Novarsis Technology, CMS Website Development"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/cmsdevelopment" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="CMS Development Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Build powerful CMS websites with easy content management, strong security, and scalable performance using modern CMS technologies."
+  />
+  <meta property="og:url" content="https://novarsis.com/cmsdevelopment" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="CMS Development Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Custom CMS and WordPress development services designed for flexibility, performance, and business growth."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+    
     <div className="bg-white">
       {/* ================= HERO ================= */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
@@ -246,7 +296,7 @@ const CMSDevelopment = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div></>
   );
 };
 

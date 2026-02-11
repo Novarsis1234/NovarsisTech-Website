@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+  import { Helmet } from "react-helmet-async";
 
 const services = [
   { name: "Web Development", path: "/webdeveloper" },
@@ -12,6 +13,47 @@ const services = [
 
 const AboutParallaxSection = () => {
   return (
+    <>
+  
+
+<Helmet>
+  <title>Software Solutions & Digital Services | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Novarsis Technology provides scalable software solutions including web development, app development, UI/UX design, CMS, digital marketing, and graphic designing services."
+  />
+
+  <meta
+    name="keywords"
+    content="software solutions company India, web development services, UI UX design agency, digital marketing company, CMS development WordPress, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/software-solutions" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Software Solutions That Scale Businesses - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Performance-focused software and digital services designed to help modern businesses grow faster."
+  />
+  <meta property="og:url" content="https://novarsis.com/software-solutions" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Software Services" />
+  <meta
+    name="twitter:description"
+    content="Explore web development, UI/UX design, CMS, and digital marketing services by Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+  
     <section
       className="relative bg-fixed bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: "url('/Images/parallex8.jpg')" }}
@@ -79,7 +121,7 @@ const AboutParallaxSection = () => {
         </div>
 
       </div>
-    </section>
+    </section>  </>
   );
 };
 

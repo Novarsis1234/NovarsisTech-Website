@@ -18,11 +18,61 @@ import {
   SiGooglesearchconsole,
   SiSemrush,
 } from "react-icons/si";
+ import { Helmet } from "react-helmet-async";
 
 const SEOOptimization = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>
+    SEO Optimization Services | Increase Rankings & Traffic - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Professional SEO Optimization Services by Novarsis Technology. Improve Google rankings, increase organic traffic, and grow your business with advanced SEO strategies."
+  />
+
+  <meta
+    name="keywords"
+    content="SEO services, SEO optimization company, digital marketing SEO, technical SEO, on-page SEO, off-page SEO, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/seooptimization" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="SEO Optimization Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Boost your website visibility with powerful SEO strategies including keyword research, technical SEO, content optimization, and performance tracking."
+  />
+  <meta property="og:url" content="https://novarsis.com/seooptimization" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="SEO Optimization Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Grow organic traffic and improve search engine rankings with expert SEO services from Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <div className="bg-white">
 
       {/* ================= HERO ================= */}
@@ -247,7 +297,7 @@ const SEOOptimization = () => {
   </div>
 </section>
 
-    </div>
+    </div> </>
   );
 };
 

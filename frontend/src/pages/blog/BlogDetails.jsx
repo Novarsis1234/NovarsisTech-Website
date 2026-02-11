@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogById, clearSingleBlog } from "../../slice/blogSlice";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -44,6 +46,83 @@ const BlogDetails = () => {
   }
 
   return (
+    <>
+<Helmet>
+  <title>
+    {singleBlog?.title
+      ? `${singleBlog.title} | Novarsis Technology Blog`
+      : "Blog Details | Novarsis Technology"}
+  </title>
+
+  <meta
+    name="description"
+    content={
+      singleBlog?.description ||
+      "Read detailed technology insights, development knowledge, and digital growth strategies from the Novarsis Technology blog."
+    }
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology blog, tech article, software development insights, digital marketing tips, SEO knowledge"
+  />
+
+  <link
+    rel="canonical"
+    href={`https://novarsis.com/blog/${singleBlog?._id || id}`}
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:title"
+    content={
+      singleBlog?.title
+        ? `${singleBlog.title} | Novarsis Technology`
+        : "Novarsis Technology Blog"
+    }
+  />
+  <meta
+    property="og:description"
+    content={
+      singleBlog?.description ||
+      "Explore detailed blog content and expert insights from Novarsis Technology."
+    }
+  />
+  <meta
+    property="og:url"
+    content={`https://novarsis.com/blog/${singleBlog?._id || id}`}
+  />
+  <meta
+    property="og:image"
+    content={singleBlog?.image || "/Images/novarsis-og-image.jpg"}
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content={
+      singleBlog?.title
+        ? `${singleBlog.title} | Novarsis Technology`
+        : "Novarsis Technology Blog"
+    }
+  />
+  <meta
+    name="twitter:description"
+    content={
+      singleBlog?.description ||
+      "Read expert insights and technology articles from Novarsis Technology."
+    }
+  />
+  <meta
+    name="twitter:image"
+    content={singleBlog?.image || "/Images/novarsis-og-image.jpg"}
+  />
+</Helmet>
+
     <section className="relative bg-white min-h-screen py-24 px-4 md:px-20 overflow-hidden">
 
       {/* ===== Decorative Green Circles ===== */}
@@ -125,7 +204,7 @@ const BlogDetails = () => {
           </Link>
         </div>
       </motion.div>
-    </section>
+    </section></>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 import {
   FaBullhorn,
   FaSearch,
@@ -20,6 +21,55 @@ const DigitalMarketing = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+    
+
+<Helmet>
+  <title>
+    Digital Marketing Services | SEO, Social Media & Online Growth - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Result-driven Digital Marketing Services by Novarsis Technology. We help businesses grow with SEO, social media marketing, paid ads, content marketing, and data-driven online strategies."
+  />
+
+  <meta
+    name="keywords"
+    content="Digital Marketing Services, SEO Services, Social Media Marketing, PPC Ads, Online Marketing Agency, Lead Generation, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/digitalmarketing" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Digital Marketing Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Boost your online presence with expert digital marketing strategies including SEO, paid advertising, content marketing, and social media growth."
+  />
+  <meta property="og:url" content="https://novarsis.com/digitalmarketing" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Digital Marketing Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Grow your business with powerful digital marketing services designed for performance, visibility, and long-term success."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <div className="bg-white">
       {/* ================= HERO ================= */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
@@ -242,7 +292,7 @@ const DigitalMarketing = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div> </>
   );
 };
 

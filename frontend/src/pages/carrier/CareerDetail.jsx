@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCareers } from "../../slice/careerSlice";
 import { Briefcase, MapPin, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const CareerDetail = () => {
   const { id } = useParams();
@@ -39,6 +40,83 @@ const CareerDetail = () => {
   }
 
   return (
+    <>
+    
+
+<Helmet>
+  <title>
+    {job?.title
+      ? `${job.title} Job Opening | Novarsis Technology Careers`
+      : "Career Details | Novarsis Technology"}
+  </title>
+
+  <meta
+    name="description"
+    content={
+      job?.description
+        ? job.description.slice(0, 150)
+        : "Explore career opportunities at Novarsis Technology and apply for exciting roles in development, design, marketing, and IT services."
+    }
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology jobs, IT job opening, software developer career, digital marketing jobs, UI UX designer hiring India"
+  />
+
+  <link
+    rel="canonical"
+    href={`https://novarsis.com/careers/${job?._id || job?.id || id}`}
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:title"
+    content={
+      job?.title
+        ? `${job.title} | Novarsis Technology Careers`
+        : "Novarsis Technology Careers"
+    }
+  />
+  <meta
+    property="og:description"
+    content={
+      job?.description
+        ? job.description.slice(0, 160)
+        : "Join Novarsis Technology and build your career with innovative IT projects."
+    }
+  />
+  <meta
+    property="og:url"
+    content={`https://novarsis.com/careers/${job?._id || job?.id || id}`}
+  />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content={
+      job?.title
+        ? `${job.title} | Novarsis Technology`
+        : "Novarsis Technology Careers"
+    }
+  />
+  <meta
+    name="twitter:description"
+    content={
+      job?.description
+        ? job.description.slice(0, 160)
+        : "Apply now and grow your career with Novarsis Technology."
+    }
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+
     <section className="relative bg-white min-h-screen py-24 px-4 md:px-20 overflow-hidden">
 
       {/* ===== Decorative Green Circles ===== */}
@@ -96,7 +174,7 @@ const CareerDetail = () => {
           Apply Now
         </Link>
       </div>
-    </section>
+    </section>    </>
   );
 };
 

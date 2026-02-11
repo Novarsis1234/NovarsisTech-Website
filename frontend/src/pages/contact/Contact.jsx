@@ -3,10 +3,50 @@ import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Reveal from "../../components/Reveal";
 import ContactForm from "./ContactForm";
+ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <>
+   
+
+<Helmet>
+  <title>Contact Novarsis Technology | Get in Touch With Our IT Experts</title>
+
+  <meta
+    name="description"
+    content="Contact Novarsis Technology for web development, app development, digital marketing, and IT solutions. Reach out via phone, email, or our contact form."
+  />
+
+  <meta
+    name="keywords"
+    content="Contact Novarsis Technology, IT company contact India, software development company contact, digital marketing agency contact, NovarsisTech support"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/contact" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Get in touch with our IT experts to discuss your project and grow your business with innovative digital solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/contact" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Novarsis Technology" />
+  <meta
+    name="twitter:description"
+    content="Have a project in mind? Contact our team today for professional IT services and solutions."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video

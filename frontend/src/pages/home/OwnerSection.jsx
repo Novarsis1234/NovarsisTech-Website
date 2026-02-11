@@ -1,8 +1,47 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const OwnerSection = () => {
   return (
-    <section className="relative bg-white py-20 px-6 overflow-hidden">
+    <>
+       {/* ================= ADVANCED HELMET SEO ================= */}
+      <Helmet>
+        <title>Founder Message | Anuj Kumar - Novarsis Technology</title>
+
+        <meta
+          name="description"
+          content="Read the founder's message from Anuj Kumar, CEO of Novarsis Technology, sharing vision, innovation, and commitment to modern IT solutions and digital growth."
+        />
+
+        <meta
+          name="keywords"
+          content="Anuj Kumar Novarsis Technology, Founder NovarsisTech, IT company founder message, software company CEO India"
+        />
+
+        <link rel="canonical" href="https://novarsis.com/founder-message" />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Founder Message | Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Discover the vision behind Novarsis Technology from founder Anuj Kumar."
+        />
+        <meta property="og:url" content="https://novarsis.com/founder-message" />
+        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Founder Message - Novarsis Technology" />
+        <meta
+          name="twitter:description"
+          content="A message from Anuj Kumar, Founder & CEO of Novarsis Technology."
+        />
+        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+      </Helmet>
+       <section className="relative bg-white py-20 px-6 overflow-hidden">
       
       {/* Decorative Circles */}
       <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
@@ -29,7 +68,7 @@ const OwnerSection = () => {
         {/* RIGHT : CONTENT */}
         <div className="text-center md:text-left">
           
-          <p className="text-[#008300] font-semibold uppercase tracking-widest text-sm mb-3">
+          <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm mb-3">
             From The Founder
           </p>
 
@@ -46,7 +85,7 @@ const OwnerSection = () => {
             confidently in the digital world.
           </p>
 
-          <h3 className="text-xl font-semibold text-[#008300] mb-1">
+          <h3 className="text-xl font-extrabold text-[#008300] mb-1">
             — Anuj Kumar
           </h3>
 
@@ -67,6 +106,8 @@ const OwnerSection = () => {
         </div>
       </div>
     </section>
+    </>
+   
   );
 };
 

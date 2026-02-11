@@ -1,10 +1,60 @@
 import React from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Project = () => {
   return (
     <>
+   
+
+
+<Helmet>
+  <title>
+    Portfolio & Projects | Software Development Case Studies - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Explore Novarsis Technology portfolio including SEO tools, School Management, Hotel Management, and Tour & Travel systems. Real-world web and software development projects built with modern technologies."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Projects, Software Development Portfolio, Web Development Case Studies, SEO Tool Project, School ERP System, Hotel Management Software, Travel Management System"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/projects" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Our Projects & Portfolio - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Discover real software projects built by Novarsis Technology including AI-powered SEO tools, ERP platforms, hotel automation, and travel management solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/projects" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Novarsis Technology Portfolio & Projects"
+  />
+  <meta
+    name="twitter:description"
+    content="View modern web development and software projects showcasing real business solutions and scalable platforms."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+
       {/* Hero Section */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video

@@ -1,7 +1,49 @@
 import React from "react";
+ import { Helmet } from "react-helmet-async";
 
 const AboutDetails = () => {
   return (
+    <>
+   
+
+<Helmet>
+  <title>Best IT Solution & Services Provider | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Novarsis Technology delivers scalable IT solutions including UI/UX design, SEO, paid advertising, and web development with a global team of experts."
+  />
+
+  <meta
+    name="keywords"
+    content="IT solutions provider, UI UX design company, SEO services India, web design development company, Novarsis Technology services"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/it-services-provider" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Best IT Services Provider - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Scalable and secure IT services powered by global expertise and modern technologies."
+  />
+  <meta property="og:url" content="https://novarsis.com/it-services-provider" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology IT Solutions" />
+  <meta
+    name="twitter:description"
+    content="UI/UX, SEO, and Web Development services designed for performance and growth."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <section
       className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
       style={{
@@ -19,7 +61,7 @@ const AboutDetails = () => {
           transition-transform duration-500 hover:translate-x-2
           text-center lg:text-left"
         >
-          <p className="uppercase tracking-widest font-semibold mb-3 text-sm text-[#008300]">
+          <p className="uppercase tracking-widest font-extrabold mb-3 text-sm text-[#008300]">
             About Our IT Company
           </p>
 
@@ -85,7 +127,7 @@ const AboutDetails = () => {
             <div className="absolute -inset-6 bg-[#008300]/20 blur-3xl rounded-3xl"></div>
 
             <img
-              src="/Images/novarsis-details.webp"
+              src="/Images/AboutService.png"
               alt="IT Services"
               className="relative rounded-2xl shadow-2xl w-full
               border border-[#008300]/30
@@ -108,7 +150,7 @@ const AboutDetails = () => {
         </div>
 
       </div>
-    </section>
+    </section> </>
   );
 };
 

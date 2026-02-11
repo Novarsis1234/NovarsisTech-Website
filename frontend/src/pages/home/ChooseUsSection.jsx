@@ -1,9 +1,49 @@
 import React from "react";
 import { Server, Users } from "lucide-react";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const ChooseUsSection = () => {
   return (
+    <>
+       {/* ================= ADVANCED HELMET SEO ================= */}
+      <Helmet>
+        <title>Why Choose Novarsis Technology | IT Solutions & Software Experts</title>
+
+        <meta
+          name="description"
+          content="Discover why businesses choose Novarsis Technology for reliable, scalable, and innovative IT solutions. Expert team delivering real digital growth."
+        />
+
+        <meta
+          name="keywords"
+          content="Why choose Novarsis Technology, IT company benefits, software development experts, digital solutions company India"
+        />
+
+        <link rel="canonical" href="https://novarsis.com/why-choose-us" />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Why Choose Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Reliable IT solutions, proven results, and an expert team helping businesses scale digitally."
+        />
+        <meta property="og:url" content="https://novarsis.com/why-choose-us" />
+        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Why Choose Novarsis Technology" />
+        <meta
+          name="twitter:description"
+          content="Learn why companies trust Novarsis Technology for innovative software and IT services."
+        />
+        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+      </Helmet>
+   
     <section className="relative bg-white py-20 px-6 md:px-16 overflow-hidden">
       
       {/* Decorative Shapes */}
@@ -23,7 +63,7 @@ const ChooseUsSection = () => {
 
           <Reveal>
             <img
-              src="/Images/novarsis-Why-Choose-Us-Pic.webp"
+              src="/Images/AboutPic3.png"
               alt="Why Choose Us"
               className="relative rounded-3xl shadow-2xl w-full max-w-[500px] object-cover
               transform transition-all duration-700
@@ -36,7 +76,7 @@ const ChooseUsSection = () => {
         <div className="md:w-1/2 w-full space-y-6 text-center md:text-left">
 
           <Reveal>
-            <p className="text-[#008300] font-semibold uppercase tracking-widest text-sm">
+            <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
               Company Benefits
             </p>
           </Reveal>
@@ -101,7 +141,7 @@ const ChooseUsSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section> </>
   );
 };
 

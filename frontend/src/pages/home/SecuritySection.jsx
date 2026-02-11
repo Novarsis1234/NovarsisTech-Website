@@ -10,6 +10,7 @@ import {
   FaPenNib,
 } from "react-icons/fa";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const SecuritySection = () => {
   const services = [
@@ -24,6 +25,47 @@ const SecuritySection = () => {
   ];
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>Advanced Cyber Security & IT Protection | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Protect your digital presence with Novarsis Technology. Advanced cyber security, operational protection, web consultation, and performance-focused IT solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="cyber security services India, IT protection, web security optimization, operational security, Novarsis Technology security solutions"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/security-solutions" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Advanced Security Solutions | Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Empowering your online security with advanced protection, smarter insights, and scalable IT solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/security-solutions" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cyber Security Services - Novarsis Technology" />
+  <meta
+    name="twitter:description"
+    content="Robust cyber security and IT protection solutions designed for performance and reliability."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+    
     <section className="relative bg-[#f9fbff] py-24 px-6 md:px-16 overflow-hidden">
       
       {/* Decorative Background */}
@@ -44,7 +86,7 @@ const SecuritySection = () => {
           <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl
             transform transition duration-700 group-hover:scale-105 group-hover:rotate-1">
             <img
-              src="/Images/novarsis-Protecting-Your-Privacy-Piccc.webp"
+              src="/Images/HomeSecurity.png"
               alt="Cyber Security"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -58,7 +100,7 @@ const SecuritySection = () => {
           <div className="absolute -left-6 top-0 bottom-0 w-1 bg-[#008300] rounded-full hidden md:block"></div>
 
           <Reveal>
-            <p className="text-[#008300] font-semibold mb-2 uppercase tracking-widest text-sm">
+            <p className="text-[#008300] font-extrabold mb-2 uppercase tracking-widest text-sm">
               Advance Protect
             </p>
           </Reveal>
@@ -71,7 +113,7 @@ const SecuritySection = () => {
           </Reveal>
 
           <Reveal>
-            <p className="text-gray-600 mb-10 leading-relaxed max-w-xl">
+            <p className="text-gray-600 mb-10 leading-relaxed max-w-xl text-justify">
               We safeguard your digital presence with robust security solutions,
               ensuring performance, privacy, and reliability using the latest
               technologies and best practices.
@@ -106,7 +148,7 @@ const SecuritySection = () => {
 
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

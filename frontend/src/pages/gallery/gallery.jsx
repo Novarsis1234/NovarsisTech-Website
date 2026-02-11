@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 /* ================= STATIC GALLERY DATA ================= */
 const galleryImages = [
@@ -30,6 +31,45 @@ const Gallery = () => {
 
   return (
     <>
+    
+
+<Helmet>
+  <title>Gallery | Life at Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Explore the Novarsis Technology gallery showcasing team collaboration, development processes, creative culture, and moments that define our innovative IT environment."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology gallery, IT company workspace, software development team culture, office gallery, digital agency environment"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/gallery" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Novarsis Technology Gallery" />
+  <meta
+    property="og:description"
+    content="Discover moments from our workspace, creative team, and digital innovation journey."
+  />
+  <meta property="og:url" content="https://novarsis.com/gallery" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Life at Novarsis Technology" />
+  <meta
+    name="twitter:description"
+    content="A visual journey into our culture, teamwork, and software development environment."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video

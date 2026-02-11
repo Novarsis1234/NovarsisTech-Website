@@ -4,6 +4,7 @@ import { fetchBlogs } from "../../slice/blogSlice";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Reveal from "../../components/Reveal";
+  import { Helmet } from "react-helmet-async";
 
 const BlogSection = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,45 @@ const BlogSection = () => {
 
   return (
     <>
+  
+
+<Helmet>
+  <title>Latest Blogs & Tech Insights | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Explore the latest blogs, technology insights, SEO strategies, and development trends shared by the Novarsis Technology team to help businesses grow digitally."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology blog, tech insights India, web development blogs, SEO tips, digital marketing articles, software development trends"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/blog" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Latest Blogs - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Read expert insights, development tips, and digital growth strategies from the Novarsis Technology blog."
+  />
+  <meta property="og:url" content="https://novarsis.com/blog" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Blog & Insights" />
+  <meta
+    name="twitter:description"
+    content="Stay updated with modern technology trends, SEO insights, and development knowledge."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video

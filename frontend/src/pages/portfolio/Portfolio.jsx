@@ -1,12 +1,52 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
+   import { Helmet } from "react-helmet-async";
 
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
+ 
+
+<Helmet>
+  <title>Our Portfolio | Novarsis Technology Projects & Case Studies</title>
+
+  <meta
+    name="description"
+    content="Explore the Novarsis Technology portfolio showcasing web development, app development, UI/UX design, digital marketing, and innovative IT projects delivered for clients worldwide."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology portfolio, IT company projects, web development portfolio India, software company case studies, digital agency work"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/portfolio" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Novarsis Technology Portfolio" />
+  <meta
+    property="og:description"
+    content="Discover our latest projects, creative solutions, and successful IT implementations."
+  />
+  <meta property="og:url" content="https://novarsis.com/portfolio" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Portfolio & Projects" />
+  <meta
+    name="twitter:description"
+    content="See how Novarsis Technology delivers modern digital solutions through real client projects."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         {/* Background Video */}

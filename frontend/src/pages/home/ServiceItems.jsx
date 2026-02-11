@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal";
+ import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -78,6 +79,45 @@ const ServiceItems = () => {
   };
 
   return (
+   <>
+
+<Helmet>
+  <title>Professional IT Services | Web, App, SEO & Digital Marketing - Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Explore professional IT services by Novarsis Technology including web development, app development, UI/UX design, CMS solutions, SEO optimization, digital marketing, and graphic designing."
+  />
+
+  <meta
+    name="keywords"
+    content="IT services company India, web development services, app development, SEO optimization, digital marketing agency, UI UX design, Novarsis Technology services"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/professional-it-services" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Professional IT Services - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Web development, app development, SEO, UI/UX, and digital marketing services designed for scalable business growth."
+  />
+  <meta property="og:url" content="https://novarsis.com/professional-it-services" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology IT Services" />
+  <meta
+    name="twitter:description"
+    content="Advanced IT services including web development, SEO, and digital marketing solutions."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
     <section
       className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
       style={{
@@ -178,7 +218,7 @@ const ServiceItems = () => {
 
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

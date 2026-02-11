@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 import {
   FaAndroid,
   FaApple,
@@ -31,6 +32,47 @@ const AppDeveloper = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>App Development Services | Android, iOS & Flutter Apps - Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Professional mobile app development services by Novarsis Technology. We build high-performance Android, iOS, Flutter, and React Native apps with scalable backend and cloud integration."
+  />
+
+  <meta
+    name="keywords"
+    content="app development company India, Android app development, iOS app development, Flutter developers, React Native apps, mobile app agency Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/appdevelopment" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="App Development Services - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Scalable Android & iOS apps built with modern technologies, secure backend systems, and performance-focused UI/UX."
+  />
+  <meta property="og:url" content="https://novarsis.com/appdevelopment" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile App Development | Novarsis Technology" />
+  <meta
+    name="twitter:description"
+    content="Build powerful mobile apps with expert Android, iOS, Flutter & React Native developers."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+  
     <div className="bg-white">
       {/* ================= HERO ================= */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
@@ -275,7 +317,7 @@ const AppDeveloper = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>  </>
   );
 };
 

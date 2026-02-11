@@ -1,11 +1,51 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const ScrollingBanner = () => {
   const text =
     "Grow Digitally With Us * Data-Driven Results * Targeted Strategies * Social Media Success * Search Engine Mastery * Continuous Growth * ";
 
   return (
+    <>
+      {/* ================= ADVANCED HELMET SEO ================= */}
+      <Helmet>
+        <title>Digital Growth & Marketing Solutions | Novarsis Technology</title>
+
+        <meta
+          name="description"
+          content="Boost your digital presence with Novarsis Technology. Data-driven marketing strategies, SEO mastery, and continuous growth solutions for modern businesses."
+        />
+
+        <meta
+          name="keywords"
+          content="digital marketing company, SEO services India, social media marketing, business growth strategies, Novarsis Technology"
+        />
+
+        <link rel="canonical" href="https://novarsis.com/digital-growth" />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Grow Digitally With Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Data-driven results, targeted strategies, and search engine mastery for business growth."
+        />
+        <meta property="og:url" content="https://novarsis.com/digital-growth" />
+        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Growth Solutions - Novarsis Technology" />
+        <meta
+          name="twitter:description"
+          content="Advanced digital marketing and SEO strategies designed for measurable growth."
+        />
+        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+      </Helmet>
+  
     <div className="relative overflow-hidden bg-gradient-to-r from-white via-[#f9fbff] to-white py-4 sm:py-6 md:py-8">
       
       {/* Scrolling Text */}
@@ -62,7 +102,7 @@ const ScrollingBanner = () => {
           </span>
         ))}
       </motion.div>
-    </div>
+    </div>  </>
   );
 };
 

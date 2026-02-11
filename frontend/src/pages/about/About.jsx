@@ -10,11 +10,51 @@ import StepsSection from "./StepsSection";
 import HappyFamilyCarousel from "./HappyFamilyCarousel";
 import Reveal from "../../components/Reveal";
 import AboutParallaxSection from "./AboutParallaxSection";
+  import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div>
+    
       <>
+    
+
+<Helmet>
+  <title>About Novarsis Technology | Innovative IT & Software Solutions Company</title>
+
+  <meta
+    name="description"
+    content="Learn about Novarsis Technology — a leading IT and software development company delivering web development, app solutions, UI/UX design, and digital growth services worldwide."
+  />
+
+  <meta
+    name="keywords"
+    content="About Novarsis Technology, IT company India, software development company, digital solutions agency, web development experts"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/about" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Discover our mission, vision, expert team, and innovative approach to delivering powerful IT solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/about" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Novarsis Technology" />
+  <meta
+    name="twitter:description"
+    content="Meet the team behind Novarsis Technology and explore our journey in building scalable digital solutions."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
         <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
           {/* Background Video */}
           <video
@@ -58,7 +98,7 @@ const About = () => {
         <AboutParallaxSection />
         <HappyFamilyCarousel />
       </>
-    </div>
+
   );
 };
 

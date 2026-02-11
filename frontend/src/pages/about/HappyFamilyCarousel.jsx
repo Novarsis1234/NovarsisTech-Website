@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Reveal from "../../components/Reveal";
+   import { Helmet } from "react-helmet-async";
 
 const logos = [
   "/Images/novarsis-logo1.webp",
@@ -34,6 +35,47 @@ const HappyFamilyCarousel = () => {
   }, []);
 
   return (
+    <>
+ 
+
+<Helmet>
+  <title>Our Clients & Happy Family | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Novarsis Technology is trusted by startups and enterprises worldwide. Explore our happy family of clients who rely on us for scalable software solutions and digital transformation."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology clients, IT company partners, software development clients, digital transformation company India"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/our-clients" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Novarsis Happy Family & Clients" />
+  <meta
+    property="og:description"
+    content="Trusted by businesses worldwide — discover our growing network of happy clients and partners."
+  />
+  <meta property="og:url" content="https://novarsis.com/our-clients" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Clients & Partners" />
+  <meta
+    name="twitter:description"
+    content="A trusted IT partner delivering scalable digital solutions to global clients."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <section className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden">
       
       {/* ===== Decorative Circles (SAME AS STATS SECTION) ===== */}
@@ -96,7 +138,7 @@ const HappyFamilyCarousel = () => {
         </div>
 
       </div>
-    </section>
+    </section> </>
   );
 };
 

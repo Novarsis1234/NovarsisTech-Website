@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 import Reveal from "../../components/Reveal";
 import {
@@ -14,6 +15,55 @@ const WebDeveloper = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+    
+
+<Helmet>
+  <title>
+    Web Development Services | Custom Website Development - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Professional web development services by Novarsis Technology. We build fast, secure, and scalable websites using React, Node.js, modern UI/UX, and SEO-focused architecture."
+  />
+
+  <meta
+    name="keywords"
+    content="web development company India, custom website development, React website developers, Node.js development, SEO friendly websites, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/webdeveloper" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Web Development Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Build modern, responsive, and high-performance websites with Novarsis Technology. Custom web solutions designed for growth."
+  />
+  <meta property="og:url" content="https://novarsis.com/webdeveloper" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Custom Web Development Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Modern web development solutions using React, Node.js and scalable backend architecture."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <div className="bg-white">
 
       {/* ================= HERO ================= */}
@@ -284,7 +334,7 @@ const WebDeveloper = () => {
 </section>
 
 
-    </div>
+    </div> </>
   );
 };
 

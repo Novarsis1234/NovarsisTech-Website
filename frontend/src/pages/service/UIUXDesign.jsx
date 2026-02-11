@@ -21,11 +21,61 @@ import {
   SiFramer,
 } from "react-icons/si";
 import { SiAdobe } from "react-icons/si";
+ import { Helmet } from "react-helmet-async";
 
 const UiUxDesigner = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>
+    UI / UX Design Services | Creative Interface Design - Novarsis Technology
+  </title>
+
+  <meta
+    name="description"
+    content="Professional UI/UX design services by Novarsis Technology. We create modern, user-focused interfaces that improve engagement, usability, and conversion rates."
+  />
+
+  <meta
+    name="keywords"
+    content="UI UX design company, user interface design, user experience design, mobile app UI design, website UI UX services, Novarsis Technology"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/uiuxdesign" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="UI / UX Design Services - Novarsis Technology"
+  />
+  <meta
+    property="og:description"
+    content="Creative and user-focused UI/UX design solutions to enhance digital experiences and improve business growth."
+  />
+  <meta property="og:url" content="https://novarsis.com/uiuxdesign" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="UI UX Design Services | Novarsis Technology"
+  />
+  <meta
+    name="twitter:description"
+    content="Modern UI/UX design for websites and mobile apps focused on usability, performance, and engagement."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <div className="bg-white">
 
       {/* ================= HERO ================= */}
@@ -254,7 +304,7 @@ const UiUxDesigner = () => {
 </section>
 
 
-    </div>
+    </div> </>
   );
 };
 

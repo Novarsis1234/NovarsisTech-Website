@@ -2,6 +2,7 @@ import React from "react";
 import { FaUserTie, FaThumbsUp, FaCalendarAlt, FaSmile } from "react-icons/fa";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { Helmet } from "react-helmet-async";
 
 const StatsSection = () => {
   const { ref, inView } = useInView({
@@ -13,10 +14,48 @@ const StatsSection = () => {
     { icon: <FaUserTie size={34} />, number: 50, label: "Active Clients" },
     { icon: <FaThumbsUp size={34} />, number: 200, label: "Projects Completed" },
     { icon: <FaCalendarAlt size={34} />, number: 8, label: "Glorious Years" },
-    { icon: <FaSmile size={34} />, number: 15, label: "Professional Team" },
+    { icon: <FaSmile size={34} />, number: 50, label: "Professional Team" },
   ];
 
   return (
+    <>
+    <Helmet>
+  <title>Company Statistics & Achievements | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Explore Novarsis Technology's company statistics including active clients, completed projects, expert team, and years of experience delivering advanced IT solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology statistics, IT company achievements, projects completed, professional IT team India, company experience stats"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/company-statistics" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Novarsis Technology Company Statistics" />
+  <meta
+    property="og:description"
+    content="Active clients, completed projects, and years of expertise showcasing our journey in delivering powerful IT solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/company-statistics" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Achievements" />
+  <meta
+    name="twitter:description"
+    content="Discover the milestones and achievements of Novarsis Technology in the IT industry."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
     <section
       ref={ref}
       className="relative overflow-hidden bg-white py-20 px-6 sm:px-10"
@@ -33,7 +72,7 @@ const StatsSection = () => {
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[#008300] font-semibold uppercase tracking-widest text-sm">
+          <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
             Company Statistics
           </p>
 
@@ -85,6 +124,7 @@ const StatsSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

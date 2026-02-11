@@ -6,6 +6,7 @@ import {
   FaChartPie,
 } from "react-icons/fa";
 import Reveal from "../../components/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -40,6 +41,44 @@ const services = [
 
 const ServiceSection = () => {
   return (
+    <>
+    <Helmet>
+  <title>Why Choose Novarsis Technology | Quality IT Services & Expert Team</title>
+
+  <meta
+    name="description"
+    content="Discover why businesses choose Novarsis Technology — quality service, expert team, excellent support, and strategic management for powerful digital growth."
+  />
+
+  <meta
+    name="keywords"
+    content="why choose Novarsis Technology, IT company benefits, expert IT team India, digital solutions company, quality IT services"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/why-choose-novarsis" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Why Choose Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Quality service, expert team, excellent support, and smart management solutions designed for business success."
+  />
+  <meta property="og:url" content="https://novarsis.com/why-choose-novarsis" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology - Trusted IT Partner" />
+  <meta
+    name="twitter:description"
+    content="Complete digital solutions powered by expert professionals and innovative strategies."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+  
     <section className="relative py-24 bg-white overflow-hidden">
 
       {/* Decorative Circles */}
@@ -97,7 +136,7 @@ const ServiceSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section>  </>
   );
 };
 

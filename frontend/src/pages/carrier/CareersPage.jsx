@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCareers } from "../../slice/careerSlice";
 import { motion } from "framer-motion";
 import Reveal from "../../components/Reveal";
+  import { Helmet } from "react-helmet-async";
 
 const CareersPage = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,45 @@ const CareersPage = () => {
 
   return (
     <>
+  
+
+<Helmet>
+  <title>Careers & Job Openings | Novarsis Technology</title>
+
+  <meta
+    name="description"
+    content="Explore current job openings at Novarsis Technology. Join our expert team in web development, app development, digital marketing, UI/UX design, and IT solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology careers, IT jobs India, software developer jobs, digital marketing careers, UI UX jobs, tech company hiring"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/careers" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Careers at Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Join our growing team and build your future with innovative IT projects and digital solutions."
+  />
+  <meta property="og:url" content="https://novarsis.com/careers" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Careers & Jobs" />
+  <meta
+    name="twitter:description"
+    content="Discover exciting career opportunities and grow your professional journey with Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video

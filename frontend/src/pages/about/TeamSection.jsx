@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTeam } from "../../slice/teamSlice";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const TeamPage = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,47 @@ const TeamPage = () => {
   }, [dispatch]);
 
   return (
+    <>
+   
+
+<Helmet>
+  <title>Our Expert Team | Novarsis Technology Professionals</title>
+
+  <meta
+    name="description"
+    content="Meet the expert team behind Novarsis Technology. Our skilled professionals specialize in web development, app solutions, UI/UX design, and scalable digital innovation."
+  />
+
+  <meta
+    name="keywords"
+    content="Novarsis Technology team, IT company professionals, software development experts, web developers India, digital solutions team"
+  />
+
+  <link rel="canonical" href="https://novarsis.com/our-team" />
+
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meet Our Expert Team - Novarsis Technology" />
+  <meta
+    property="og:description"
+    content="Passionate professionals building innovative and scalable IT solutions for businesses worldwide."
+  />
+  <meta property="og:url" content="https://novarsis.com/our-team" />
+  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Novarsis Technology Expert Team" />
+  <meta
+    name="twitter:description"
+    content="Discover the talented team driving innovation and digital growth at Novarsis Technology."
+  />
+  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+</Helmet>
+
+   
     <section className="relative py-24 bg-white overflow-hidden">
       {/* Decorative Circles */}
       <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
@@ -82,7 +124,7 @@ const TeamPage = () => {
           )}
         </div>
       </div>
-    </section>
+    </section> </>
   );
 };
 
