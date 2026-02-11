@@ -9,15 +9,17 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const rememberMe = false;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { loading, error, response, message } = useSelector((state) => state.user);
 
+  /* ================= LOGIN SUCCESS ================= */
   useEffect(() => {
-    const token = response?.data?.access_token;
+    const token = response?.accessToken;
+    const refreshToken = response?.refreshToken;
 
     if (token) {
       if (rememberMe) {
@@ -26,6 +28,11 @@ function Login() {
         sessionStorage.setItem('userToken', token);
       }
 
+      if (refreshToken) {
+        localStorage.setItem('refreshToken', refreshToken);
+      }
+
+      toast.success('Login Successful');
       navigate('/dashboard');
     }
 
@@ -34,20 +41,21 @@ function Login() {
     }
   }, [response, error, message, rememberMe, navigate]);
 
+  /* ================= LOGIN HANDLER ================= */
   const loginHandler = (e) => {
     e.preventDefault();
 
     if (!email || !password) {
-      toast.warning('Email and password required');
+      toast.warning('Username and password are required');
       return;
     }
 
+    // 👇 EMAIL INPUT KO USERNAME ME BHEJ RAHE
     dispatch(
       signin({
         username: email.trim(),
-        email: email.trim(),
-        password,
-        secretKey: process.env.REACT_APP_ADMIN_SECRET
+        password: password,
+        secretkey: process.env.REACT_APP_ADMIN_SECRET
       })
     );
   };
@@ -73,40 +81,21 @@ function Login() {
                       </div>
 
                       <form className="user" onSubmit={loginHandler}>
-                        <div className="form-group">
-                          <input
-                            type="email"
-                            className="form-control form-control-user"
-                            placeholder="Enter Email Address..."
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                          />
-                        </div>
+                        <input
+                          type="text"
+                          className="form-control mb-3"
+                          placeholder="Enter Username / Email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
 
-                        <div className="form-group">
-                          <input
-                            type="password"
-                            className="form-control form-control-user"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <div className="custom-control custom-checkbox small">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="rememberMe"
-                              checked={rememberMe}
-                              onChange={(e) => setRememberMe(e.target.checked)}
-                            />
-                            <label className="custom-control-label" htmlFor="rememberMe">
-                              Remember Me
-                            </label>
-                          </div>
-                        </div>
+                        <input
+                          type="password"
+                          className="form-control mb-3"
+                          placeholder="Password"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
 
                         <Button
                           type="submit"

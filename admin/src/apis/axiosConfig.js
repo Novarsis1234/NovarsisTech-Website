@@ -1,19 +1,17 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL
+  baseURL: process.env.REACT_APP_BACKEND_URL,
+  withCredentials: true
 });
 
-/* =========================
-   REQUEST INTERCEPTOR
-========================= */
+/* ================= REQUEST INTERCEPTOR ================= */
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('userToken') || sessionStorage.getItem('userToken');
 
-    // login / refresh endpoints me token nahi bhejna
-    if (token && !config.url.includes('/auth/')) {
+    // signin & refresh pe token nahi bhejna
+    if (token && !config.url.includes('/admin/signin') && !config.url.includes('/admin/refresh')) {
       config.headers.Authorization = `Bearer ${token}`;
     }
 
@@ -22,9 +20,7 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-/* =========================
-   RESPONSE INTERCEPTOR
-========================= */
+/* ================= RESPONSE INTERCEPTOR ================= */
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -34,21 +30,19 @@ axiosInstance.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        const refreshToken = Cookies.get('refreshToken');
+        const refreshToken = localStorage.getItem('refreshToken');
 
-        const response = await axios.post(
+        const res = await axios.post(
           `${process.env.REACT_APP_BACKEND_URL}/admin/refresh`,
           { token: refreshToken },
           { withCredentials: true }
         );
 
-        const newToken = response.data?.access_token;
+        const newToken = res.data?.accessToken;
 
         if (newToken) {
-          // ✅ SAME KEY
           localStorage.setItem('userToken', newToken);
 
-          // Update headers
           axiosInstance.defaults.headers.Authorization = `Bearer ${newToken}`;
           originalRequest.headers.Authorization = `Bearer ${newToken}`;
 
@@ -56,9 +50,9 @@ axiosInstance.interceptors.response.use(
         }
       } catch (err) {
         localStorage.removeItem('userToken');
+        localStorage.removeItem('refreshToken');
         sessionStorage.removeItem('userToken');
         window.location.href = '/signin';
-        return Promise.reject(err);
       }
     }
 
