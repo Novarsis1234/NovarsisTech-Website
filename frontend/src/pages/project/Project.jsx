@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const Project = () => {
   return (
@@ -739,7 +740,8 @@ const Project = () => {
 `}</style>
           </section>
         </div>
-      </section>
+      </section> 
+      <AutoInternalLinks/>
     </>
   );
 };

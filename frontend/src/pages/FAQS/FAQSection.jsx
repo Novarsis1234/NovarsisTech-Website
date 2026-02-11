@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "../../components/Reveal";
   import { Helmet } from "react-helmet-async";
+  import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 /* ================= STATIC FAQ DATA (10) ================= */
 const faqs = [
@@ -134,6 +135,28 @@ const FAQSection = () => {
       </Reveal>
     </div>
   </section>
+  
+  <section className="sr-only">
+          {" "}
+   <p>
+Our Frequently Asked Questions section helps visitors understand how Novarsis
+Technology delivers reliable IT services and digital solutions. We address
+common queries related to web development, app development, design services,
+SEO strategies, and project timelines. These answers are designed to provide
+clarity about our process, pricing approach, and long-term support services.
+By sharing transparent information, we aim to build trust and help businesses
+make informed decisions before starting their digital journey with us.
+
+Each FAQ reflects real challenges faced by modern businesses and highlights
+how our team provides efficient solutions using advanced technologies and
+creative strategies. Whether you are planning a new website, launching a
+mobile app, or improving your online marketing performance, our FAQ section
+serves as a helpful resource to guide you through every step.
+</p>
+
+
+        </section>
+   
 
   {/* ================= FAQ + IMAGE SECTION ================= */}
   <section className="relative bg-white overflow-hidden">
@@ -230,7 +253,7 @@ const FAQSection = () => {
     </div>
   </div>
 </section>
-
+<AutoInternalLinks/>
 </>
 
   );

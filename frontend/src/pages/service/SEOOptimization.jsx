@@ -100,7 +100,32 @@ const SEOOptimization = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+      
+           <section className="sr-only"> <p>
+Our SEO optimization services are designed to improve your website’s visibility
+on search engines and attract high-quality organic traffic. At Novarsis
+Technology, we use modern SEO techniques that combine technical optimization,
+content strategy, and performance analysis to help your business rank higher
+in search results. Our approach focuses on long-term growth rather than short-
+term tactics.
+
+We conduct in-depth keyword research, optimize website structure, improve page
+speed, and enhance on-page elements such as headings, meta tags, and internal
+linking. Our team also works on content optimization and backlink strategies
+to strengthen your website’s authority and relevance. By monitoring analytics
+and search trends, we continuously refine strategies to deliver consistent
+improvement.
+
+With a focus on user experience and search engine guidelines, our SEO services
+help businesses increase visibility, generate leads, and build a strong
+digital foundation that supports sustainable growth.
+</p>
+
+
+
+</section>
 
       {/* ================= INTRO ================= */}
      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

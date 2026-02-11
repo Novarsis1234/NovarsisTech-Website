@@ -96,7 +96,30 @@ const DigitalMarketing = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+           <section className="sr-only"> <p>
+Novarsis Technology provides comprehensive digital marketing services that
+help businesses build strong online visibility and attract targeted audiences.
+Our strategies combine data-driven insights with creative campaigns to deliver
+measurable growth across search engines, social media, and digital platforms.
+We focus on understanding your market, competitors, and audience behavior to
+create marketing strategies that generate real results.
+
+Our services include social media marketing, paid advertising, content
+strategy, and performance tracking. We design campaigns that increase brand
+awareness, drive traffic, and improve conversion rates through continuous
+optimization. By analyzing user engagement and campaign performance, we ensure
+your marketing efforts remain effective and scalable.
+
+With a balance of creativity and analytics, Novarsis Technology helps
+businesses establish a powerful digital presence. Our goal is to create
+sustainable marketing strategies that not only bring visibility but also build
+long-term customer relationships and business growth.
+</p>
+
+
+</section>
 
       {/* ================= INTRO ================= */}
       <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

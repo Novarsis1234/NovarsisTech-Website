@@ -99,7 +99,32 @@ const AppDeveloper = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+      <section className="sr-only">  <p>
+Novarsis Technology delivers high-performance mobile app development services
+for Android, iOS, and cross-platform applications. Our goal is to create
+scalable mobile solutions that combine innovative design, powerful features,
+and smooth performance to enhance user engagement and business growth.
+Whether you need a startup MVP, enterprise application, or customer-focused
+mobile platform, our team builds secure and reliable apps tailored to your
+specific requirements.
+
+We follow a structured development process that includes research, UI/UX
+design, development, testing, and deployment. Our apps are built with modern
+frameworks like React Native and Flutter, allowing faster development while
+maintaining native-level performance. We also integrate real-time databases,
+cloud infrastructure, push notifications, and secure APIs to ensure your app
+remains future-ready.
+
+Beyond development, we assist with Play Store and App Store publishing,
+performance optimization, and long-term maintenance. By combining creative
+design with advanced technology, Novarsis Technology helps businesses launch
+mobile applications that improve customer experience and drive measurable
+results.
+</p>
+</section>
+
 
       {/* ================= INTRO ================= */}
       <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 /* ================= STATIC GALLERY DATA ================= */
 const galleryImages = [
@@ -100,7 +101,28 @@ const Gallery = () => {
             </h1>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+      <section className="sr-only">
+          {" "}
+   <p>
+The Novarsis Technology gallery showcases real moments from our workspace,
+team collaboration, and creative environment. These visuals highlight the
+culture, innovation, and dedication that drive our projects forward. Our team
+believes that a strong work culture leads to better ideas, better solutions,
+and better results for our clients.
+
+From brainstorming sessions to successful project launches, every image
+reflects our commitment to quality and teamwork. The gallery represents the
+human side of technology, where creativity meets technical expertise to build
+modern digital solutions. By sharing these experiences, we give visitors a
+closer look at how our company operates and the passion behind every service
+we provide.
+</p>
+
+
+
+        </section>
 
       {/* ================= GALLERY SECTION ================= */}
       <section className="relative bg-white py-24 px-4 overflow-hidden">
@@ -177,6 +199,8 @@ const Gallery = () => {
     )}
   </div>
 </section>
+  
+  <AutoInternalLinks/>
 
     </>
   );

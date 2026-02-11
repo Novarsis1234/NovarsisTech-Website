@@ -103,7 +103,32 @@ const UiUxDesigner = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+          <section className="sr-only"> <p>
+Our UI and UX design services focus on creating visually engaging and highly
+intuitive digital experiences that improve user satisfaction and brand
+perception. At Novarsis Technology, we believe that design is more than just
+appearance — it is about usability, accessibility, and seamless interaction.
+Our designers research user behavior, analyze business goals, and craft
+interfaces that deliver clarity and efficiency across web and mobile platforms.
+
+We create wireframes, prototypes, and design systems that ensure consistency
+throughout your product. Every element, from typography and color palettes to
+navigation structure and animations, is carefully planned to enhance user
+journeys. Our designs are optimized for speed, responsiveness, and conversion,
+helping businesses turn visitors into loyal customers.
+
+By combining creativity with data-driven insights, we develop UI/UX solutions
+that align with modern trends while maintaining strong usability standards.
+Whether you need a complete product redesign or a new digital interface,
+Novarsis Technology ensures your platform delivers a smooth and memorable
+experience.
+</p>
+
+
+
+</section>
 
       {/* ================= INTRO ================= */}
     <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

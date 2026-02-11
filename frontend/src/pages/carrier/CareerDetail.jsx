@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCareers } from "../../slice/careerSlice";
 import { Briefcase, MapPin, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const CareerDetail = () => {
   const { id } = useParams();
@@ -180,6 +181,7 @@ const CareerDetail = () => {
     </Link>
   </div>
 </section>
+<AutoInternalLinks/>
    </>
   );
 };

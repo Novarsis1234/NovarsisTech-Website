@@ -6,6 +6,7 @@ import { fetchCareers } from "../../slice/careerSlice";
 import { motion } from "framer-motion";
 import Reveal from "../../components/Reveal";
   import { Helmet } from "react-helmet-async";
+  import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const CareersPage = () => {
   const dispatch = useDispatch();
@@ -95,7 +96,32 @@ const CareersPage = () => {
             </h1>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+       <section className="sr-only">
+          {" "}
+<p>
+The careers section at Novarsis Technology provides opportunities for talented
+individuals to join a growing team focused on innovation and digital
+excellence. We believe in creating a work environment that encourages
+learning, collaboration, and professional growth. Our open positions cover a
+wide range of roles including development, design, marketing, and technical
+support.
+
+By joining our team, professionals gain the chance to work on exciting
+projects, explore new technologies, and build meaningful digital solutions.
+We value creativity, dedication, and a passion for problem-solving. Our goal
+is to create a workplace where individuals can grow their skills while
+contributing to impactful projects that help businesses succeed in the
+digital world.
+</p>
+
+
+
+
+
+        </section>
+
 
       {/* ================= CAREERS SECTION ================= */}
    <section className="relative bg-white py-24 px-4 overflow-hidden">
@@ -195,7 +221,7 @@ const CareersPage = () => {
     </div>
   </div>
 </section>
-
+<AutoInternalLinks/>
     </>
   );
 };

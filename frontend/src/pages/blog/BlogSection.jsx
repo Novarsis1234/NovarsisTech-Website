@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Reveal from "../../components/Reveal";
   import { Helmet } from "react-helmet-async";
+import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const BlogSection = () => {
   const dispatch = useDispatch();
@@ -110,7 +111,30 @@ const BlogSection = () => {
           </Reveal>
         </div>
       </section>
+     
+     <section className="sr-only">
+          {" "}
+<p>
+The Novarsis Technology blog shares valuable insights, industry trends, and
+practical knowledge related to web development, mobile applications, digital
+marketing, and modern design practices. Our articles are created to help
+businesses stay updated with the latest technology advancements and make
+better decisions for their digital strategies.
 
+Through detailed guides and expert perspectives, we aim to simplify complex
+technical topics and provide actionable information that businesses can apply
+immediately. Whether you are looking to improve website performance, enhance
+SEO rankings, or explore new digital opportunities, our blog serves as a
+reliable source of knowledge designed to support your growth journey.
+</p>
+
+
+
+
+
+        </section>
+
+     
       {/* ================= BLOG LIST SECTION ================= */}
       <section className="relative bg-white min-h-screen py-24 px-4 md:px-16 overflow-hidden">
 
@@ -191,6 +215,7 @@ const BlogSection = () => {
     </div>
   </div>
 </section>
+<AutoInternalLinks/>
 
     </>
   );

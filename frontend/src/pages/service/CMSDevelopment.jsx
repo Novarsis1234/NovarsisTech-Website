@@ -100,7 +100,30 @@ const CMSDevelopment = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+      <section className="sr-only"> <p>
+Novarsis Technology offers powerful CMS and WordPress development services
+that allow businesses to manage their websites with ease. Our team builds
+custom WordPress solutions that are fast, secure, and fully optimized for
+performance. Whether you need a business website, blog platform, portfolio,
+or advanced CMS-based system, we create flexible solutions that are easy to
+update and scale.
+
+We design custom themes, develop plugins, and integrate modern features that
+enhance both functionality and user experience. Our development process
+focuses on SEO-friendly structure, mobile responsiveness, and clean coding
+practices to ensure long-term reliability. We also provide migration,
+optimization, and security enhancements to improve your website’s stability
+and speed.
+
+With user-friendly dashboards and advanced customization options, our CMS
+solutions empower businesses to control their content without technical
+complexity. From initial setup to ongoing support, Novarsis Technology ensures
+your WordPress platform remains efficient, secure, and aligned with your
+digital growth strategy.
+</p>
+
+</section>
 
       {/* ================= INTRO ================= */}
       <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

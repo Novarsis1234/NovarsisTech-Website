@@ -94,7 +94,28 @@ const GraphicDesigning = () => {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+   <section className="sr-only">   <p>
+Novarsis Technology offers professional graphic designing services that help
+brands communicate their message through visually compelling designs. Our
+creative team develops logos, marketing creatives, social media graphics,
+branding materials, and digital assets that reflect your company’s identity
+and values. Every design is crafted to enhance brand recognition while
+maintaining a modern and professional look.
+
+We focus on combining creativity with strategy to produce designs that not
+only look attractive but also serve a clear business purpose. From concept
+development and color selection to typography and layout design, every detail
+is carefully planned to create impactful visuals. Our designs are optimized
+for both digital and print platforms, ensuring consistency across all brand
+touchpoints.
+
+By blending innovation with market trends, Novarsis Technology helps businesses
+build strong visual identities that attract attention and leave lasting
+impressions on their audience.
+</p></section>
+
 
       {/* ================= INTRO ================= */}
      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

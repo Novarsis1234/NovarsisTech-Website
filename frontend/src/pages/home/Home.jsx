@@ -56,7 +56,27 @@ const Home = () => {
   />
   <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
 </Helmet>
+ <section className="sr-only">
+          {" "}
+        <p>
+Novarsis Technology is a professional IT solutions company offering modern
+digital services including web development, mobile app development, UI/UX
+design, SEO optimization, digital marketing, and graphic designing. Our goal
+is to help businesses build scalable digital platforms that improve online
+visibility, enhance user experience, and drive measurable growth. With a team
+of skilled developers, designers, and marketing experts, we create innovative
+solutions tailored to your business goals.
 
+We focus on performance-driven development, secure architecture, and modern
+design standards to ensure every project delivers long-term value. From
+startups to growing enterprises, our services are designed to help brands
+strengthen their digital presence and stay competitive in the evolving
+technology landscape. By combining creativity, strategy, and advanced tools,
+Novarsis Technology empowers businesses to achieve sustainable digital
+success.
+</p>
+
+        </section>
    
     <div>
       <HomeSectionPage />

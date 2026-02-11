@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
 import { Link } from "react-router-dom";
    import { Helmet } from "react-helmet-async";
+   import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
@@ -80,7 +81,29 @@ const Portfolio = () => {
             </h1>
           </Reveal>
         </div>
-      </section>
+      </section> 
+
+        <section className="sr-only">
+          {" "}
+<p>
+Our company portfolio represents the journey of Novarsis Technology in
+delivering innovative digital solutions across various industries. It
+highlights our expertise in web development, mobile app design, branding,
+digital marketing, and creative design projects. Each project reflects our
+commitment to performance, scalability, and modern design standards.
+
+Through this portfolio, businesses can explore the quality of our work and
+understand how we transform ideas into impactful digital experiences. We focus
+on building solutions that not only look professional but also deliver real
+business value. By combining strategy, creativity, and technology, Novarsis
+Technology continues to create projects that help brands grow in the digital
+world.
+</p>
+
+
+
+
+        </section>
 
       {/* ================= PORTFOLIO CONTENT ================= */}
      <section className="relative bg-white overflow-hidden py-24 px-4">
@@ -155,6 +178,8 @@ const Portfolio = () => {
           </div>
         </div>
       )}
+
+      <AutoInternalLinks/>
     </>
   );
 };

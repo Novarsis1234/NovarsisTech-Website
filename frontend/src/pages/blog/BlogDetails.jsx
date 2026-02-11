@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogById, clearSingleBlog } from "../../slice/blogSlice";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-
+import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -209,7 +209,8 @@ const BlogDetails = () => {
       </Link>
     </div>
   </motion.div>
-</section>
+</section> 
+<AutoInternalLinks/>
 </>
   );
 };
