@@ -2,6 +2,7 @@ import React from "react";
 import {
   FaFacebookF,
   FaLinkedinIn,
+  FaTwitter,
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -9,6 +10,7 @@ import {
 const SocialBar = () => {
   const socialLinks = [
     { icon: <FaFacebookF />, url: "https://www.facebook.com/NovarsisTechindia/" },
+    { icon: <FaTwitter />, url: "https://x.com/novarsistech_" },
     { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/87981778/" },
     {
       icon: <FaWhatsapp />,
@@ -22,7 +24,7 @@ const SocialBar = () => {
       className="
         fixed top-1/2 left-0
         -translate-y-1/2
-        hidden md:flex
+        hidden lg:flex
         flex-col space-y-4
         p-2 z-50
       "

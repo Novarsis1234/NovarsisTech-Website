@@ -7,54 +7,71 @@ import AutoInternalLinks from "../../components/AutoInternalLinks";
 const Project = () => {
   return (
     <>
-   
+      <Helmet>
+        <title>
+          Portfolio & Projects | Software Development Case Studies - Novarsis
+          Technology
+        </title>
 
+        <meta
+          name="description"
+          content="Explore Novarsis Technology portfolio including SEO tools, School Management, Hotel Management, and Tour & Travel systems. Real-world web and software development projects built with modern technologies."
+        />
 
-<Helmet>
-  <title>
-    Portfolio & Projects | Software Development Case Studies - Novarsis Technology
-  </title>
+        <meta
+          name="keywords"
+          content="Novarsis Projects, Software Development Portfolio, Web Development Case Studies, SEO Tool Project, School ERP System, Hotel Management Software, Travel Management System"
+        />
 
-  <meta
-    name="description"
-    content="Explore Novarsis Technology portfolio including SEO tools, School Management, Hotel Management, and Tour & Travel systems. Real-world web and software development projects built with modern technologies."
-  />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/projects" />
 
-  <meta
-    name="keywords"
-    content="Novarsis Projects, Software Development Portfolio, Web Development Case Studies, SEO Tool Project, School ERP System, Hotel Management Software, Travel Management System"
-  />
+        <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://novarsis.com/projects" />
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Our Projects & Portfolio - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="Discover real software projects built by Novarsis Technology including AI-powered SEO tools, ERP platforms, hotel automation, and travel management solutions."
+        />
+        <meta property="og:url" content="https://novarsistech.com/projects" />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Novarsis Technology Portfolio & Projects"
+        />
+        <meta
+          name="twitter:description"
+          content="View modern web development and software projects showcasing real business solutions and scalable platforms."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="Our Projects & Portfolio - Novarsis Technology"
-  />
-  <meta
-    property="og:description"
-    content="Discover real software projects built by Novarsis Technology including AI-powered SEO tools, ERP platforms, hotel automation, and travel management solutions."
-  />
-  <meta property="og:url" content="https://novarsis.com/projects" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="Novarsis Technology Portfolio & Projects"
-  />
-  <meta
-    name="twitter:description"
-    content="View modern web development and software projects showcasing real business solutions and scalable platforms."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
-
+        {/* ✅🔥 PROJECTS / CASE STUDIES SCHEMA */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"CollectionPage",
+        "name":"Novarsis Technology Projects & Portfolio",
+        "url":"https://novarsistech.com/projects",
+        "description":"Software development case studies including SEO tools, ERP systems, hotel automation, and travel management platforms built by Novarsis Technology."
+      }
+    `}
+        </script>
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
@@ -224,7 +241,7 @@ const Project = () => {
             </div>
 
             {/* ================= SCROLL CSS ================= */}
-              <style>{`
+            <style>{`
   .scroll-animation {
     animation: scrollY 14s linear infinite;
     will-change: transform;
@@ -289,7 +306,6 @@ const Project = () => {
                   alt="School Platform Preview"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-             
               </div>
 
               {/* ================= CONTENT + AUTO SCROLL PREVIEW ================= */}
@@ -391,7 +407,7 @@ const Project = () => {
             </div>
 
             {/* ================= SCROLL CSS ================= */}
-           <style>{`
+            <style>{`
   .scroll-animation {
     animation: scrollY 14s linear infinite;
     will-change: transform;
@@ -410,7 +426,6 @@ const Project = () => {
     }
   }
 `}</style>
-
           </section>
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#008300]">
@@ -456,7 +471,6 @@ const Project = () => {
                   alt="Hotel Management Preview"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-             
               </div>
 
               {/* ================= CONTENT + AUTO SCROLL PREVIEW ================= */}
@@ -554,7 +568,7 @@ const Project = () => {
             </div>
 
             {/* ================= SCROLL CSS ================= */}
-               <style>{`
+            <style>{`
   .scroll-animation {
     animation: scrollY 14s linear infinite;
     will-change: transform;
@@ -619,7 +633,6 @@ const Project = () => {
                   alt="Tour & Travel Platform Preview"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-               
               </div>
 
               {/* ================= CONTENT + AUTO SCROLL PREVIEW ================= */}
@@ -719,7 +732,7 @@ const Project = () => {
             </div>
 
             {/* ================= SCROLL CSS ================= */}
-              <style>{`
+            <style>{`
   .scroll-animation {
     animation: scrollY 14s linear infinite;
     will-change: transform;
@@ -740,8 +753,8 @@ const Project = () => {
 `}</style>
           </section>
         </div>
-      </section> 
-      <AutoInternalLinks/>
+      </section>
+      <AutoInternalLinks />
     </>
   );
 };

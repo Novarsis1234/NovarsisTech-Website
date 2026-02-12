@@ -10,9 +10,7 @@ import AutoInternalLinks from "../../components/AutoInternalLinks";
 
 const CareersPage = () => {
   const dispatch = useDispatch();
-  const { careers = [], loading, error } = useSelector(
-    (state) => state.career
-  );
+  const { careers = [], loading, error } = useSelector((state) => state.career);
 
   useEffect(() => {
     dispatch(fetchCareers());
@@ -41,8 +39,50 @@ const CareersPage = () => {
           content="Novarsis Technology careers, IT jobs India, software developer jobs, digital marketing careers, UI UX jobs, tech company hiring"
         />
 
-        <link rel="canonical" href="https://novarsis.com/careers" />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/careers" />
         <meta name="robots" content="index, follow" />
+
+        {/* ✅ OpenGraph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Careers at Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Join Novarsis Technology and build your career in modern IT, development, and digital solutions."
+        />
+        <meta property="og:url" content="https://novarsistech.com/careers" />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Careers & Jobs | Novarsis Technology"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore exciting career opportunities at Novarsis Technology."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅ Career Page Schema (SEO BOOST 🚀) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"WebPage",
+        "name":"Novarsis Technology Careers",
+        "url":"https://novarsistech.com/careers",
+        "description":"Explore job openings and career opportunities at Novarsis Technology."
+      }
+    `}
+        </script>
       </Helmet>
 
       {/* ================= HERO ================= */}
@@ -77,16 +117,15 @@ const CareersPage = () => {
       </section>
 
       {/* ================= SEO INTRO (VISIBLE) ================= */}
-      <section className="bg-white py-14 px-4"> 
-
+      <section className="bg-white py-14 px-4">
         <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
-
           <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+          <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
+          <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
 
           <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-            Job Opportunities at <span className="text-[#008300]">Novarsis Technology</span>
+            Job Opportunities at{" "}
+            <span className="text-[#008300]">Novarsis Technology</span>
           </h2>
 
           <p className="mb-4">
@@ -111,23 +150,20 @@ const CareersPage = () => {
             expand your career and contribute to impactful projects that help
             businesses succeed in the digital world.
           </p>
-
         </div>
       </section>
 
       {/* ================= CAREERS LIST ================= */}
       <section className="relative bg-white py-24 px-4 overflow-hidden">
-
         <h2 className="sr-only">
-          Novarsis Technology Career Opportunities and Current Job Openings in IT Services
+          Novarsis Technology Career Opportunities and Current Job Openings in
+          IT Services
         </h2>
 
-       
         <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
         <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
-
           <div className="text-center mb-16">
             <Reveal>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
@@ -146,61 +182,59 @@ const CareersPage = () => {
           {error && <p className="text-center text-red-500">{error}</p>}
 
           <div className="space-y-10">
-            {careers.length > 0 ? (
-              careers.map((job) => {
-                const jobId = job._id || job.id;
+            {careers.length > 0
+              ? careers.map((job) => {
+                  const jobId = job._id || job.id;
 
-                return (
-                  <motion.div
-                    key={jobId}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-[#008300]/10 transition-all duration-500"
-                  >
-                    {isNewJob(job.createdAt) && (
-                      <span className="inline-block mb-4 bg-[#008300] text-white text-xs px-4 py-1 rounded-full">
-                        New Opening
-                      </span>
-                    )}
-
-                    <h3 className="text-2xl font-bold text-[#008300] mb-4 flex items-center gap-2">
-                      <Briefcase size={20} /> {job.title}
-                    </h3>
-
-                    <div className="flex flex-wrap gap-6 text-gray-600 text-sm mb-5">
-                      <span className="flex items-center gap-1">
-                        <MapPin size={16} /> {job.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock size={16} /> {job.type}
-                      </span>
-                      {job.experience && (
-                        <span>Experience: {job.experience}</span>
-                      )}
-                    </div>
-
-                    <p className="text-gray-700 leading-relaxed line-clamp-4 mb-4">
-                      {job.description}
-                    </p>
-
-                    <Link
-                      to={`/careers/${jobId}`}
-                      className="inline-flex items-center gap-2 text-[#008300] font-semibold hover:gap-3 transition-all"
+                  return (
+                    <motion.div
+                      key={jobId}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                      className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-[#008300]/10 transition-all duration-500"
                     >
-                      View Details →
-                    </Link>
-                  </motion.div>
-                );
-              })
-            ) : (
-              !loading && (
-                <p className="text-center text-gray-500">
-                  No career openings available.
-                </p>
-              )
-            )}
+                      {isNewJob(job.createdAt) && (
+                        <span className="inline-block mb-4 bg-[#008300] text-white text-xs px-4 py-1 rounded-full">
+                          New Opening
+                        </span>
+                      )}
+
+                      <h3 className="text-2xl font-bold text-[#008300] mb-4 flex items-center gap-2">
+                        <Briefcase size={20} /> {job.title}
+                      </h3>
+
+                      <div className="flex flex-wrap gap-6 text-gray-600 text-sm mb-5">
+                        <span className="flex items-center gap-1">
+                          <MapPin size={16} /> {job.location}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock size={16} /> {job.type}
+                        </span>
+                        {job.experience && (
+                          <span>Experience: {job.experience}</span>
+                        )}
+                      </div>
+
+                      <p className="text-gray-700 leading-relaxed line-clamp-4 mb-4">
+                        {job.description}
+                      </p>
+
+                      <Link
+                        to={`/careers/${jobId}`}
+                        className="inline-flex items-center gap-2 text-[#008300] font-semibold hover:gap-3 transition-all"
+                      >
+                        View Details →
+                      </Link>
+                    </motion.div>
+                  );
+                })
+              : !loading && (
+                  <p className="text-center text-gray-500">
+                    No career openings available.
+                  </p>
+                )}
           </div>
         </div>
       </section>

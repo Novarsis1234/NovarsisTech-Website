@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal";
- import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -79,154 +79,184 @@ const ServiceItems = () => {
   };
 
   return (
-   <>
+    <>
+      <Helmet>
+        <title>
+          Professional IT Services | Web, App, SEO & Digital Marketing -
+          Novarsis Technology
+        </title>
 
-<Helmet>
-  <title>Professional IT Services | Web, App, SEO & Digital Marketing - Novarsis Technology</title>
+        <meta
+          name="description"
+          content="Explore professional IT services by Novarsis Technology including web development, app development, UI/UX design, CMS solutions, SEO optimization, digital marketing, and graphic designing."
+        />
 
-  <meta
-    name="description"
-    content="Explore professional IT services by Novarsis Technology including web development, app development, UI/UX design, CMS solutions, SEO optimization, digital marketing, and graphic designing."
-  />
+        <meta
+          name="keywords"
+          content="IT services company India, web development services, app development, SEO optimization, digital marketing agency, UI UX design, Novarsis Technology services"
+        />
 
-  <meta
-    name="keywords"
-    content="IT services company India, web development services, app development, SEO optimization, digital marketing agency, UI UX design, Novarsis Technology services"
-  />
+        {/* ✅ Updated Canonical */}
+        <link
+          rel="canonical"
+          href="https://novarsistech.com/professional-it-services"
+        />
 
-  <link rel="canonical" href="https://novarsis.com/professional-it-services" />
+        <meta name="robots" content="index, follow" />
 
-  <meta name="robots" content="index, follow" />
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Professional IT Services - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="Web development, app development, SEO, UI/UX, and digital marketing services designed for scalable business growth."
+        />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/professional-it-services"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Professional IT Services - Novarsis Technology" />
-  <meta
-    property="og:description"
-    content="Web development, app development, SEO, UI/UX, and digital marketing services designed for scalable business growth."
-  />
-  <meta property="og:url" content="https://novarsis.com/professional-it-services" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Novarsis Technology IT Services" />
+        <meta
+          name="twitter:description"
+          content="Advanced IT services including web development, SEO, and digital marketing solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Novarsis Technology IT Services" />
-  <meta
-    name="twitter:description"
-    content="Advanced IT services including web development, SEO, and digital marketing solutions."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
+        {/* ✅🔥 PROFESSIONAL SERVICES COLLECTION SCHEMA */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"CollectionPage",
+        "name":"Professional IT Services - Novarsis Technology",
+        "url":"https://novarsistech.com/professional-it-services",
+        "description":"Professional IT services including web development, app development, UI/UX design, SEO optimization, digital marketing, and graphic designing by Novarsis Technology."
+      }
+    `}
+        </script>
+      </Helmet>
 
-   <section
-  className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/Images/parallex5.jpg')",
-  }}
->
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Professional IT Services by Novarsis Technology – Web Development, Branding, SEO Solutions
-  </h2>
-
-  {/* OVERLAY */}
-  <div className="absolute inset-0 bg-black/70"></div>
-
-  {/* CONTENT */}
-  <div className="relative z-10">
-
-    {/* HEADER */}
-    <div className="text-center mb-14 px-6">
-      <Reveal>
-        <h4 className="text-[#008300] font-extrabold uppercase tracking-wide">
-          What We’re Offering
-        </h4>
-      </Reveal>
-
-      <Reveal>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
-          Dealing in all Professional IT Services
+      <section
+        className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/Images/parallex5.jpg')",
+        }}
+      >
+        {/* ⭐ Hidden SEO Heading */}
+        <h2 className="sr-only">
+          Professional IT Services by Novarsis Technology – Web Development,
+          Branding, SEO Solutions
         </h2>
-      </Reveal>
-    </div>
 
-    {/* SLIDER WRAPPER */}
-    <div className="relative max-w-7xl mx-auto px-6">
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* LEFT BUTTON */}
-      <button
-        onClick={prevSlide}
-        disabled={index === 0}
-        className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2
+        {/* CONTENT */}
+        <div className="relative z-10">
+          {/* HEADER */}
+          <div className="text-center mb-14 px-6">
+            <Reveal>
+              <h4 className="text-[#008300] font-extrabold uppercase tracking-wide">
+                What We’re Offering
+              </h4>
+            </Reveal>
+
+            <Reveal>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">
+                Dealing in all Professional IT Services
+              </h2>
+            </Reveal>
+          </div>
+
+          {/* SLIDER WRAPPER */}
+          <div className="relative max-w-7xl mx-auto px-6">
+            {/* LEFT BUTTON */}
+            <button
+              onClick={prevSlide}
+              disabled={index === 0}
+              className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2
         w-12 h-12 rounded-full bg-[#008300] text-white
         items-center justify-center shadow-lg
         hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
-      >
-        <FaChevronLeft />
-      </button>
+            >
+              <FaChevronLeft />
+            </button>
 
-      {/* RIGHT BUTTON */}
-      <button
-        onClick={nextSlide}
-        disabled={index + visibleCards >= services.length}
-        className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2
+            {/* RIGHT BUTTON */}
+            <button
+              onClick={nextSlide}
+              disabled={index + visibleCards >= services.length}
+              className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2
         w-12 h-12 rounded-full bg-[#008300] text-white
         items-center justify-center shadow-lg
         hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
-      >
-        <FaChevronRight />
-      </button>
+            >
+              <FaChevronRight />
+            </button>
 
-      {/* CARDS */}
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {services.slice(index, index + visibleCards).map((service, i) => (
-          <div
-            key={i}
-            className="group bg-white rounded-2xl shadow-md 
+            {/* CARDS */}
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              {services.slice(index, index + visibleCards).map((service, i) => (
+                <div
+                  key={i}
+                  className="group bg-white rounded-2xl shadow-md 
             hover:shadow-2xl transition-all duration-500 
             transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
-          >
-            {/* IMAGE */}
-            <div className="relative">
-              <img
-                src={service.img}
-                alt={service.title + " IT Service by Novarsis Technology"}
-                className="w-full h-52 object-cover"
-              />
+                >
+                  {/* IMAGE */}
+                  <div className="relative">
+                    <img
+                      src={service.img}
+                      alt={service.title + " IT Service by Novarsis Technology"}
+                      className="w-full h-52 object-cover"
+                    />
 
-              {/* ICON */}
-              <div className="absolute top-4 right-4 
+                    {/* ICON */}
+                    <div
+                      className="absolute top-4 right-4 
                 bg-[#008300] text-white p-3 rounded-lg shadow-md 
-                group-hover:bg-white group-hover:text-[#008300] transition">
-                {service.icon}
-              </div>
-            </div>
+                group-hover:bg-white group-hover:text-[#008300] transition"
+                    >
+                      {service.icon}
+                    </div>
+                  </div>
 
-            {/* CONTENT */}
-            <div className="p-6">
-              <h3 className="text-lg font-bold text-[#008300] mb-3">
-                {service.title}
-              </h3>
+                  {/* CONTENT */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-[#008300] mb-3">
+                      {service.title}
+                    </h3>
 
-              <p className="text-gray-600 text-sm leading-relaxed text-justify">
-                {service.desc}
-              </p>
+                    <p className="text-gray-600 text-sm leading-relaxed text-justify">
+                      {service.desc}
+                    </p>
 
-              <Link to={service.path}>
-                <div className="mt-5 text-[#008300] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                  <span>Read More</span>
-                  <span>→</span>
+                    <Link to={service.path}>
+                      <div className="mt-5 text-[#008300] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                        <span>Read More</span>
+                        <span>→</span>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-              </Link>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
     </>
   );
 };

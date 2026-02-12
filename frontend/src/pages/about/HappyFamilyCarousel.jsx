@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Reveal from "../../components/Reveal";
-   import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const logos = [
   "/Images/novarsis-logo1.webp",
@@ -36,89 +36,107 @@ const HappyFamilyCarousel = () => {
 
   return (
     <>
- 
+      <Helmet>
+        <title>
+          About Novarsis Technology | Innovative IT & Software Solutions Company
+        </title>
 
+        <meta
+          name="description"
+          content="Learn about Novarsis Technology — a leading IT and software development company delivering web development, app solutions, UI/UX design, and digital growth services worldwide."
+        />
 
-<Helmet>
-  <title>About Novarsis Technology | Innovative IT & Software Solutions Company</title>
+        <meta
+          name="keywords"
+          content="About Novarsis Technology, IT company India, software development company, digital solutions agency, web development experts"
+        />
 
-  <meta
-    name="description"
-    content="Learn about Novarsis Technology — a leading IT and software development company delivering web development, app solutions, UI/UX design, and digital growth services worldwide."
-  />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/about" />
 
-  <meta
-    name="keywords"
-    content="About Novarsis Technology, IT company India, software development company, digital solutions agency, web development experts"
-  />
+        <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://novarsis.com/about" />
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Discover our mission, vision, expert team, and innovative approach to delivering powerful IT solutions."
+        />
+        <meta property="og:url" content="https://novarsistech.com/about" />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Novarsis Technology" />
+        <meta
+          name="twitter:description"
+          content="Meet the team behind Novarsis Technology and explore our journey in building scalable digital solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Novarsis Technology" />
-  <meta
-    property="og:description"
-    content="Discover our mission, vision, expert team, and innovative approach to delivering powerful IT solutions."
-  />
-  <meta property="og:url" content="https://novarsis.com/about" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        {/* ✅🔥 ABOUT PAGE SCHEMA (SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"AboutPage",
+        "name":"About Novarsis Technology",
+        "url":"https://novarsistech.com/about",
+        "description":"About Novarsis Technology — innovative IT and software solutions company."
+      }
+    `}
+        </script>
+      </Helmet>
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Novarsis Technology" />
-  <meta
-    name="twitter:description"
-    content="Meet the team behind Novarsis Technology and explore our journey in building scalable digital solutions."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
-   
-   <section className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden">
-  
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Novarsis Technology Clients and Happy Family – Trusted IT Company Partnerships
-  </h2>
-
-  {/* ===== Decorative Circles (SAME AS STATS SECTION) ===== */}
-  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
-
-  {/* ===== CONTENT ===== */}
-  <div className="relative z-10 max-w-7xl mx-auto">
-
-    {/* Heading */}
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <Reveal>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-black">
-          Novarsis <span className="text-[#008300]">Happy Family</span>
+      <section className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden">
+        {/* ⭐ Hidden SEO Heading */}
+        <h2 className="sr-only">
+          Novarsis Technology Clients and Happy Family – Trusted IT Company
+          Partnerships
         </h2>
-      </Reveal>
 
-      <Reveal>
-        <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
-          Trusted by startups, growing businesses, and enterprises who rely
-          on Novarsis Technology for scalable software solutions, digital
-          transformation, and long-term partnerships.
-        </p>
-      </Reveal>
-    </div>
+        {/* ===== Decorative Circles (SAME AS STATS SECTION) ===== */}
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
 
-    {/* Carousel */}
-    <div
-      ref={scrollRef}
-      className="flex overflow-hidden whitespace-nowrap w-full"
-    >
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="inline-block w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex-shrink-0 p-6"
-        >
+        {/* ===== CONTENT ===== */}
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Heading */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Reveal>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-black">
+                Novarsis <span className="text-[#008300]">Happy Family</span>
+              </h2>
+            </Reveal>
+
+            <Reveal>
+              <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
+                Trusted by startups, growing businesses, and enterprises who
+                rely on Novarsis Technology for scalable software solutions,
+                digital transformation, and long-term partnerships.
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Carousel */}
           <div
-            className="
+            ref={scrollRef}
+            className="flex overflow-hidden whitespace-nowrap w-full"
+          >
+            {logos.map((logo, index) => (
+              <div
+                key={index}
+                className="inline-block w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex-shrink-0 p-6"
+              >
+                <div
+                  className="
               flex justify-center items-center h-28
               bg-white rounded-2xl
               border border-[#008300]/20
@@ -126,25 +144,24 @@ const HappyFamilyCarousel = () => {
               transition-all duration-500
               hover:-translate-y-2
             "
-          >
-            <img
-              src={logo}
-              alt={`Novarsis Technology Client Company Logo ${index + 1}`}
-              className="
+                >
+                  <img
+                    src={logo}
+                    alt={`Novarsis Technology Client Company Logo ${index + 1}`}
+                    className="
                 w-32 h-20 object-contain
                 grayscale hover:grayscale-0
                 transition-all duration-700
                 hover:scale-110
               "
-            />
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-
-  </div>
-</section>
- </>
+      </section>
+    </>
   );
 };
 

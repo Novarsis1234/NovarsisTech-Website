@@ -43,138 +43,166 @@ const steps = [
 const StepsSection = () => {
   return (
     <>
-    <Helmet>
-  <title>Our Process | How Novarsis Technology Scales Your Business</title>
+      <Helmet>
+        <title>
+          Our Process | How Novarsis Technology Scales Your Business
+        </title>
 
-  <meta
-    name="description"
-    content="Discover the 5-step process used by Novarsis Technology to build, test, launch, and scale powerful digital solutions for businesses worldwide."
-  />
+        <meta
+          name="description"
+          content="Discover the 5-step process used by Novarsis Technology to build, test, launch, and scale powerful digital solutions for businesses worldwide."
+        />
 
-  <meta
-    name="keywords"
-    content="Novarsis Technology process, software development workflow, IT project steps, digital business growth strategy, web development process India"
-  />
+        <meta
+          name="keywords"
+          content="Novarsis Technology process, software development workflow, IT project steps, digital business growth strategy, web development process India"
+        />
 
-  <link rel="canonical" href="https://novarsis.com/our-process" />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/our-process" />
 
-  <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow" />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="How We Scale Your Business - Novarsis Technology" />
-  <meta
-    property="og:description"
-    content="From consultation to launch, explore our proven 5-step process for building scalable IT solutions."
-  />
-  <meta property="og:url" content="https://novarsis.com/our-process" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="How We Scale Your Business - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="From consultation to launch, explore our proven 5-step process for building scalable IT solutions."
+        />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/our-process"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Novarsis Technology Development Process" />
-  <meta
-    name="twitter:description"
-    content="A structured approach to designing, developing, testing, and scaling digital products."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Novarsis Technology Development Process"
+        />
+        <meta
+          name="twitter:description"
+          content="A structured approach to designing, developing, testing, and scaling digital products."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-   <section className="relative bg-white py-24 overflow-hidden">
+        {/* ✅🔥 OUR PROCESS PAGE SCHEMA */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"WebPage",
+        "name":"Our Process - Novarsis Technology",
+        "url":"https://novarsistech.com/our-process",
+        "description":"5-step development process used by Novarsis Technology to build scalable digital solutions."
+      }
+    `}
+        </script>
+      </Helmet>
 
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Novarsis Technology Process – How We Scale Your Business in 5 Steps
-  </h2>
+      <section className="relative bg-white py-24 overflow-hidden">
+        {/* ⭐ Hidden SEO Heading */}
+        <h2 className="sr-only">
+          Novarsis Technology Process – How We Scale Your Business in 5 Steps
+        </h2>
 
-  {/* Header */}
-  <div className="max-w-6xl mx-auto text-center px-6">
-    <Reveal>
-      <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
-        In Just 5 Steps
-      </h4>
-    </Reveal>
+        {/* Header */}
+        <div className="max-w-6xl mx-auto text-center px-6">
+          <Reveal>
+            <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+              In Just 5 Steps
+            </h4>
+          </Reveal>
 
-    <Reveal>
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
-        How We <span className="text-[#008300]">Scale Your Business</span>
-      </h2>
-    </Reveal>
+          <Reveal>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
+              How We <span className="text-[#008300]">Scale Your Business</span>
+            </h2>
+          </Reveal>
 
-    <Reveal>
-      <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
-        From strategy to execution, our proven process helps you build,
-        launch, and scale digital solutions with confidence.
-      </p>
-    </Reveal>
-  </div>
+          <Reveal>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
+              From strategy to execution, our proven process helps you build,
+              launch, and scale digital solutions with confidence.
+            </p>
+          </Reveal>
+        </div>
 
-  {/* Timeline */}
-  <div className="relative max-w-6xl mx-auto mt-20 px-6">
-    
-    {/* Center Line (Desktop only) */}
-    <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gray-200 -translate-x-1/2"></div>
+        {/* Timeline */}
+        <div className="relative max-w-6xl mx-auto mt-20 px-6">
+          {/* Center Line (Desktop only) */}
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gray-200 -translate-x-1/2"></div>
 
-    <div className="space-y-20">
-      {steps.map((step, index) => (
-        <div
-          key={index}
-          className={`relative flex flex-col md:flex-row items-center gap-10
+          <div className="space-y-20">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className={`relative flex flex-col md:flex-row items-center gap-10
             ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
-        >
-          {/* Image */}
-          <div className="md:w-1/2 w-full">
-            <Reveal>
-              <img
-                src={step.image}
-                alt={`${step.title} – Novarsis Technology Business Scaling Step`}
-                className="rounded-2xl shadow-xl w-full object-cover
+              >
+                {/* Image */}
+                <div className="md:w-1/2 w-full">
+                  <Reveal>
+                    <img
+                      src={step.image}
+                      alt={`${step.title} – Novarsis Technology Business Scaling Step`}
+                      className="rounded-2xl shadow-xl w-full object-cover
                 transition-transform duration-500 hover:scale-105"
-              />
-            </Reveal>
-          </div>
+                    />
+                  </Reveal>
+                </div>
 
-          {/* Content Card */}
-          <div className="md:w-1/2 w-full">
-            <Reveal>
-              <div className="bg-white rounded-2xl shadow-xl p-8 relative">
-                
-                {/* Step Badge */}
-                <span className="inline-block mb-3 text-sm font-semibold text-[#008300]">
-                  Step {step.step}
-                </span>
+                {/* Content Card */}
+                <div className="md:w-1/2 w-full">
+                  <Reveal>
+                    <div className="bg-white rounded-2xl shadow-xl p-8 relative">
+                      {/* Step Badge */}
+                      <span className="inline-block mb-3 text-sm font-semibold text-[#008300]">
+                        Step {step.step}
+                      </span>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">
-                  {step.title}
-                </h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">
+                        {step.title}
+                      </h3>
 
-                <p className="text-gray-600 leading-relaxed">
-                  {step.description}
-                </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
 
-                {/* Connector Dot */}
-                <span
-                  className={`hidden md:block absolute top-1/2 w-4 h-4 rounded-full bg-[#008300]
+                      {/* Connector Dot */}
+                      <span
+                        className={`hidden md:block absolute top-1/2 w-4 h-4 rounded-full bg-[#008300]
                     ${index % 2 === 0 ? "-right-12" : "-left-12"}`}
-                ></span>
-              </div>
-            </Reveal>
-          </div>
+                      ></span>
+                    </div>
+                  </Reveal>
+                </div>
 
-          {/* Background Step Number */}
-          <span
-            className={`absolute text-[72px] sm:text-[90px] font-extrabold
+                {/* Background Step Number */}
+                <span
+                  className={`absolute text-[72px] sm:text-[90px] font-extrabold
             text-[#008300]/10 select-none
             ${index % 2 === 0 ? "left-0" : "right-0"}`}
-          >
-            {step.step}
-          </span>
+                >
+                  {step.step}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-   </>
+      </section>
+    </>
   );
 };
 

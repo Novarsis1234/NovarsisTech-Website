@@ -39,8 +39,7 @@ const ApplyForm = () => {
       newErrors.email = "Enter a valid email address.";
     if (!formData.number || !/^\d{10}$/.test(formData.number))
       newErrors.number = "Enter a valid 10-digit mobile number.";
-    if (!formData.experience)
-      newErrors.experience = "Experience is required.";
+    if (!formData.experience) newErrors.experience = "Experience is required.";
     if (!formData.currentCTC) newErrors.currentCTC = "Current CTC is required.";
     if (!formData.expectedCTC)
       newErrors.expectedCTC = "Expected CTC is required.";
@@ -96,9 +95,7 @@ const ApplyForm = () => {
             Application submitted successfully!
           </p>
         )}
-        {error && (
-          <p className="text-red-600 text-center mb-3">{error}</p>
-        )}
+        {error && <p className="text-red-600 text-center mb-3">{error}</p>}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name */}
@@ -172,9 +169,7 @@ const ApplyForm = () => {
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#345bf3] outline-none"
             />
             {errors.currentCTC && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.currentCTC}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.currentCTC}</p>
             )}
           </div>
 
@@ -189,9 +184,7 @@ const ApplyForm = () => {
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#345bf3] outline-none"
             />
             {errors.expectedCTC && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.expectedCTC}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.expectedCTC}</p>
             )}
           </div>
 

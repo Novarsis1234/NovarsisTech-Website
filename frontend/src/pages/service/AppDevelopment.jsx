@@ -33,328 +33,363 @@ const AppDeveloper = () => {
 
   return (
     <>
-   
+      <Helmet>
+        <title>
+          App Development Services | Android, iOS & Flutter Apps - Novarsis
+          Technology
+        </title>
 
-<Helmet>
-  <title>App Development Services | Android, iOS & Flutter Apps - Novarsis Technology</title>
-
-  <meta
-    name="description"
-    content="Professional mobile app development services by Novarsis Technology. We build high-performance Android, iOS, Flutter, and React Native apps with scalable backend and cloud integration."
-  />
-
-  <meta
-    name="keywords"
-    content="app development company India, Android app development, iOS app development, Flutter developers, React Native apps, mobile app agency Novarsis Technology"
-  />
-
-  <link rel="canonical" href="https://novarsis.com/appdevelopment" />
-
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="App Development Services - Novarsis Technology" />
-  <meta
-    property="og:description"
-    content="Scalable Android & iOS apps built with modern technologies, secure backend systems, and performance-focused UI/UX."
-  />
-  <meta property="og:url" content="https://novarsis.com/appdevelopment" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mobile App Development | Novarsis Technology" />
-  <meta
-    name="twitter:description"
-    content="Build powerful mobile apps with expert Android, iOS, Flutter & React Native developers."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
-
-  
-    <div className="bg-white">
-      {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          poster="/Images/bannerImage.png"
+        <meta
+          name="description"
+          content="Professional mobile app development services by Novarsis Technology. We build high-performance Android, iOS, Flutter, and React Native apps with scalable backend and cloud integration."
         />
-        <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
-        <div className="relative z-10 text-center text-white px-6">
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-extrabold">
-              App Development Services
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-              High-performance Android, iOS & cross-platform mobile applications
-              built for scalability and growth.
-            </p>
-          </Reveal>
-        </div>
-      </section> 
+        <meta
+          name="keywords"
+          content="app development company India, Android app development, iOS app development, Flutter developers, React Native apps, mobile app agency Novarsis Technology"
+        />
 
-    
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/appdevelopment" />
 
+        <meta name="robots" content="index, follow" />
 
-      {/* ================= INTRO ================= */}
-      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* Decorative Circles */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="App Development Services - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="Scalable Android & iOS apps built with modern technologies, secure backend systems, and performance-focused UI/UX."
+        />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/appdevelopment"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          {/* LEFT */}
-          <div>
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Mobile App Development | Novarsis Technology"
+        />
+        <meta
+          name="twitter:description"
+          content="Build powerful mobile apps with expert Android, iOS, Flutter & React Native developers."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅🔥 SERVICE SCHEMA (SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "serviceType":"Mobile App Development",
+        "provider":{
+          "@type":"Organization",
+          "name":"Novarsis Technology",
+          "url":"https://novarsistech.com"
+        },
+        "areaServed":"Worldwide",
+        "url":"https://novarsistech.com/appdevelopment",
+        "description":"Android, iOS, Flutter, and React Native mobile app development services with scalable backend integration."
+      }
+    `}
+        </script>
+      </Helmet>
+      <div className="bg-white">
+        {/* ================= HERO ================= */}
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/Images/banner.mp4"
+            autoPlay
+            loop
+            muted
+            poster="/Images/bannerImage.png"
+          />
+          <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
+
+          <div className="relative z-10 text-center text-white px-6">
             <Reveal>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-                Mobile App Development
-              </h2>
+              <h1 className="text-4xl md:text-6xl font-extrabold">
+                App Development Services
+              </h1>
             </Reveal>
-
             <Reveal>
-              <ul className="space-y-4 text-gray-700 text-lg">
-                {[
-                  "Android & iOS native app development",
-                  "Cross-platform apps using modern frameworks",
-                  "Secure backend & real-time database integration",
-                  "UI/UX focused on performance & usability",
-                  "App Store & Play Store deployment support",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-[#008300] text-xl font-bold">✔</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
+                High-performance Android, iOS & cross-platform mobile
+                applications built for scalability and growth.
+              </p>
             </Reveal>
           </div>
+        </section>
 
-          {/* RIGHT IMAGE (CIRCLE) */}
-          <Reveal>
-            <div className="flex justify-center md:justify-end">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
-                <img
-                  src="/Images/s-appdevelopment3.png"
-                  alt="App Development"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        {/* ================= INTRO ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circles */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* LEFT */}
+            <div>
+              <Reveal>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
+                  Mobile App Development
+                </h2>
+              </Reveal>
+
+              <Reveal>
+                <ul className="space-y-4 text-gray-700 text-lg">
+                  {[
+                    "Android & iOS native app development",
+                    "Cross-platform apps using modern frameworks",
+                    "Secure backend & real-time database integration",
+                    "UI/UX focused on performance & usability",
+                    "App Store & Play Store deployment support",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-[#008300] text-xl font-bold">
+                        ✔
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
-          </Reveal>
-        </div>
-      </section>
 
-      {/* ================= DESCRIPTION ================= */}
-      <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* Decorative Circle */}
-        <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <Reveal>
-            <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
-              Our app development services focus on building fast, scalable, and
-              user-centric mobile applications tailored to your business needs.
-              From idea validation and UI/UX design to development, testing, and
-              deployment, we manage the complete app lifecycle. We create
-              high-performance native and cross-platform apps with secure APIs,
-              cloud integration, and real-time features that ensure reliability,
-              smooth performance, and long-term scalability.
-            </p>
-          </Reveal>
-
-          <Reveal>
-            <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
-              {[
-                "Native & cross-platform mobile apps",
-                "High-performance & scalable architecture",
-                "Secure APIs & cloud integration",
-                "App Store & Play Store publishing",
-                "Real-time database & push notifications",
-                "Maintenance & long-term support",
-              ].map((point, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <span className="text-[#008300] text-xl font-bold">✔</span>
-                  {point}
+            {/* RIGHT IMAGE (CIRCLE) */}
+            <Reveal>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                  <img
+                    src="/Images/s-appdevelopment3.png"
+                    alt="App Development"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-      {/* ================= STATS ================= */}
-      <section className="py-20 px-6 bg-[#008300] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-          <Stat icon={<FaUsers />} value="50+" label="Happy Clients" />
-          <Stat
-            icon={<FaProjectDiagram />}
-            value="60+"
-            label="Apps Delivered"
-          />
-          <Stat icon={<FaClock />} value="8+" label="Years Experience" />
-          <Stat icon={<FaStar />} value="4.8/5" label="App Rating" />
-        </div>
-      </section>
+        {/* ================= DESCRIPTION ================= */}
+        <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circle */}
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
 
-      {/* ================= APP TECHNOLOGIES ================= */}
-      <SkillSection
-        title="App Technologies"
-        desc="Modern mobile app technologies used to build fast, scalable, and secure applications."
-        bg="bg-white"
-        skills={[
-          { icon: <FaAndroid />, name: "Android" },
-          { icon: <FaApple />, name: "iOS" },
-          { icon: <FaReact />, name: "React Native" },
-          { icon: <SiFlutter />, name: "Flutter" },
-          { icon: <SiKotlin />, name: "Kotlin" },
-          { icon: <FaSwift />, name: "Swift" },
-          { icon: <FaJava />, name: "Java" },
-          { icon: <FaMobileAlt />, name: "Hybrid Apps" },
-        ]}
-      />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <Reveal>
+              <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
+                Our app development services focus on building fast, scalable,
+                and user-centric mobile applications tailored to your business
+                needs. From idea validation and UI/UX design to development,
+                testing, and deployment, we manage the complete app lifecycle.
+                We create high-performance native and cross-platform apps with
+                secure APIs, cloud integration, and real-time features that
+                ensure reliability, smooth performance, and long-term
+                scalability.
+              </p>
+            </Reveal>
 
-      {/* ================= BACKEND ================= */}
-      <SkillSection
-        title="Backend & Databases"
-        desc="Robust backend systems and databases for mobile applications."
-        bg="bg-[#f6fff6]"
-        skills={[
-          { icon: <FaNodeJs />, name: "Node.js" },
-          { icon: <SiFirebase />, name: "Firebase" },
-          { icon: <SiMongodb />, name: "MongoDB" },
-          { icon: <SiMysql />, name: "MySQL" },
-          { icon: <SiPostgresql />, name: "PostgreSQL" },
-          { icon: <FaDatabase />, name: "SQLite" },
-        ]}
-      />
+            <Reveal>
+              <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
+                {[
+                  "Native & cross-platform mobile apps",
+                  "High-performance & scalable architecture",
+                  "Secure APIs & cloud integration",
+                  "App Store & Play Store publishing",
+                  "Real-time database & push notifications",
+                  "Maintenance & long-term support",
+                ].map((point, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-[#008300] text-xl font-bold">✔</span>
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-      {/* ================= CLOUD ================= */}
-      <SkillSection
-        title="Cloud & DevOps"
-        desc="Cloud infrastructure and DevOps tools for scalability and performance."
-        bg="bg-white"
-        skills={[
-          { icon: <FaAws />, name: "AWS" },
-          { icon: <FaDocker />, name: "Docker" },
-          { icon: <FaGithub />, name: "GitHub" },
-        ]}
-      />
+        {/* ================= STATS ================= */}
+        <section className="py-20 px-6 bg-[#008300] text-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            <Stat icon={<FaUsers />} value="50+" label="Happy Clients" />
+            <Stat
+              icon={<FaProjectDiagram />}
+              value="60+"
+              label="Apps Delivered"
+            />
+            <Stat icon={<FaClock />} value="8+" label="Years Experience" />
+            <Stat icon={<FaStar />} value="4.8/5" label="App Rating" />
+          </div>
+        </section>
 
-      {/* ================= FAQ ================= */}
-      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* DECORATIVE LAYERED SQUARES (Responsive Safe) */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-        <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+        {/* ================= APP TECHNOLOGIES ================= */}
+        <SkillSection
+          title="App Technologies"
+          desc="Modern mobile app technologies used to build fast, scalable, and secure applications."
+          bg="bg-white"
+          skills={[
+            { icon: <FaAndroid />, name: "Android" },
+            { icon: <FaApple />, name: "iOS" },
+            { icon: <FaReact />, name: "React Native" },
+            { icon: <SiFlutter />, name: "Flutter" },
+            { icon: <SiKotlin />, name: "Kotlin" },
+            { icon: <FaSwift />, name: "Swift" },
+            { icon: <FaJava />, name: "Java" },
+            { icon: <FaMobileAlt />, name: "Hybrid Apps" },
+          ]}
+        />
 
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+        {/* ================= BACKEND ================= */}
+        <SkillSection
+          title="Backend & Databases"
+          desc="Robust backend systems and databases for mobile applications."
+          bg="bg-[#f6fff6]"
+          skills={[
+            { icon: <FaNodeJs />, name: "Node.js" },
+            { icon: <SiFirebase />, name: "Firebase" },
+            { icon: <SiMongodb />, name: "MongoDB" },
+            { icon: <SiMysql />, name: "MySQL" },
+            { icon: <SiPostgresql />, name: "PostgreSQL" },
+            { icon: <FaDatabase />, name: "SQLite" },
+          ]}
+        />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          {/* IMAGE */}
-          <Reveal>
-            <div className="relative max-w-md mx-auto md:max-w-none">
-              <div
-                className="absolute inset-0 bg-[#008300]/10 
+        {/* ================= CLOUD ================= */}
+        <SkillSection
+          title="Cloud & DevOps"
+          desc="Cloud infrastructure and DevOps tools for scalability and performance."
+          bg="bg-white"
+          skills={[
+            { icon: <FaAws />, name: "AWS" },
+            { icon: <FaDocker />, name: "Docker" },
+            { icon: <FaGithub />, name: "GitHub" },
+          ]}
+        />
+
+        {/* ================= FAQ ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* DECORATIVE LAYERED SQUARES (Responsive Safe) */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* IMAGE */}
+            <Reveal>
+              <div className="relative max-w-md mx-auto md:max-w-none">
+                <div
+                  className="absolute inset-0 bg-[#008300]/10 
                         rounded-[40px] -rotate-3"
-              ></div>
+                ></div>
 
-              <img
-                src="/Images/s-appdevelopment2.png"
-                alt="FAQ"
-                className="
+                <img
+                  src="/Images/s-appdevelopment2.png"
+                  alt="FAQ"
+                  className="
             relative z-10
             w-full
             rounded-[40px]
             shadow-2xl
           "
-              />
-            </div>
-          </Reveal>
-
-          {/* FAQ CONTENT */}
-          <div>
-            <Reveal>
-              <h2 className="text-3xl font-bold text-[#008300] mb-8">
-                App Development FAQs
-              </h2>
+                />
+              </div>
             </Reveal>
 
-            {[
-              {
-                q: "How long does app development take?",
-                a: "15–45 days depending on features.",
-              },
-              {
-                q: "Do you publish apps on Play Store & App Store?",
-                a: "Yes, complete deployment support.",
-              },
-              {
-                q: "Do you provide maintenance?",
-                a: "Yes, long-term support & updates.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="mb-4 bg-white rounded-xl shadow">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex justify-between items-center p-5 font-semibold"
-                >
-                  {item.q}
-                  <FaChevronDown
-                    className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
-                  />
-                </button>
+            {/* FAQ CONTENT */}
+            <div>
+              <Reveal>
+                <h2 className="text-3xl font-bold text-[#008300] mb-8">
+                  App Development FAQs
+                </h2>
+              </Reveal>
 
-                {openFaq === i && (
-                  <div className="px-5 pb-5 text-gray-600">{item.a}</div>
-                )}
-              </div>
-            ))}
+              {[
+                {
+                  q: "How long does app development take?",
+                  a: "15–45 days depending on features.",
+                },
+                {
+                  q: "Do you publish apps on Play Store & App Store?",
+                  a: "Yes, complete deployment support.",
+                },
+                {
+                  q: "Do you provide maintenance?",
+                  a: "Yes, long-term support & updates.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="mb-4 bg-white rounded-xl shadow">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex justify-between items-center p-5 font-semibold"
+                  >
+                    {item.q}
+                    <FaChevronDown
+                      className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
+                    />
+                  </button>
+
+                  {openFaq === i && (
+                    <div className="px-5 pb-5 text-gray-600">{item.a}</div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section> 
+        </section>
 
-      {/* ================= MOBILE APP SEO INTRO ================= */}
-<section className="bg-white py-16 px-6">
-  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+        {/* ================= MOBILE APP SEO INTRO ================= */}
+        <section className="bg-white py-16 px-6">
+          <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              Mobile App Development Services{" "}
+              <span className="text-[#008300]">by Novarsis Technology</span>
+            </h2>
 
-    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-      Mobile App Development Services <span className="text-[#008300]">by Novarsis Technology</span>
-    </h2>
+            <p className="mb-4">
+              Novarsis Technology delivers high-performance mobile app
+              development services for Android, iOS, and cross-platform
+              applications. Our goal is to create scalable mobile solutions that
+              combine innovative design, powerful features, and smooth
+              performance to enhance user engagement and business growth.
+            </p>
 
-    <p className="mb-4">
-      Novarsis Technology delivers high-performance mobile app development
-      services for Android, iOS, and cross-platform applications. Our goal is
-      to create scalable mobile solutions that combine innovative design,
-      powerful features, and smooth performance to enhance user engagement and
-      business growth.
-    </p>
+            <p className="mb-4">
+              Whether you need a startup MVP, enterprise application, or
+              customer-focused mobile platform, our team builds secure and
+              reliable apps tailored to your specific requirements. We follow a
+              structured development process including research, UI/UX design,
+              development, testing, and deployment.
+            </p>
 
-    <p className="mb-4">
-      Whether you need a startup MVP, enterprise application, or customer-focused
-      mobile platform, our team builds secure and reliable apps tailored to your
-      specific requirements. We follow a structured development process including
-      research, UI/UX design, development, testing, and deployment.
-    </p>
-
-    <p>
-      Using modern frameworks like React Native and Flutter, we deliver apps with
-      native-level performance, cloud integrations, and SEO-friendly architecture.
-      Novarsis Technology helps businesses launch mobile applications that improve
-      customer experience and drive measurable results.
-    </p>
-
-  </div>
-</section>
-
-    </div>  </>
+            <p>
+              Using modern frameworks like React Native and Flutter, we deliver
+              apps with native-level performance, cloud integrations, and
+              SEO-friendly architecture. Novarsis Technology helps businesses
+              launch mobile applications that improve customer experience and
+              drive measurable results.
+            </p>
+          </div>
+        </section>
+      </div>{" "}
+    </>
   );
 };
 

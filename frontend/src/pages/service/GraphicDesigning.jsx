@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Reveal from "../../components/Reveal";
- import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import {
   FaPaintBrush,
   FaPalette,
@@ -20,302 +20,331 @@ const GraphicDesigning = () => {
 
   return (
     <>
-   
+      <Helmet>
+        <title>
+          Graphic Designing Services | Creative Branding & Visual Design -
+          Novarsis Technology
+        </title>
 
-<Helmet>
-  <title>
-    Graphic Designing Services | Creative Branding & Visual Design - Novarsis Technology
-  </title>
-
-  <meta
-    name="description"
-    content="Professional Graphic Designing Services by Novarsis Technology. We create logos, branding, social media creatives, marketing visuals, and modern UI graphics that elevate your brand identity."
-  />
-
-  <meta
-    name="keywords"
-    content="Graphic Designing Services, Logo Design, Branding Design, Creative Design Agency, Social Media Design, UI Graphics, Novarsis Technology"
-  />
-
-  <link rel="canonical" href="https://novarsis.com/graphicdesigning" />
-
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="Graphic Designing Services - Novarsis Technology"
-  />
-  <meta
-    property="og:description"
-    content="Creative graphic design solutions including logo design, branding, marketing visuals, and professional digital creatives to grow your business."
-  />
-  <meta property="og:url" content="https://novarsis.com/graphicdesigning" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="Graphic Designing Services | Novarsis Technology"
-  />
-  <meta
-    name="twitter:description"
-    content="Enhance your brand identity with professional graphic design services from Novarsis Technology."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
-
-   
-    <div className="bg-white">
-
-      {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          poster="/Images/bannerImage.png" 
+        <meta
+          name="description"
+          content="Professional Graphic Designing Services by Novarsis Technology. We create logos, branding, social media creatives, marketing visuals, and modern UI graphics that elevate your brand identity."
         />
-        <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
-        <div className="relative z-10 text-center text-white px-6">
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-extrabold">
-              Graphic Designing Services
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-              Creative, impactful and brand-focused graphic design solutions.
-            </p>
-          </Reveal>
-        </div>
-      </section> 
+        <meta
+          name="keywords"
+          content="Graphic Designing Services, Logo Design, Branding Design, Creative Design Agency, Social Media Design, UI Graphics, Novarsis Technology"
+        />
 
-  
+        {/* ✅ Updated Canonical */}
+        <link
+          rel="canonical"
+          href="https://novarsistech.com/graphicdesigning"
+        />
 
-      {/* ================= INTRO ================= */}
-     <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
-  {/* Decorative Circles */}
-  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+        <meta name="robots" content="index, follow" />
 
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Graphic Designing Services - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="Creative graphic design solutions including logo design, branding, marketing visuals, and professional digital creatives to grow your business."
+        />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/graphicdesigning"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-    {/* LEFT */}
-    <div>
-      <Reveal>
-        <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-          Graphic Designing
-        </h2>
-      </Reveal>
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Graphic Designing Services | Novarsis Technology"
+        />
+        <meta
+          name="twitter:description"
+          content="Enhance your brand identity with professional graphic design services from Novarsis Technology."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-      <Reveal>
-        <ul className="space-y-4 text-gray-700 text-lg">
-          {[
-            "Creative & brand-driven designs",
-            "Modern visuals with strong impact",
-            "Marketing & social media creatives",
-            "Print & digital design solutions",
-            "Consistent brand identity",
-          ].map((item, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="text-[#008300] text-xl font-bold">✔</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </Reveal>
-    </div>
-
-    {/* RIGHT IMAGE (CIRCLE) */}
-    <Reveal>
-      <div className="flex justify-center md:justify-end">
-        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
-          <img
-            src="/Images/s-GD2.png"
-            alt="Graphic Designing"
-            className="w-full h-full object-cover"
+        {/* ✅🔥 SERVICE SCHEMA (GRAPHIC DESIGN SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "serviceType":"Graphic Designing Services",
+        "provider":{
+          "@type":"Organization",
+          "name":"Novarsis Technology",
+          "url":"https://novarsistech.com"
+        },
+        "areaServed":"Worldwide",
+        "url":"https://novarsistech.com/graphicdesigning",
+        "description":"Logo design, branding, social media creatives, marketing visuals, and modern graphic designing services by Novarsis Technology."
+      }
+    `}
+        </script>
+      </Helmet>
+      <div className="bg-white">
+        {/* ================= HERO ================= */}
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/Images/banner.mp4"
+            autoPlay
+            loop
+            muted
+            poster="/Images/bannerImage.png"
           />
-        </div>
-      </div>
-    </Reveal>
+          <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
-  </div>
-</section>
-
-
-{/* ================= DESCRIPTION ================= */}
-<section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
-  {/* Decorative Circle */}
-  <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-
-  <div className="max-w-7xl mx-auto relative z-10">
-
-    <Reveal>
-      <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
-        Our graphic designing services focus on creating visually appealing,
-        meaningful, and brand-aligned designs that communicate your message
-        effectively. From logos and branding to marketing creatives and
-        social media graphics, we ensure every design element enhances
-        your brand identity, engages your audience, and supports your
-        business goals.
-      </p>
-    </Reveal>
-
-    <Reveal>
-      <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
-        {[
-          "Logo & brand identity design",
-          "Social media creatives & ads",
-          "Brochures, banners & posters",
-          "Website & app graphics",
-          "Print & digital media design",
-          "High-quality & scalable assets",
-        ].map((point, index) => (
-          <div key={index} className="flex items-start gap-3">
-            <span className="text-[#008300] text-xl font-bold">✔</span>
-            {point}
+          <div className="relative z-10 text-center text-white px-6">
+            <Reveal>
+              <h1 className="text-4xl md:text-6xl font-extrabold">
+                Graphic Designing Services
+              </h1>
+            </Reveal>
+            <Reveal>
+              <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
+                Creative, impactful and brand-focused graphic design solutions.
+              </p>
+            </Reveal>
           </div>
-        ))}
-      </div>
-    </Reveal>
+        </section>
 
-  </div>
-</section>
+        {/* ================= INTRO ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circles */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
 
-      {/* ================= STATS ================= */}
-      <section className="py-20 px-6 bg-[#008300] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-          <Stat icon={<FaUsers />} value="40+" label="Happy Clients" />
-          <Stat icon={<FaProjectDiagram />} value="60+" label="Design Projects" />
-          <Stat icon={<FaClock />} value="8+" label="Years Experience" />
-          <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
-        </div>
-      </section>
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* LEFT */}
+            <div>
+              <Reveal>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
+                  Graphic Designing
+                </h2>
+              </Reveal>
 
-      {/* ================= DESIGN SERVICES ================= */}
-      <SkillSection
-        title="Graphic Design Services"
-        desc="Professional graphic design services to strengthen your brand."
-        bg="bg-white"
-        skills={[
-          { icon: <FaPalette />, name: "Brand Identity" },
-          { icon: <FaPaintBrush />, name: "Creative Design" },
-          { icon: <FaImage />, name: "Social Media Graphics" },
-          { icon: <FaPenNib />, name: "Logo Design" },
-          { icon: <FaVectorSquare />, name: "Vector Illustrations" },
-          { icon: <FaLayerGroup />, name: "Print & Digital Design" },
-        ]}
-      />
+              <Reveal>
+                <ul className="space-y-4 text-gray-700 text-lg">
+                  {[
+                    "Creative & brand-driven designs",
+                    "Modern visuals with strong impact",
+                    "Marketing & social media creatives",
+                    "Print & digital design solutions",
+                    "Consistent brand identity",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-[#008300] text-xl font-bold">
+                        ✔
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
 
-      {/* ================= FAQ ================= */}
- <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+            {/* RIGHT IMAGE (CIRCLE) */}
+            <Reveal>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                  <img
+                    src="/Images/s-GD2.png"
+                    alt="Graphic Designing"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-  {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
-  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-  <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+        {/* ================= DESCRIPTION ================= */}
+        <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circle */}
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
 
-  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-  <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <Reveal>
+              <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
+                Our graphic designing services focus on creating visually
+                appealing, meaningful, and brand-aligned designs that
+                communicate your message effectively. From logos and branding to
+                marketing creatives and social media graphics, we ensure every
+                design element enhances your brand identity, engages your
+                audience, and supports your business goals.
+              </p>
+            </Reveal>
 
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            <Reveal>
+              <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
+                {[
+                  "Logo & brand identity design",
+                  "Social media creatives & ads",
+                  "Brochures, banners & posters",
+                  "Website & app graphics",
+                  "Print & digital media design",
+                  "High-quality & scalable assets",
+                ].map((point, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-[#008300] text-xl font-bold">✔</span>
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-    {/* IMAGE */}
-    <Reveal>
-      <div className="relative max-w-md mx-auto md:max-w-none">
-        {/* BACK LAYER */}
-        <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
+        {/* ================= STATS ================= */}
+        <section className="py-20 px-6 bg-[#008300] text-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            <Stat icon={<FaUsers />} value="40+" label="Happy Clients" />
+            <Stat
+              icon={<FaProjectDiagram />}
+              value="60+"
+              label="Design Projects"
+            />
+            <Stat icon={<FaClock />} value="8+" label="Years Experience" />
+            <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
+          </div>
+        </section>
 
-        <img
-          src="/Images/s-GD1.png"
-          alt="Graphic Design FAQ"
-          className="
+        {/* ================= DESIGN SERVICES ================= */}
+        <SkillSection
+          title="Graphic Design Services"
+          desc="Professional graphic design services to strengthen your brand."
+          bg="bg-white"
+          skills={[
+            { icon: <FaPalette />, name: "Brand Identity" },
+            { icon: <FaPaintBrush />, name: "Creative Design" },
+            { icon: <FaImage />, name: "Social Media Graphics" },
+            { icon: <FaPenNib />, name: "Logo Design" },
+            { icon: <FaVectorSquare />, name: "Vector Illustrations" },
+            { icon: <FaLayerGroup />, name: "Print & Digital Design" },
+          ]}
+        />
+
+        {/* ================= FAQ ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* IMAGE */}
+            <Reveal>
+              <div className="relative max-w-md mx-auto md:max-w-none">
+                {/* BACK LAYER */}
+                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
+
+                <img
+                  src="/Images/s-GD1.png"
+                  alt="Graphic Design FAQ"
+                  className="
             relative z-10
             w-full
             rounded-[36px]
             shadow-2xl
           "
-        />
-      </div>
-    </Reveal>
+                />
+              </div>
+            </Reveal>
 
-    {/* FAQ CONTENT */}
-    <div>
-      <Reveal>
-        <h2 className="text-3xl font-bold text-[#008300] mb-8">
-          Graphic Designing FAQs
-        </h2>
-      </Reveal>
+            {/* FAQ CONTENT */}
+            <div>
+              <Reveal>
+                <h2 className="text-3xl font-bold text-[#008300] mb-8">
+                  Graphic Designing FAQs
+                </h2>
+              </Reveal>
 
-      {[
-        { q: "Do you design logos and branding?", a: "Yes, complete brand identity solutions." },
-        { q: "Do you provide print-ready files?", a: "Yes, high-quality print & digital formats." },
-        { q: "Can you design social media creatives?", a: "Yes, marketing & social media designs included." },
-      ].map((item, i) => (
-        <div key={i} className="mb-4 bg-white rounded-xl shadow">
-          <button
-            onClick={() => setOpenFaq(openFaq === i ? null : i)}
-            className="w-full flex justify-between items-center p-5 font-semibold"
-          >
-            {item.q}
-            <FaChevronDown
-              className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
-            />
-          </button>
+              {[
+                {
+                  q: "Do you design logos and branding?",
+                  a: "Yes, complete brand identity solutions.",
+                },
+                {
+                  q: "Do you provide print-ready files?",
+                  a: "Yes, high-quality print & digital formats.",
+                },
+                {
+                  q: "Can you design social media creatives?",
+                  a: "Yes, marketing & social media designs included.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="mb-4 bg-white rounded-xl shadow">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex justify-between items-center p-5 font-semibold"
+                  >
+                    {item.q}
+                    <FaChevronDown
+                      className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
+                    />
+                  </button>
 
-          {openFaq === i && (
-            <div className="px-5 pb-5 text-gray-600">
-              {item.a}
+                  {openFaq === i && (
+                    <div className="px-5 pb-5 text-gray-600">{item.a}</div>
+                  )}
+                </div>
+              ))}
             </div>
-          )}
-        </div>
-      ))}
-    </div>
+          </div>
+        </section>
 
-  </div>
-</section> 
+        {/* ================= GRAPHIC DESIGN SEO INTRO ================= */}
+        <section className="bg-white py-16 px-6">
+          <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              Graphic Designing Services{" "}
+              <span className="text-[#008300]">by Novarsis Technology</span>
+            </h2>
 
-{/* ================= GRAPHIC DESIGN SEO INTRO ================= */}
-<section className="bg-white py-16 px-6">
-  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <p className="mb-4">
+              Novarsis Technology offers professional graphic designing services
+              that help brands communicate their message through visually
+              compelling designs. Our creative team develops logos, marketing
+              creatives, social media graphics, branding materials, and digital
+              assets that reflect your company’s identity and values.
+            </p>
 
-    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-      Graphic Designing Services <span className="text-[#008300]">by Novarsis Technology</span>
-    </h2>
+            <p className="mb-4">
+              We combine creativity with strategic thinking to produce designs
+              that not only look attractive but also support business goals.
+              From concept development and color selection to typography and
+              layout design, every detail is carefully planned to create
+              impactful visuals across digital and print platforms.
+            </p>
 
-    <p className="mb-4">
-      Novarsis Technology offers professional graphic designing services that
-      help brands communicate their message through visually compelling designs.
-      Our creative team develops logos, marketing creatives, social media
-      graphics, branding materials, and digital assets that reflect your
-      company’s identity and values.
-    </p>
-
-    <p className="mb-4">
-      We combine creativity with strategic thinking to produce designs that not
-      only look attractive but also support business goals. From concept
-      development and color selection to typography and layout design, every
-      detail is carefully planned to create impactful visuals across digital and
-      print platforms.
-    </p>
-
-    <p>
-      By blending innovation with modern design trends, Novarsis Technology helps
-      businesses build strong visual identities that attract attention, improve
-      brand recognition, and leave lasting impressions on their audience.
-    </p>
-
-  </div>
-</section>
-
-
-
-    </div> </>
+            <p>
+              By blending innovation with modern design trends, Novarsis
+              Technology helps businesses build strong visual identities that
+              attract attention, improve brand recognition, and leave lasting
+              impressions on their audience.
+            </p>
+          </div>
+        </section>
+      </div>{" "}
+    </>
   );
 };
 
@@ -323,7 +352,6 @@ const GraphicDesigning = () => {
 
 const SkillSection = ({ title, desc, skills, bg }) => (
   <section className={`relative py-28 px-6 ${bg} overflow-hidden`}>
-
     {/* SQUARE BACKGROUND */}
     <div
       className="
@@ -336,7 +364,6 @@ const SkillSection = ({ title, desc, skills, bg }) => (
     ></div>
 
     <div className="max-w-7xl mx-auto relative z-10">
-
       <Reveal>
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
           {title}
@@ -383,11 +410,9 @@ const SkillSection = ({ title, desc, skills, bg }) => (
           </Reveal>
         ))}
       </div>
-
     </div>
   </section>
 );
-
 
 const Stat = ({ icon, value, label }) => (
   <Reveal>

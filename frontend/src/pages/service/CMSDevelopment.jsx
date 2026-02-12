@@ -26,313 +26,344 @@ const CMSDevelopment = () => {
 
   return (
     <>
-    
+      <Helmet>
+        <title>
+          CMS Development Services | WordPress & Custom CMS Solutions - Novarsis
+          Technology
+        </title>
 
-<Helmet>
-  <title>
-    CMS Development Services | WordPress & Custom CMS Solutions - Novarsis Technology
-  </title>
-
-  <meta
-    name="description"
-    content="Professional CMS Development Services by Novarsis Technology. We build secure, scalable, and easy-to-manage WordPress and custom CMS websites tailored for business growth."
-  />
-
-  <meta
-    name="keywords"
-    content="CMS Development Services, WordPress Development, Custom CMS Solutions, Website Management System, Novarsis Technology, CMS Website Development"
-  />
-
-  <link rel="canonical" href="https://novarsis.com/cmsdevelopment" />
-
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="CMS Development Services - Novarsis Technology"
-  />
-  <meta
-    property="og:description"
-    content="Build powerful CMS websites with easy content management, strong security, and scalable performance using modern CMS technologies."
-  />
-  <meta property="og:url" content="https://novarsis.com/cmsdevelopment" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="CMS Development Services | Novarsis Technology"
-  />
-  <meta
-    name="twitter:description"
-    content="Custom CMS and WordPress development services designed for flexibility, performance, and business growth."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
-
-    
-    <div className="bg-white">
-      {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          poster="/Images/bannerImage.png"
+        <meta
+          name="description"
+          content="Professional CMS Development Services by Novarsis Technology. We build secure, scalable, and easy-to-manage WordPress and custom CMS websites tailored for business growth."
         />
-        <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
-        <div className="relative z-10 text-center text-white px-6">
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-extrabold">
-              CMS Development Services
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-              Powerful, scalable and easy-to-manage content management solutions
-              for businesses.
-            </p>
-          </Reveal>
-        </div>
-      </section> 
+        <meta
+          name="keywords"
+          content="CMS Development Services, WordPress Development, Custom CMS Solutions, Website Management System, Novarsis Technology, CMS Website Development"
+        />
 
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/cmsdevelopment" />
 
-      {/* ================= INTRO ================= */}
-      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* Decorative Circles */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+        <meta name="robots" content="index, follow" />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          {/* LEFT */}
-          <div>
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="CMS Development Services - Novarsis Technology"
+        />
+        <meta
+          property="og:description"
+          content="Build powerful CMS websites with easy content management, strong security, and scalable performance using modern CMS technologies."
+        />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/cmsdevelopment"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="CMS Development Services | Novarsis Technology"
+        />
+        <meta
+          name="twitter:description"
+          content="Custom CMS and WordPress development services designed for flexibility, performance, and business growth."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅🔥 SERVICE SCHEMA (CMS DEVELOPMENT SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "serviceType":"CMS Development",
+        "provider":{
+          "@type":"Organization",
+          "name":"Novarsis Technology",
+          "url":"https://novarsistech.com"
+        },
+        "areaServed":"Worldwide",
+        "url":"https://novarsistech.com/cmsdevelopment",
+        "description":"WordPress and custom CMS development services with scalable architecture and secure content management systems."
+      }
+    `}
+        </script>
+      </Helmet>
+
+      <div className="bg-white">
+        {/* ================= HERO ================= */}
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/Images/banner.mp4"
+            autoPlay
+            loop
+            muted
+            poster="/Images/bannerImage.png"
+          />
+          <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
+
+          <div className="relative z-10 text-center text-white px-6">
             <Reveal>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-                CMS Development
-              </h2>
+              <h1 className="text-4xl md:text-6xl font-extrabold">
+                CMS Development Services
+              </h1>
             </Reveal>
-
             <Reveal>
-              <ul className="space-y-4 text-gray-700 text-lg">
-                {[
-                  "Custom CMS development & customization",
-                  "User-friendly admin dashboards",
-                  "Secure & scalable content architecture",
-                  "SEO-optimized & performance-driven CMS",
-                  "Ongoing support & maintenance",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-[#008300] text-xl font-bold">✔</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
+                Powerful, scalable and easy-to-manage content management
+                solutions for businesses.
+              </p>
             </Reveal>
           </div>
+        </section>
 
-          {/* RIGHT IMAGE (CIRCLE) */}
-          <Reveal>
-            <div className="flex justify-center md:justify-end">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
-                <img
-                  src="/Images/s-CMS3.png"
-                  alt="CMS Development"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        {/* ================= INTRO ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circles */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* LEFT */}
+            <div>
+              <Reveal>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
+                  CMS Development
+                </h2>
+              </Reveal>
+
+              <Reveal>
+                <ul className="space-y-4 text-gray-700 text-lg">
+                  {[
+                    "Custom CMS development & customization",
+                    "User-friendly admin dashboards",
+                    "Secure & scalable content architecture",
+                    "SEO-optimized & performance-driven CMS",
+                    "Ongoing support & maintenance",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-[#008300] text-xl font-bold">
+                        ✔
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
-          </Reveal>
-        </div>
-      </section>
 
-      {/* ================= DESCRIPTION ================= */}
-      <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* Decorative Circle */}
-        <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <Reveal>
-            <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
-              Our CMS development services help businesses manage, update, and
-              scale their digital content effortlessly. We build secure,
-              flexible, and high-performance content management systems tailored
-              to your business needs. From simple blogs and corporate websites
-              to complex enterprise CMS and e-commerce platforms, we deliver
-              solutions that empower your team with full control over content
-              while ensuring speed, security, and scalability.
-            </p>
-          </Reveal>
-
-          <Reveal>
-            <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
-              {[
-                "WordPress, Headless & custom CMS",
-                "Easy content & media management",
-                "Role-based admin access",
-                "API & third-party integrations",
-                "SEO & performance optimization",
-                "Long-term maintenance & support",
-              ].map((point, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <span className="text-[#008300] text-xl font-bold">✔</span>
-                  {point}
+            {/* RIGHT IMAGE (CIRCLE) */}
+            <Reveal>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                  <img
+                    src="/Images/s-CMS3.png"
+                    alt="CMS Development"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-      {/* ================= STATS ================= */}
-      <section className="py-20 px-6 bg-[#008300] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-          <Stat icon={<FaUsers />} value="50+" label="Happy Clients" />
-          <Stat icon={<FaProjectDiagram />} value="70+" label="CMS Projects" />
-          <Stat icon={<FaClock />} value="8+" label="Years Experience" />
-          <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
-        </div>
-      </section>
+        {/* ================= DESCRIPTION ================= */}
+        <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* Decorative Circle */}
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
 
-      {/* ================= CMS PLATFORMS ================= */}
-      <SkillSection
-        title="CMS Platforms"
-        desc="Popular and powerful CMS platforms used to build scalable websites."
-        bg="bg-white"
-        skills={[
-          { icon: <FaWordpress />, name: "WordPress" },
-          { icon: <SiStrapi />, name: "Strapi (Headless CMS)" },
-          { icon: <SiContentful />, name: "Contentful" },
-          { icon: <FaShopify />, name: "Shopify CMS" },
-          { icon: <SiMagento />, name: "Magento" },
-          { icon: <SiWoocommerce />, name: "WooCommerce" },
-        ]}
-      />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <Reveal>
+              <p className="text-gray-700 text-lg leading-relaxed text-justify mb-12">
+                Our CMS development services help businesses manage, update, and
+                scale their digital content effortlessly. We build secure,
+                flexible, and high-performance content management systems
+                tailored to your business needs. From simple blogs and corporate
+                websites to complex enterprise CMS and e-commerce platforms, we
+                deliver solutions that empower your team with full control over
+                content while ensuring speed, security, and scalability.
+              </p>
+            </Reveal>
 
-      {/* ================= FEATURES ================= */}
-      <SkillSection
-        title="CMS Features"
-        desc="Essential features included in our CMS development solutions."
-        bg="bg-[#f6fff6]"
-        skills={[
-          { icon: <FaCogs />, name: "Custom Admin Panel" },
-          { icon: <FaServer />, name: "Scalable Architecture" },
-          { icon: <FaLock />, name: "Security & Roles" },
-          { icon: <FaGlobe />, name: "Multi-language CMS" },
-        ]}
-      />
+            <Reveal>
+              <div className="grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
+                {[
+                  "WordPress, Headless & custom CMS",
+                  "Easy content & media management",
+                  "Role-based admin access",
+                  "API & third-party integrations",
+                  "SEO & performance optimization",
+                  "Long-term maintenance & support",
+                ].map((point, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-[#008300] text-xl font-bold">✔</span>
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-      {/* ================= FAQ ================= */}
-      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
-        {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-        <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+        {/* ================= STATS ================= */}
+        <section className="py-20 px-6 bg-[#008300] text-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            <Stat icon={<FaUsers />} value="50+" label="Happy Clients" />
+            <Stat
+              icon={<FaProjectDiagram />}
+              value="70+"
+              label="CMS Projects"
+            />
+            <Stat icon={<FaClock />} value="8+" label="Years Experience" />
+            <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
+          </div>
+        </section>
 
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+        {/* ================= CMS PLATFORMS ================= */}
+        <SkillSection
+          title="CMS Platforms"
+          desc="Popular and powerful CMS platforms used to build scalable websites."
+          bg="bg-white"
+          skills={[
+            { icon: <FaWordpress />, name: "WordPress" },
+            { icon: <SiStrapi />, name: "Strapi (Headless CMS)" },
+            { icon: <SiContentful />, name: "Contentful" },
+            { icon: <FaShopify />, name: "Shopify CMS" },
+            { icon: <SiMagento />, name: "Magento" },
+            { icon: <SiWoocommerce />, name: "WooCommerce" },
+          ]}
+        />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          {/* IMAGE */}
-          <Reveal>
-            <div className="relative max-w-md mx-auto md:max-w-none">
-              {/* BACK LAYER */}
-              <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
+        {/* ================= FEATURES ================= */}
+        <SkillSection
+          title="CMS Features"
+          desc="Essential features included in our CMS development solutions."
+          bg="bg-[#f6fff6]"
+          skills={[
+            { icon: <FaCogs />, name: "Custom Admin Panel" },
+            { icon: <FaServer />, name: "Scalable Architecture" },
+            { icon: <FaLock />, name: "Security & Roles" },
+            { icon: <FaGlobe />, name: "Multi-language CMS" },
+          ]}
+        />
 
-              <img
-                src="/Images/s-CMS2.png"
-                alt="CMS FAQ"
-                className="
+        {/* ================= FAQ ================= */}
+        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+          {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            {/* IMAGE */}
+            <Reveal>
+              <div className="relative max-w-md mx-auto md:max-w-none">
+                {/* BACK LAYER */}
+                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
+
+                <img
+                  src="/Images/s-CMS2.png"
+                  alt="CMS FAQ"
+                  className="
             relative z-10
             w-full
             rounded-[36px]
             shadow-2xl
           "
-              />
-            </div>
-          </Reveal>
-
-          {/* FAQ CONTENT */}
-          <div>
-            <Reveal>
-              <h2 className="text-3xl font-bold text-[#008300] mb-8">
-                CMS Development FAQs
-              </h2>
+                />
+              </div>
             </Reveal>
 
-            {[
-              {
-                q: "Can I manage content myself?",
-                a: "Yes, you get a user-friendly admin dashboard.",
-              },
-              {
-                q: "Do you provide custom CMS?",
-                a: "Yes, we build fully custom and headless CMS.",
-              },
-              {
-                q: "Do you offer maintenance?",
-                a: "Yes, ongoing support & updates available.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="mb-4 bg-white rounded-xl shadow">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex justify-between items-center p-5 font-semibold"
-                >
-                  {item.q}
-                  <FaChevronDown
-                    className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
-                  />
-                </button>
+            {/* FAQ CONTENT */}
+            <div>
+              <Reveal>
+                <h2 className="text-3xl font-bold text-[#008300] mb-8">
+                  CMS Development FAQs
+                </h2>
+              </Reveal>
 
-                {openFaq === i && (
-                  <div className="px-5 pb-5 text-gray-600">{item.a}</div>
-                )}
-              </div>
-            ))}
+              {[
+                {
+                  q: "Can I manage content myself?",
+                  a: "Yes, you get a user-friendly admin dashboard.",
+                },
+                {
+                  q: "Do you provide custom CMS?",
+                  a: "Yes, we build fully custom and headless CMS.",
+                },
+                {
+                  q: "Do you offer maintenance?",
+                  a: "Yes, ongoing support & updates available.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="mb-4 bg-white rounded-xl shadow">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex justify-between items-center p-5 font-semibold"
+                  >
+                    {item.q}
+                    <FaChevronDown
+                      className={`${openFaq === i ? "rotate-180" : ""} transition-transform`}
+                    />
+                  </button>
+
+                  {openFaq === i && (
+                    <div className="px-5 pb-5 text-gray-600">{item.a}</div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section> 
+        </section>
 
-      {/* ================= CMS / WORDPRESS SEO INTRO ================= */}
-<section className="bg-white py-16 px-6">
-  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+        {/* ================= CMS / WORDPRESS SEO INTRO ================= */}
+        <section className="bg-white py-16 px-6">
+          <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              CMS & WordPress Development Services{" "}
+              <span className="text-[#008300]">by Novarsis Technology</span>
+            </h2>
 
-    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-      CMS & WordPress Development Services <span className="text-[#008300]">by Novarsis Technology</span> 
-    </h2>
+            <p className="mb-4">
+              Novarsis Technology offers powerful CMS and WordPress development
+              services that allow businesses to manage their websites with ease.
+              Our team builds custom WordPress solutions that are fast, secure,
+              and fully optimized for performance, helping brands create
+              scalable digital platforms.
+            </p>
 
-    <p className="mb-4">
-      Novarsis Technology offers powerful CMS and WordPress development
-      services that allow businesses to manage their websites with ease.
-      Our team builds custom WordPress solutions that are fast, secure,
-      and fully optimized for performance, helping brands create scalable
-      digital platforms.
-    </p>
+            <p className="mb-4">
+              Whether you need a business website, blog platform, portfolio, or
+              advanced CMS-based system, we design flexible solutions that are
+              easy to update and maintain. We create custom themes, develop
+              plugins, and integrate modern features that enhance both
+              functionality and user experience.
+            </p>
 
-    <p className="mb-4">
-      Whether you need a business website, blog platform, portfolio, or
-      advanced CMS-based system, we design flexible solutions that are
-      easy to update and maintain. We create custom themes, develop plugins,
-      and integrate modern features that enhance both functionality and
-      user experience.
-    </p>
-
-    <p>
-      With a strong focus on SEO-friendly structure, mobile responsiveness,
-      and clean coding practices, Novarsis Technology ensures your WordPress
-      platform remains efficient, secure, and aligned with long-term
-      digital growth strategies.
-    </p>
-
-  </div>
-</section>
-
-    </div></>
+            <p>
+              With a strong focus on SEO-friendly structure, mobile
+              responsiveness, and clean coding practices, Novarsis Technology
+              ensures your WordPress platform remains efficient, secure, and
+              aligned with long-term digital growth strategies.
+            </p>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

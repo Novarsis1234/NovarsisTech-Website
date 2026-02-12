@@ -37,11 +37,12 @@ const Details = () => {
           content="Novarsis Technology achievements, IT company growth stats, software company experience, digital solutions company India"
         />
 
-        <link rel="canonical" href="https://novarsis.com/company-growth" />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/company-growth" />
 
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
+        {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -51,10 +52,16 @@ const Details = () => {
           property="og:description"
           content="Our experience, results, and milestones showcase the trust clients place in Novarsis Technology."
         />
-        <meta property="og:url" content="https://novarsis.com/company-growth" />
-        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/company-growth"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-        {/* Twitter */}
+        {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -64,85 +71,101 @@ const Details = () => {
           name="twitter:description"
           content="Discover the numbers behind our success and dedication to digital innovation."
         />
-        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅🔥 COMPANY GROWTH PAGE SCHEMA */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"WebPage",
+        "name":"Company Growth & Achievements",
+        "url":"https://novarsistech.com/company-growth",
+        "description":"Company growth journey, achievements, and milestones of Novarsis Technology."
+      }
+    `}
+        </script>
       </Helmet>
-     <section
-  ref={ref}
-  className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
->
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Novarsis Technology Company Insights and Growth Statistics in IT Solutions
-  </h2>
-
-  {/* Decorative Circles */}
-  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
-
-  <div className="relative z-10 max-w-6xl mx-auto">
-    {/* Heading */}
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <Reveal>
-        <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
-          Company Insights
-        </h4>
-      </Reveal>
-
-      <Reveal>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
-          Our Growth in <span className="text-[#008300]">Results</span>
+      <section
+        ref={ref}
+        className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
+      >
+        {/* ⭐ Hidden SEO Heading */}
+        <h2 className="sr-only">
+          Novarsis Technology Company Insights and Growth Statistics in IT
+          Solutions
         </h2>
-      </Reveal>
 
-      <Reveal>
-        <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
-          These numbers reflect our experience, dedication, and commitment
-          to delivering reliable IT solutions that help businesses grow
-          and succeed in the digital era.
-        </p>
-      </Reveal>
-    </div>
+        {/* Decorative Circles */}
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
 
-    {/* Stats Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
-      {stats.map((item, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
+        <div className="relative z-10 max-w-6xl mx-auto">
+          {/* Heading */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Reveal>
+              <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+                Company Insights
+              </h4>
+            </Reveal>
+
+            <Reveal>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
+                Our Growth in <span className="text-[#008300]">Results</span>
+              </h2>
+            </Reveal>
+
+            <Reveal>
+              <p className="text-gray-600 mt-5 text-base sm:text-lg leading-relaxed">
+                These numbers reflect our experience, dedication, and commitment
+                to delivering reliable IT solutions that help businesses grow
+                and succeed in the digital era.
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            {stats.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
           transition-all duration-500 p-8 flex flex-col items-center"
-        >
-          <Reveal>
-            <div className="bg-[#008300]/10 text-[#008300] rounded-full p-6 mb-5">
-              {item.icon}
-            </div>
-          </Reveal>
+              >
+                <Reveal>
+                  <div className="bg-[#008300]/10 text-[#008300] rounded-full p-6 mb-5">
+                    {item.icon}
+                  </div>
+                </Reveal>
 
-          <Reveal>
-            <h3 className="text-4xl font-extrabold text-black">
-              {inView ? (
-                <CountUp
-                  start={0}
-                  end={item.number}
-                  duration={2.5}
-                  suffix="+"
-                />
-              ) : (
-                "0+"
-              )}
-            </h3>
-          </Reveal>
+                <Reveal>
+                  <h3 className="text-4xl font-extrabold text-black">
+                    {inView ? (
+                      <CountUp
+                        start={0}
+                        end={item.number}
+                        duration={2.5}
+                        suffix="+"
+                      />
+                    ) : (
+                      "0+"
+                    )}
+                  </h3>
+                </Reveal>
 
-          <Reveal>
-            <p className="mt-3 text-sm sm:text-base font-semibold text-gray-700 tracking-wide">
-              {item.label}
-            </p>
-          </Reveal>
+                <Reveal>
+                  <p className="mt-3 text-sm sm:text-base font-semibold text-gray-700 tracking-wide">
+                    {item.label}
+                  </p>
+                </Reveal>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-{" "}
+      </section>{" "}
     </>
   );
 };

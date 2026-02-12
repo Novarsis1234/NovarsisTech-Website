@@ -1,51 +1,84 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Reveal from "../../components/Reveal";
 import ContactForm from "./ContactForm";
- import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
+    import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const Contact = () => {
   return (
     <>
-   
+      <Helmet>
+        <title>
+          Contact Novarsis Technology | Get in Touch With Our IT Experts
+        </title>
 
-<Helmet>
-  <title>Contact Novarsis Technology | Get in Touch With Our IT Experts</title>
+        <meta
+          name="description"
+          content="Contact Novarsis Technology for web development, app development, digital marketing, and IT solutions. Reach out via phone, email, or our contact form."
+        />
 
-  <meta
-    name="description"
-    content="Contact Novarsis Technology for web development, app development, digital marketing, and IT solutions. Reach out via phone, email, or our contact form."
-  />
+        <meta
+          name="keywords"
+          content="Contact Novarsis Technology, IT company contact India, software development company contact, digital marketing agency contact, NovarsisTech support"
+        />
 
-  <meta
-    name="keywords"
-    content="Contact Novarsis Technology, IT company contact India, software development company contact, digital marketing agency contact, NovarsisTech support"
-  />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/contact" />
+        <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://novarsis.com/contact" />
+        {/* ✅ Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Novarsis Technology" />
+        <meta
+          property="og:description"
+          content="Get in touch with our IT experts to discuss your project and grow your business with innovative digital solutions."
+        />
+        <meta property="og:url" content="https://novarsistech.com/contact" />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Novarsis Technology" />
+        <meta
+          name="twitter:description"
+          content="Have a project in mind? Contact our team today for professional IT services and solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact Novarsis Technology" />
-  <meta
-    property="og:description"
-    content="Get in touch with our IT experts to discuss your project and grow your business with innovative digital solutions."
-  />
-  <meta property="og:url" content="https://novarsis.com/contact" />
-  <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact Novarsis Technology" />
-  <meta
-    name="twitter:description"
-    content="Have a project in mind? Contact our team today for professional IT services and solutions."
-  />
-  <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
-</Helmet>
+        {/* ✅🔥 CONTACT PAGE SCHEMA (LOCAL SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"ContactPage",
+        "name":"Contact Novarsis Technology",
+        "url":"https://novarsistech.com/contact",
+        "publisher":{
+          "@type":"Organization",
+          "name":"Novarsis Technology",
+          "url":"https://novarsistech.com",
+          "logo":"https://novarsistech.com/logo.png"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
@@ -72,77 +105,158 @@ const Contact = () => {
           </Reveal>
 
           <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Contact Us
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold">Contact Us</h1>
           </Reveal>
         </div>
       </section>
 
       {/* ================= CONTACT SECTION ================= */}
       <section className="relative bg-white py-24 px-4 overflow-hidden">
-
         {/* ===== Decorative Green Circles ===== */}
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
- 
+
         <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-       
 
         <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start px-6">
-
           {/* ===== LEFT CONTENT ===== */}
-          <div>
-            <Reveal>
-              <p className="text-[#008300] uppercase text-sm font-semibold mb-3 tracking-widest">
-                Contact With Us
-              </p>
-            </Reveal>
+  
 
-            <Reveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-6 leading-tight">
-                Feel Free to Get in{" "}
-                <span className="text-[#008300]">Touch</span>
-              </h2>
-            </Reveal>
+<div>
+  <Reveal>
+    <p className="text-[#008300] uppercase text-sm font-semibold mb-3 tracking-widest">
+      Contact With Us
+    </p>
+  </Reveal>
 
-            <Reveal>
-              <p className="text-gray-600 mb-12 max-w-lg leading-relaxed">
-                Have a project in mind or need expert guidance?  
-                Our team is here to help you turn your ideas into powerful digital solutions.
-              </p>
-            </Reveal>
+  <Reveal>
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-6 leading-tight">
+      Feel Free to Get in{" "}
+      <span className="text-[#008300]">Touch</span>
+    </h2>
+  </Reveal>
 
-            {/* Contact Info */}
-            <div className="space-y-8">
+  <Reveal>
+    <p className="text-gray-600 mb-10 max-w-lg leading-relaxed">
+      Have a project in mind or need expert guidance? Our team is here
+      to help you turn your ideas into powerful digital solutions.
+    </p>
+  </Reveal>
 
-              {/* Phone */}
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-[#008300] text-[#008300] text-xl">
-                  <FaPhoneAlt />
-                </div>
-                <div>
-                  <p className="text-gray-500 text-sm">Call Anytime</p>
-                  <p className="text-black font-semibold text-lg">
-                    +91 91117 20303
-                  </p>
-                </div>
-              </div>
+  {/* ================= CONTACT INFO ================= */}
+  <div className="space-y-8">
 
-              {/* Email */}
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-[#008300] text-[#008300] text-xl">
-                  <FaEnvelope />
-                </div>
-                <div>
-                  <p className="text-gray-500 text-sm">Send Email</p>
-                  <p className="text-black font-semibold text-lg">
-                    info@novarsistech.com
-                  </p>
-                </div>
-              </div>
+    {/* Phone */}
+    <div className="flex items-center gap-5">
+      <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-[#008300] text-[#008300] text-xl">
+        <FaPhoneAlt />
+      </div>
+      <div>
+        <p className="text-gray-500 text-sm">Call Anytime</p>
+        <a
+          href="tel:+919111720303"
+          className="text-black font-semibold text-lg hover:text-[#008300] transition"
+        >
+          +91 91117 20303
+        </a>
+      </div>
+    </div>
 
-            </div>
-          </div>
+    {/* Email */}
+    <div className="flex items-center gap-5">
+      <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-[#008300] text-[#008300] text-xl">
+        <FaEnvelope />
+      </div>
+      <div>
+        <p className="text-gray-500 text-sm">Send Email</p>
+        <a
+          href="mailto:info@novarsistech.com"
+          className="text-black font-semibold text-lg hover:text-[#008300] transition"
+        >
+          info@novarsistech.com
+        </a>
+      </div>
+    </div>
+
+    {/* WhatsApp */}
+    <div className="flex items-center gap-5">
+      <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-green-500 text-green-500 text-xl">
+        <FaWhatsapp />
+      </div>
+      <div>
+        <p className="text-gray-500 text-sm">WhatsApp</p>
+        <a
+          href="https://wa.me/919111720303?text=Hello%20Novarsis%20Tech%2C%20I%20am%20interested%20in%20your%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black font-semibold text-lg hover:text-green-500 transition"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-center gap-5">
+      <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-[#008300] text-[#008300] text-xl">
+        <FaMapMarkerAlt />
+      </div>
+      <div>
+        <p className="text-gray-500 text-sm">Visit Office</p>
+        <a
+          href="https://maps.app.goo.gl/1VWNa3CsZPsuK6YEA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black font-semibold text-lg hover:text-[#008300] transition"
+        >
+          Vijay Nagar, Indore
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  {/* ================= SOCIAL MEDIA ================= */}
+  <div className="mt-12">
+    <p className="text-gray-500 text-sm mb-4">Follow Us On</p>
+
+    <div className="flex gap-4">
+      {[
+        {
+          icon: <FaFacebookF />,
+          link: "https://www.facebook.com/NovarsisTechindia/",
+        },
+        {
+          icon: <FaTwitter />,
+          link: "https://twitter.com/",
+        },
+        {
+          icon: <FaInstagram />,
+          link: "https://www.instagram.com/novarsistech/",
+        },
+        {
+          icon: <FaLinkedinIn />,
+          link: "https://www.linkedin.com/company/87981778/",
+        },
+        {
+          icon: <FaWhatsapp />,
+          link: "https://wa.me/919111720303",
+        },
+      ].map((item, i) => (
+        <a
+          key={i}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 flex items-center justify-center bg-white text-[#008300] rounded-md cursor-pointer hover:bg-black hover:text-white transition-all duration-300"
+        >
+          {item.icon}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+
 
           {/* ===== RIGHT FORM ===== */}
           <ContactForm />

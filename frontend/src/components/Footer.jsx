@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Reveal from "./Reveal";
 
@@ -78,16 +79,16 @@ const Footer = () => {
               <Link to="/appdevelopment">App Development</Link>
             </li>
             <li>
-              <Link to="/digitalmarketing">UI / UX Design</Link>
+              <Link to="/digitalmarketing">Digital Marketing</Link>
             </li>
             <li>
-              <Link to="/graphicdesigning">CMS Development</Link>
+              <Link to="/graphicdesigning">Graphic Designing </Link>
             </li>
             <li>
-              <Link to="/uiuxdesign">Graphic Designing</Link>
+              <Link to="/uiuxdesign">UI / UX Design</Link>
             </li>
             <li>
-              <Link to="/cmsdevelopment">Digital Marketing</Link>
+              <Link to="/cmsdevelopment">CMS Development</Link>
             </li>
             <li>
               <Link to="/seooptimization">SEO Optimization</Link>
@@ -99,32 +100,34 @@ const Footer = () => {
         <div>
           <h3 className="footer-title">Contact Info</h3>
           <ul className="space-y-4 text-sm text-black/80">
-           <li className="flex gap-3">
-  <FaMapMarkerAlt className="text-[#008300] mt-1" />
-  <a
-    href="https://maps.app.goo.gl/6uPVnRKNiNk1GMX96, 3rd Floor, Vikram Urban, Vijay Nagar, Indore, MP 452010"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline"
-  >
-    301, 3rd Floor, Vikram Urban, Vijay Nagar, Indore, MP 452010
-  </a>
-</li>
+            <li className="flex gap-3">
+              <FaMapMarkerAlt className="text-[#008300] mt-1" />
+              <a
+                href="https://maps.app.goo.gl/6uPVnRKNiNk1GMX96, 3rd Floor, Vikram Urban, Vijay Nagar, Indore, MP 452010"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                301, 3rd Floor, Vikram Urban, Vijay Nagar, Indore, MP 452010
+              </a>
+            </li>
 
-<li className="flex gap-3">
-  <FaPhoneAlt className="text-[#008300]" />
-  <a href="tel:+919111720303" className="hover:underline">
-    +91 91117 20303
-  </a>
-</li>
+            <li className="flex gap-3">
+              <FaPhoneAlt className="text-[#008300]" />
+              <a href="tel:+919111720303" className="hover:underline">
+                +91 91117 20303
+              </a>
+            </li>
 
-<li className="flex gap-3">
-  <FaEnvelope className="text-[#008300]" />
-  <a href="mailto:info@novarsistech.com" className="hover:underline">
-    info@novarsistech.com
-  </a>
-</li>
-
+            <li className="flex gap-3">
+              <FaEnvelope className="text-[#008300]" />
+              <a
+                href="mailto:info@novarsistech.com"
+                className="hover:underline"
+              >
+                info@novarsistech.com
+              </a>
+            </li>
 
             <li className="flex gap-3">
               <FaClock className="text-[#008300] mt-1" />
@@ -147,21 +150,42 @@ const Footer = () => {
       <div className="bg-[#008300]">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
           {/* SOCIAL ICONS */}
-          <div className="flex gap-4">
-            {[
-              <FaFacebookF />,
-              <FaTwitter />,
-              <FaInstagram />,
-              <FaLinkedinIn />,
-            ].map((icon, i) => (
-              <div
-                key={i}
-                className="w-10 h-10 flex items-center justify-center bg-white text-[#008300] rounded-md cursor-pointer hover:bg-black hover:text-white transition-all duration-300"
-              >
-                {icon}
-              </div>
-            ))}
-          </div>
+       
+<div className="flex gap-4">
+  {[
+    {
+      icon: <FaFacebookF />,
+      link: "https://www.facebook.com/NovarsisTechindia/",
+    },
+    {
+      icon: <FaTwitter />,
+      link: "https://x.com/novarsistech_",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/novarsistech/",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/company/87981778/",
+    },
+    {
+      icon: <FaWhatsapp />,
+      link: "https://wa.me/919111720303?text=Hello%20Novarsis%20Tech%2C%20I%20am%20interested%20in%20your%20services.",
+    },
+  ].map((item, i) => (
+    <a
+      key={i}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center bg-white text-[#008300] rounded-md cursor-pointer hover:bg-black hover:text-white transition-all duration-300"
+    >
+      {item.icon}
+    </a>
+  ))}
+</div>
+
 
           {/* COPYRIGHT */}
           <p className="text-sm text-white/90 text-center">

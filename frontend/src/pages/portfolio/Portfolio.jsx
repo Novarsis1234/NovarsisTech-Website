@@ -10,7 +10,9 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Our Portfolio | Novarsis Technology Projects & Case Studies</title>
+        <title>
+          Our Portfolio | Novarsis Technology Projects & Case Studies
+        </title>
 
         <meta
           name="description"
@@ -22,27 +24,50 @@ const Portfolio = () => {
           content="Novarsis Technology portfolio, IT company projects, web development portfolio India, software company case studies, digital agency work"
         />
 
-        <link rel="canonical" href="https://novarsis.com/portfolio" />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/portfolio" />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
+        {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Novarsis Technology Portfolio" />
         <meta
           property="og:description"
           content="Discover our latest projects, creative solutions, and successful IT implementations."
         />
-        <meta property="og:url" content="https://novarsis.com/portfolio" />
-        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        <meta property="og:url" content="https://novarsistech.com/portfolio" />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-        {/* Twitter */}
+        {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Novarsis Technology Portfolio & Projects" />
+        <meta
+          name="twitter:title"
+          content="Novarsis Technology Portfolio & Projects"
+        />
         <meta
           name="twitter:description"
           content="See how Novarsis Technology delivers modern digital solutions through real client projects."
         />
-        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅🔥 PORTFOLIO SCHEMA (SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"CollectionPage",
+        "name":"Novarsis Technology Portfolio",
+        "url":"https://novarsistech.com/portfolio",
+        "description":"Portfolio of web development, app development, UI/UX design, and digital marketing projects by Novarsis Technology."
+      }
+    `}
+        </script>
       </Helmet>
 
       {/* ================= HERO SECTION ================= */}
@@ -79,47 +104,49 @@ const Portfolio = () => {
 
       {/* ================= VISIBLE SEO INTRO SECTION ================= */}
       <section className="bg-white py-14 px-4">
-          <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
+        <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
         <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
-
           <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-            IT Projects & Case <span className="text-[#008300]"> Studies by Novarsis Technology</span>
+            IT Projects & Case{" "}
+            <span className="text-[#008300]">
+              {" "}
+              Studies by Novarsis Technology
+            </span>
           </h2>
 
           <p className="mb-4">
-            The Novarsis Technology portfolio highlights our journey in delivering
-            innovative digital solutions for startups, enterprises, and growing
-            brands. Our team specializes in modern web development, scalable mobile
-            applications, UI/UX design, branding strategies, and result-driven
-            digital marketing services tailored to real business goals.
+            The Novarsis Technology portfolio highlights our journey in
+            delivering innovative digital solutions for startups, enterprises,
+            and growing brands. Our team specializes in modern web development,
+            scalable mobile applications, UI/UX design, branding strategies, and
+            result-driven digital marketing services tailored to real business
+            goals.
           </p>
 
           <p className="mb-4">
             Every project showcased in our portfolio represents our focus on
-            performance, creativity, and long-term value. We design platforms that
-            not only look visually appealing but also follow advanced SEO practices,
-            responsive layouts, and user-friendly experiences to maximize online
-            growth.
+            performance, creativity, and long-term value. We design platforms
+            that not only look visually appealing but also follow advanced SEO
+            practices, responsive layouts, and user-friendly experiences to
+            maximize online growth.
           </p>
 
           <p>
             By combining technology with strategic thinking, Novarsis Technology
             builds digital products that help companies stand out in competitive
-            markets. Explore our latest work to understand how we transform ideas
-            into powerful digital solutions that drive measurable success.
+            markets. Explore our latest work to understand how we transform
+            ideas into powerful digital solutions that drive measurable success.
           </p>
-
         </div>
       </section>
 
       {/* ================= PORTFOLIO CONTENT ================= */}
       <section className="relative bg-white overflow-hidden py-24 px-4">
-
         <h2 className="sr-only">
-          Novarsis Technology Company Portfolio PDF – IT Services and Project Showcase
+          Novarsis Technology Company Portfolio PDF – IT Services and Project
+          Showcase
         </h2>
 
-       
         <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
         <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
 
@@ -132,9 +159,10 @@ const Portfolio = () => {
 
           <Reveal>
             <p className="text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-base sm:text-lg text-justify">
-              Our comprehensive portfolio PDF presents a detailed overview of our
-              professional journey, showcasing creative projects, technical
-              expertise, and successful collaborations across multiple industries.
+              Our comprehensive portfolio PDF presents a detailed overview of
+              our professional journey, showcasing creative projects, technical
+              expertise, and successful collaborations across multiple
+              industries.
             </p>
           </Reveal>
 
@@ -153,7 +181,6 @@ const Portfolio = () => {
       {open && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
           <div className="bg-white w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden relative shadow-2xl">
-
             <button
               onClick={() => setOpen(false)}
               className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full z-10 hover:bg-red-600 transition"

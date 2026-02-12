@@ -15,9 +15,6 @@ const AutoInternalLinks = ({ title = "Explore Our Services" }) => {
   return (
     <section className="mt-20 py-12 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6 text-center">
-
-        
-        
         {/* SEO Heading */}
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#008300] mb-4">
           {title}

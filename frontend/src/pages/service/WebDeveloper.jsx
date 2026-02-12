@@ -55,11 +55,12 @@ const WebDeveloper = () => {
           content="web development company India, custom website development, React website developers, Node.js development, SEO friendly websites, Novarsis Technology"
         />
 
-        <link rel="canonical" href="https://novarsis.com/webdeveloper" />
+        {/* ✅ Updated Canonical */}
+        <link rel="canonical" href="https://novarsistech.com/webdeveloper" />
 
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
+        {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -69,10 +70,16 @@ const WebDeveloper = () => {
           property="og:description"
           content="Build modern, responsive, and high-performance websites with Novarsis Technology. Custom web solutions designed for growth."
         />
-        <meta property="og:url" content="https://novarsis.com/webdeveloper" />
-        <meta property="og:image" content="/Images/novarsis-og-image.jpg" />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/webdeveloper"
+        />
+        <meta
+          property="og:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
 
-        {/* Twitter */}
+        {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -82,7 +89,29 @@ const WebDeveloper = () => {
           name="twitter:description"
           content="Modern web development solutions using React, Node.js and scalable backend architecture."
         />
-        <meta name="twitter:image" content="/Images/novarsis-og-image.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
+        />
+
+        {/* ✅🔥 SERVICE SCHEMA (WEB DEVELOPMENT SEO BOOST) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "serviceType":"Web Development Services",
+        "provider":{
+          "@type":"Organization",
+          "name":"Novarsis Technology",
+          "url":"https://novarsistech.com"
+        },
+        "areaServed":"Worldwide",
+        "url":"https://novarsistech.com/webdeveloper",
+        "description":"Custom website development using React, Node.js, scalable backend architecture, SEO-friendly design, and modern UI/UX solutions."
+      }
+    `}
+        </script>
       </Helmet>
       <div className="bg-white">
         {/* ================= HERO ================= */}
@@ -111,8 +140,6 @@ const WebDeveloper = () => {
             </Reveal>
           </div>
         </section>
-
-  
 
         {/* ================= INTRO ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
@@ -216,8 +243,7 @@ const WebDeveloper = () => {
             <Stat icon={<FaClock />} value="8+" label="Years Experience" />
             <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
           </div>
-        </section> 
-
+        </section>
 
         {/* ================= FRONTEND ================= */}
         <SkillSection
@@ -353,42 +379,42 @@ const WebDeveloper = () => {
               ))}
             </div>
           </div>
-        </section> 
+        </section>
 
-         {/* ================= SEO INTRO (VISIBLE) ================= */}
-<section className="bg-white py-16 px-6">
-  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+        {/* ================= SEO INTRO (VISIBLE) ================= */}
+        <section className="bg-white py-16 px-6">
+          <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              Custom Web Development Services{" "}
+              <span className="text-[#008300]">by Novarsis Technology</span>
+            </h2>
 
-    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-      Custom Web Development Services <span className="text-[#008300]">by Novarsis Technology</span>
-    </h2>
+            <p className="mb-4">
+              Novarsis Technology provides professional web development services
+              designed to help businesses create fast, secure, and scalable
+              digital platforms. Our expert developers build modern websites
+              using advanced technologies that deliver high performance,
+              responsive design, and seamless user experiences across all
+              devices.
+            </p>
 
-    <p className="mb-4">
-      Novarsis Technology provides professional web development services designed
-      to help businesses create fast, secure, and scalable digital platforms.
-      Our expert developers build modern websites using advanced technologies
-      that deliver high performance, responsive design, and seamless user
-      experiences across all devices.
-    </p>
+            <p className="mb-4">
+              From corporate websites and custom web applications to eCommerce
+              platforms and dynamic portals, we focus on building solutions that
+              support long-term business growth. Our development process
+              combines strategic planning, modern UI/UX design, and powerful
+              backend architecture to ensure stability and performance.
+            </p>
 
-    <p className="mb-4">
-      From corporate websites and custom web applications to eCommerce platforms
-      and dynamic portals, we focus on building solutions that support long-term
-      business growth. Our development process combines strategic planning,
-      modern UI/UX design, and powerful backend architecture to ensure stability
-      and performance.
-    </p>
-
-    <p>
-      With a strong focus on SEO-friendly structure, mobile responsiveness, and
-      optimized performance, Novarsis Technology helps companies build digital
-      platforms that attract visitors, improve engagement, and convert traffic
-      into real business results.
-    </p>
-
-  </div>
-</section>
-
+            <p>
+              With a strong focus on SEO-friendly structure, mobile
+              responsiveness, and optimized performance, Novarsis Technology
+              helps companies build digital platforms that attract visitors,
+              improve engagement, and convert traffic into real business
+              results.
+            </p>
+          </div>
+        </section>
       </div>{" "}
     </>
   );
