@@ -148,38 +148,58 @@ const GraphicDesigning = () => {
       </Helmet>
       <article className="bg-white">
         {/* ================= HERO ================= */}
-        <section itemScope itemType="https://schema.org/WebPage" className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
-            src="/Images/banner.mp4"
-            autoPlay
-            loop
-            muted
-            poster="/Images/bannerImage.png"
-          />
-          <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
+      <section
+  itemScope
+  itemType="https://schema.org/WebPage"
+  className="relative h-[50vh] flex items-center justify-center overflow-hidden"
+>
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="/Images/banner.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="/Images/bannerImage.png"
+  />
 
-          <div className="relative z-10 text-center text-white px-6">
-            {/* ✅ Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="text-gray-300 text-sm md:text-base mb-4">
-              <a href="/" className="hover:text-[#008300] transition-colors">Home</a>
-              <span className="mx-2 text-[#008300]">/</span>
-             
-              <span className="text-[#008300]">Graphic Designing</span>
-            </nav>
+  <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
-            <Reveal>
-              <h1 itemProp="headline" className="text-4xl md:text-6xl font-extrabold">
-                Graphic Designing Services
-              </h1>
-            </Reveal>
-            <Reveal>
-              <p itemProp="description" className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-                Professional graphic design services with creative, impactful, and brand-focused visual solutions that elevate your brand identity and engage audiences.
-              </p>
-            </Reveal>
-          </div>
-        </section>
+  <div className="relative z-10 text-center text-white px-4 sm:px-6">
+    {/* ✅ Breadcrumb Navigation */}
+    <nav
+      aria-label="Breadcrumb"
+      className="text-gray-300 text-xs sm:text-sm md:text-base mb-3 md:mb-4"
+    >
+      <a href="/" className="hover:text-[#008300] transition-colors">
+        Home
+      </a>
+      <span className="mx-2 text-[#008300]">/</span>
+      <span className="text-[#008300]">Graphic Designing</span>
+    </nav>
+
+    <Reveal>
+      {/* ✅ Responsive Heading */}
+      <h1
+        itemProp="headline"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+      >
+        Graphic Designing Services
+      </h1>
+    </Reveal>
+
+    <Reveal>
+      <p
+        itemProp="description"
+        className="mt-4 md:mt-6 max-w-3xl mx-auto text-gray-200 text-sm sm:text-base md:text-lg"
+      >
+        Professional graphic design services with creative, impactful,
+        and brand-focused visual solutions that elevate your brand
+        identity and engage audiences.
+      </p>
+    </Reveal>
+  </div>
+</section>
 
         {/* ================= INTRO ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">

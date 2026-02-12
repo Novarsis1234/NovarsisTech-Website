@@ -79,44 +79,54 @@ const About = () => {
       </Helmet>
 
       {/* ================= HERO HEADER ================= */}
-      <header className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
-        {/* Background Video */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster="/Images/bannerImage.png"
-        />
+    <header className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+  {/* Background Video */}
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="/Images/banner.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="metadata"
+    poster="/Images/bannerImage.png"
+  />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 
-        {/* Content */}
-        <div className="relative z-10 text-center text-white px-4">
-          {/* Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb">
-            <Reveal>
-              <p className="text-gray-300 text-lg md:text-xl mb-2">
-                <Link to="/" className="hover:text-[#008300] transition">
-                  Home
-                </Link>
-                <span className="text-[#008300] mx-1">/</span> About Us
-              </p>
-            </Reveal>
-          </nav>
+  {/* Content */}
+  <div className="relative z-10 text-center text-white px-4 sm:px-6">
+    {/* Breadcrumb Navigation */}
+    <nav aria-label="Breadcrumb">
+      <Reveal>
+        <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-xl mb-2 md:mb-3">
+          <Link to="/" className="hover:text-[#008300] transition">
+            Home
+          </Link>
+          <span className="text-[#008300] mx-1">/</span> About Us
+        </p>
+      </Reveal>
+    </nav>
 
-          {/* ✅ EXACTLY ONE H1 */}
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold">
-              About Us | Novarsis Technology
-            </h1>
-          </Reveal>
-        </div>
-      </header>
+    {/* ✅ EXACTLY ONE H1 */}
+    <Reveal>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        About Us | Novarsis Technology
+      </h1>
+    </Reveal>
+
+    {/* ✅ SEO Optimized Paragraph */}
+    <Reveal>
+      <p className="mt-3 md:mt-4 max-w-2xl mx-auto text-gray-200 text-sm sm:text-base md:text-lg">
+        Novarsis Technology delivers web development, mobile apps, UI/UX design,
+SEO, and digital marketing solutions for modern business growth.
+
+      </p>
+    </Reveal>
+  </div>
+</header>
+
 
       {/* ================= MAIN CONTENT ================= */}
       <main>

@@ -157,40 +157,56 @@ const Project = () => {
       </Helmet>
 
       {/* Hero Section with Breadcrumb */}
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden" itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Software Development Projects" />
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/Images/bannerImage.png"
-          alt="Project showcase banner"
-        />
-        <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
+      <section
+  className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden"
+  itemScope
+  itemType="https://schema.org/WebPage"
+>
+  <meta itemProp="name" content="Software Development Projects" />
 
-        <div className="relative z-10 text-center text-white px-4">
-          <Reveal>
-            <nav aria-label="Breadcrumb" className="text-gray-300 text-lg md:text-xl mb-2">
-              <Link to="/" className="hover:text-[#008300] transition-colors">
-                Home
-              </Link>
-              <span className="mx-2 text-[#008300]">/</span>
-              <span className="text-[#008300]">Projects</span>
-            </nav>
-          </Reveal>
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Software Development Portfolio & Projects</h1>
-          </Reveal>
-          <Reveal>
-            <p className="text-gray-200 text-lg mt-4 max-w-2xl mx-auto">
-              Discover our case studies in web development, ERP systems, hotel automation, and travel management solutions
-            </p>
-          </Reveal>
-        </div>
-      </section>
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="/Images/banner.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="/Images/bannerImage.png"
+    alt="Project showcase banner"
+  />
+
+  <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
+
+  <div className="relative z-10 text-center text-white px-4 sm:px-6">
+    <Reveal>
+      <nav
+        aria-label="Breadcrumb"
+        className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-xl mb-2 md:mb-3"
+      >
+        <Link to="/" className="hover:text-[#008300] transition-colors">
+          Home
+        </Link>
+        <span className="mx-2 text-[#008300]">/</span>
+        <span className="text-[#008300]">Projects</span>
+      </nav>
+    </Reveal>
+
+    <Reveal>
+      {/* ✅ Responsive Heading */}
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+        Software Development Portfolio & Projects
+      </h1>
+    </Reveal>
+
+    <Reveal>
+      <p className="text-gray-200 text-sm sm:text-base md:text-lg mt-3 md:mt-4 max-w-2xl mx-auto">
+        Discover our case studies in web development, ERP systems, hotel
+        automation, and travel management solutions
+      </p>
+    </Reveal>
+  </div>
+</section>
+
 
       {/* Projects Section */}
       <section className="py-24 bg-gray-50">

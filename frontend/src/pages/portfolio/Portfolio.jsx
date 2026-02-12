@@ -79,36 +79,47 @@ const Portfolio = () => {
       </Helmet>
 
       {/* ================= HERO ================= */}
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/Images/banner.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/Images/bannerImage.png"
-        />
-        <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
+     <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="/Images/banner.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="/Images/bannerImage.png"
+  />
 
-        <div className="relative z-10 text-center text-white px-4">
-          <Reveal>
-            <p className="text-gray-300 text-lg md:text-xl mb-2">
-              <Link to="/" className="hover:text-[#008300] transition">
-                Home
-              </Link>
-              <span className="text-[#008300] mx-1">/</span> Portfolio
-            </p>
-          </Reveal>
+  <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 
-          {/* ✅ ONLY 1 H1 */}
-          <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Novarsis Technology Portfolio
-            </h1>
-          </Reveal>
-        </div>
-      </section>
+  <div className="relative z-10 text-center text-white px-4 sm:px-6">
+    <Reveal>
+      {/* ✅ Breadcrumb */}
+      <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-xl mb-2 md:mb-3">
+        <Link to="/" className="hover:text-[#008300] transition">
+          Home
+        </Link>
+        <span className="text-[#008300] mx-1">/</span> Portfolio
+      </p>
+    </Reveal>
+
+    {/* ✅ ONLY 1 H1 */}
+    <Reveal>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        Novarsis Technology Portfolio
+      </h1>
+    </Reveal>
+
+    {/* ✅ SEO Optimized Paragraph */}
+    <Reveal>
+      <p className="mt-3 md:mt-4 max-w-2xl mx-auto text-gray-200 text-sm sm:text-base md:text-lg">
+        Explore our portfolio featuring innovative web development, mobile app
+        development, UI/UX design, and digital marketing projects.
+      </p>
+    </Reveal>
+  </div>
+</section>
+
 
       {/* ================= ARTICLE CONTENT ================= */}
       <article>
