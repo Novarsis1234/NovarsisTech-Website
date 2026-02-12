@@ -42,6 +42,7 @@ const services = [
 const ServiceSection = () => {
   return (
     <>
+      {/* ================= ADVANCED SEO HELMET ================= */}
       <Helmet>
         <title>
           Why Choose Novarsis Technology | Quality IT Services & Expert Team
@@ -52,20 +53,13 @@ const ServiceSection = () => {
           content="Discover why businesses choose Novarsis Technology — quality service, expert team, excellent support, and strategic management for powerful digital growth."
         />
 
-        <meta
-          name="keywords"
-          content="why choose Novarsis Technology, IT company benefits, expert IT team India, digital solutions company, quality IT services"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link
           rel="canonical"
           href="https://novarsistech.com/why-choose-novarsis"
         />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Why Choose Novarsis Technology" />
         <meta
@@ -81,50 +75,66 @@ const ServiceSection = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Novarsis Technology - Trusted IT Partner"
-        />
-        <meta
-          name="twitter:description"
-          content="Complete digital solutions powered by expert professionals and innovative strategies."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 WEBPAGE SCHEMA (TRUST SIGNAL BOOST) */}
+        {/* 🔥 WebPage + Breadcrumb + Organization Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"WebPage",
-        "name":"Why Choose Novarsis Technology",
-        "url":"https://novarsistech.com/why-choose-novarsis",
-        "description":"Reasons why businesses trust Novarsis Technology for quality IT services, expert teams, and strategic digital growth."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@graph":[
+              {
+                "@type":"WebPage",
+                "name":"Why Choose Novarsis Technology",
+                "url":"https://novarsistech.com/why-choose-novarsis"
+              },
+              {
+                "@type":"Organization",
+                "name":"Novarsis Technology",
+                "url":"https://novarsistech.com"
+              },
+              {
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                  {
+                    "@type":"ListItem",
+                    "position":1,
+                    "name":"Home",
+                    "item":"https://novarsistech.com"
+                  },
+                  {
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"Why Choose Novarsis",
+                    "item":"https://novarsistech.com/why-choose-novarsis"
+                  }
+                ]
+              }
+            ]
+          }
+        `}
         </script>
       </Helmet>
 
-      <section className="relative py-24 bg-white overflow-hidden">
-        {/* ⭐ Hidden SEO H1 (Google Ranking Boost) */}
-        <h1 className="sr-only">
-          Why Choose Novarsis Technology – Best IT Company Digital Solutions
-        </h1>
+      <section
+        className="relative py-24 bg-white overflow-hidden"
+        aria-labelledby="why-choose-heading"
+      >
+        {/* ✅ EXACTLY ONE H1 (Hidden for homepage structure) */}
+        <header className="sr-only">
+          <h1>Why Choose Novarsis Technology Digital Solutions</h1>
+        </header>
 
         {/* Decorative Circles */}
         <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
         <div className="absolute top-40 right-0 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          {/* ================= HEADING ================= */}
+          <header className="text-center mb-16 max-w-3xl mx-auto">
             <Reveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
+              <h2
+                id="why-choose-heading"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4"
+              >
                 Why <span className="text-[#008300]">Choose Us</span>
               </h2>
             </Reveal>
@@ -135,25 +145,25 @@ const ServiceSection = () => {
                 to grow with confidence and consistency.
               </p>
             </Reveal>
-          </div>
+          </header>
 
-          {/* Cards */}
+          {/* ================= CARDS ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {services.map((service) => (
-              <div
+              <article
                 key={service.id}
                 className="group relative bg-white rounded-2xl p-8 text-center
-          shadow-lg hover:shadow-2xl transition-all duration-500
-          hover:-translate-y-2"
+                shadow-lg hover:shadow-2xl transition-all duration-500
+                hover:-translate-y-2"
               >
-                {/* Card Circle Accent */}
+                {/* Circle Accent */}
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#008300]/10 rounded-full"></div>
 
                 {/* Icon */}
                 <div
                   className="relative mx-auto mb-6 w-20 h-20 rounded-full
-            bg-white shadow-md flex items-center justify-center
-            group-hover:bg-[#008300]/10 transition"
+                  bg-white shadow-md flex items-center justify-center
+                  group-hover:bg-[#008300]/10 transition"
                 >
                   {service.icon}
                 </div>
@@ -169,7 +179,7 @@ const ServiceSection = () => {
                     {service.description}
                   </p>
                 </Reveal>
-              </div>
+              </article>
             ))}
           </div>
         </div>

@@ -15,6 +15,7 @@ import { Helmet } from "react-helmet-async";
 const About = () => {
   return (
     <>
+      {/* ================= ADVANCED SEO HELMET ================= */}
       <Helmet>
         <title>
           About Novarsis Technology | Innovative IT & Software Solutions Company
@@ -37,28 +38,48 @@ const About = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* Organization Schema */}
+        {/* 🔥 WebPage + Breadcrumb + Organization Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Organization",
-        "name":"Novarsis Technology",
-        "url":"https://novarsistech.com",
-        "logo":"https://novarsistech.com/logo.png"
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@graph":[
+              {
+                "@type":"WebPage",
+                "name":"About Novarsis Technology",
+                "url":"https://novarsistech.com/about"
+              },
+              {
+                "@type":"Organization",
+                "name":"Novarsis Technology",
+                "url":"https://novarsistech.com",
+                "logo":"https://novarsistech.com/logo.png"
+              },
+              {
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                  {
+                    "@type":"ListItem",
+                    "position":1,
+                    "name":"Home",
+                    "item":"https://novarsistech.com"
+                  },
+                  {
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"About Us",
+                    "item":"https://novarsistech.com/about"
+                  }
+                ]
+              }
+            ]
+          }
+        `}
         </script>
       </Helmet>
 
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+      {/* ================= HERO HEADER ================= */}
+      <header className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -67,39 +88,62 @@ const About = () => {
           loop
           muted
           playsInline
+          preload="metadata"
           poster="/Images/bannerImage.png"
         />
 
-        {/* Dark Overlay */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 
-        {/* Centered Content */}
+        {/* Content */}
         <div className="relative z-10 text-center text-white px-4">
-          <Reveal>
-            <p className="text-gray-300 text-lg md:text-xl mb-2">
-              <Link to="/" className="hover:text-[#008300] transition">
-                Home
-              </Link>
-              <span className="text-[#008300] mx-1">/</span> About Us
-            </p>
-          </Reveal>
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb">
+            <Reveal>
+              <p className="text-gray-300 text-lg md:text-xl mb-2">
+                <Link to="/" className="hover:text-[#008300] transition">
+                  Home
+                </Link>
+                <span className="text-[#008300] mx-1">/</span> About Us
+              </p>
+            </Reveal>
+          </nav>
 
+          {/* ✅ EXACTLY ONE H1 */}
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-bold">
               About Us | Novarsis Technology
             </h1>
           </Reveal>
         </div>
-      </section>
+      </header>
 
-      <Details />
-      <Section />
-      <TeamSection />
-      <ScrollingBanner />
-      <AboutDetails />
-      <StepsSection />
-      <AboutParallaxSection />
-      <HappyFamilyCarousel />
+      {/* ================= MAIN CONTENT ================= */}
+      <main>
+        {/* About Details Section */}
+        <Details />
+
+        {/* IT Meeting Section */}
+        <Section />
+
+        {/* Team Section */}
+        <TeamSection />
+
+        {/* Scrolling Banner */}
+        <ScrollingBanner />
+
+        {/* About Extended Content */}
+        <AboutDetails />
+
+        {/* Steps Process */}
+        <StepsSection />
+
+        {/* Parallax About Section */}
+        <AboutParallaxSection />
+
+        {/* Happy Clients Carousel */}
+        <HappyFamilyCarousel />
+      </main>
     </>
   );
 };

@@ -16,6 +16,8 @@ const HappyFamilyCarousel = () => {
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
     const scrollContent = scrollContainer.innerHTML;
     scrollContainer.innerHTML += scrollContent;
 
@@ -36,82 +38,60 @@ const HappyFamilyCarousel = () => {
 
   return (
     <>
+      {/* ================= SECTION LEVEL SEO SCHEMA ================= */}
       <Helmet>
-        <title>
-          About Novarsis Technology | Innovative IT & Software Solutions Company
-        </title>
-
-        <meta
-          name="description"
-          content="Learn about Novarsis Technology — a leading IT and software development company delivering web development, app solutions, UI/UX design, and digital growth services worldwide."
-        />
-
-        <meta
-          name="keywords"
-          content="About Novarsis Technology, IT company India, software development company, digital solutions agency, web development experts"
-        />
-
-        {/* ✅ Updated Canonical */}
-        <link rel="canonical" href="https://novarsistech.com/about" />
-
-        <meta name="robots" content="index, follow" />
-
-        {/* ✅ Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="About Novarsis Technology" />
-        <meta
-          property="og:description"
-          content="Discover our mission, vision, expert team, and innovative approach to delivering powerful IT solutions."
-        />
-        <meta property="og:url" content="https://novarsistech.com/about" />
-        <meta
-          property="og:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Novarsis Technology" />
-        <meta
-          name="twitter:description"
-          content="Meet the team behind Novarsis Technology and explore our journey in building scalable digital solutions."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 ABOUT PAGE SCHEMA (SEO BOOST) */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"AboutPage",
-        "name":"About Novarsis Technology",
-        "url":"https://novarsistech.com/about",
-        "description":"About Novarsis Technology — innovative IT and software solutions company."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@graph":[
+              {
+                "@type":"Organization",
+                "name":"Novarsis Technology",
+                "url":"https://novarsistech.com"
+              },
+              {
+                "@type":"ItemList",
+                "name":"Novarsis Technology Clients",
+                "itemListElement":[
+                  ${logos
+                    .map(
+                      (logo, i) => `{
+                        "@type":"ListItem",
+                        "position":${i + 1},
+                        "name":"Client Logo ${i + 1}"
+                      }`
+                    )
+                    .join(",")}
+                ]
+              }
+            ]
+          }
+        `}
         </script>
       </Helmet>
 
-      <section className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden">
-        {/* ⭐ Hidden SEO Heading */}
-        <h2 className="sr-only">
-          Novarsis Technology Clients and Happy Family – Trusted IT Company
-          Partnerships
-        </h2>
+      <section
+        className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
+        aria-labelledby="happy-family-heading"
+      >
+        {/* ✅ EXACTLY ONE H1 (Hidden for global SEO safety) */}
+        <header className="sr-only">
+          <h1>Novarsis Technology Happy Family and Client Partnerships</h1>
+        </header>
 
-        {/* ===== Decorative Circles (SAME AS STATS SECTION) ===== */}
+        {/* Decorative Background */}
         <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
 
-        {/* ===== CONTENT ===== */}
         <div className="relative z-10 max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          {/* ================= HEADING ================= */}
+          <header className="text-center max-w-3xl mx-auto mb-16">
             <Reveal>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-black">
+              <h2
+                id="happy-family-heading"
+                className="text-3xl sm:text-4xl font-extrabold text-black"
+              >
                 Novarsis <span className="text-[#008300]">Happy Family</span>
               </h2>
             </Reveal>
@@ -123,40 +103,42 @@ const HappyFamilyCarousel = () => {
                 digital transformation, and long-term partnerships.
               </p>
             </Reveal>
-          </div>
+          </header>
 
-          {/* Carousel */}
+          {/* ================= CLIENT LOGOS CAROUSEL ================= */}
           <div
             ref={scrollRef}
             className="flex overflow-hidden whitespace-nowrap w-full"
+            role="list"
           >
             {logos.map((logo, index) => (
-              <div
+              <article
                 key={index}
                 className="inline-block w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex-shrink-0 p-6"
               >
                 <div
                   className="
-              flex justify-center items-center h-28
-              bg-white rounded-2xl
-              border border-[#008300]/20
-              shadow-lg hover:shadow-2xl
-              transition-all duration-500
-              hover:-translate-y-2
-            "
+                  flex justify-center items-center h-28
+                  bg-white rounded-2xl
+                  border border-[#008300]/20
+                  shadow-lg hover:shadow-2xl
+                  transition-all duration-500
+                  hover:-translate-y-2
+                "
                 >
                   <img
                     src={logo}
                     alt={`Novarsis Technology Client Company Logo ${index + 1}`}
+                    loading="lazy"
                     className="
-                w-32 h-20 object-contain
-                grayscale hover:grayscale-0
-                transition-all duration-700
-                hover:scale-110
-              "
+                    w-32 h-20 object-contain
+                    grayscale hover:grayscale-0
+                    transition-all duration-700
+                    hover:scale-110
+                  "
                   />
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>

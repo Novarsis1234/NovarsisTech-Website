@@ -25,78 +25,130 @@ const UiUxDesigner = () => {
     <>
       <Helmet>
         <title>
-          UI / UX Design Services | Creative Interface Design - Novarsis
-          Technology
+          UI/UX Design Services | Modern Interface & Experience Design - Novarsis Technology
         </title>
 
         <meta
           name="description"
-          content="Professional UI/UX design services by Novarsis Technology. We create modern, user-focused interfaces that improve engagement, usability, and conversion rates."
+          content="Professional UI/UX Design Services by Novarsis Technology. We create modern, user-focused interfaces for web and mobile apps that improve engagement, usability, and conversion rates."
         />
 
         <meta
           name="keywords"
-          content="UI UX design company, user interface design, user experience design, mobile app UI design, website UI UX services, Novarsis Technology"
+          content="UI UX Design, User Interface Design, User Experience Design, Mobile App UI, Web Design, UX Strategy, Digital Design Services, Design Company"
         />
 
-        {/* ✅ Updated Canonical */}
-        <link rel="canonical" href="https://novarsistech.com/uiuxdesign" />
+        {/* ✅ Dynamic Canonical */}
+        <link rel="canonical" href={`https://novarsistech.com/services/ui-ux-design`} />
 
-        <meta name="robots" content="index, follow" />
+        {/* ✅ RankMath Friendly Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Novarsis Technology" />
 
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="UI / UX Design Services - Novarsis Technology"
+          content="UI/UX Design Services | Modern Interface & Experience Design - Novarsis Technology"
         />
         <meta
           property="og:description"
-          content="Creative and user-focused UI/UX design solutions to enhance digital experiences and improve business growth."
+          content="Professional UI/UX design services for web and mobile apps with focus on usability, user experience, and conversion optimization."
         />
-        <meta property="og:url" content="https://novarsistech.com/uiuxdesign" />
+        <meta
+          property="og:url"
+          content="https://novarsistech.com/services/ui-ux-design"
+        />
         <meta
           property="og:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
+        <meta property="og:site_name" content="Novarsis Technology" />
 
-        {/* ✅ Twitter */}
+        {/* ✅ Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="UI UX Design Services | Novarsis Technology"
+          content="UI/UX Design Services | Modern Interface & Experience Design"
         />
         <meta
           name="twitter:description"
-          content="Modern UI/UX design for websites and mobile apps focused on usability, performance, and engagement."
+          content="Expert UI/UX design services for websites and mobile apps with user-centered design approach and modern design tools."
         />
         <meta
           name="twitter:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅🔥 SERVICE SCHEMA (UI/UX DESIGN SEO BOOST) */}
+        {/* ✅ BreadcrumbList Schema */}
         <script type="application/ld+json">
-          {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "serviceType":"UI UX Design Services",
-        "provider":{
-          "@type":"Organization",
-          "name":"Novarsis Technology",
-          "url":"https://novarsistech.com"
-        },
-        "areaServed":"Worldwide",
-        "url":"https://novarsistech.com/uiuxdesign",
-        "description":"User interface and user experience design services including mobile app UI, website UX strategy, and modern digital product design."
-      }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://novarsistech.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://novarsistech.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "UI/UX Design",
+                "item": "https://novarsistech.com/services/ui-ux-design"
+              }
+            ]
+          })}
+        </script>
+
+        {/* ✅ Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Novarsis Technology",
+            "url": "https://novarsistech.com",
+            "logo": "https://novarsistech.com/Images/logo.png",
+            "description": "Professional UI/UX Design Services including user interface design, user experience strategy, and digital product design.",
+            "sameAs": [
+              "https://facebook.com/novarsistech",
+              "https://twitter.com/novarsistech",
+              "https://linkedin.com/company/novarsistech"
+            ]
+          })}
+        </script>
+
+        {/* ✅ ProfessionalService Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "UI/UX Design Services",
+            "url": "https://novarsistech.com/services/ui-ux-design",
+            "description": "Professional UI/UX design services including user interface design, user experience strategy, wireframing, prototyping, and design systems.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Novarsis Technology",
+              "url": "https://novarsistech.com"
+            },
+            "serviceType": ["UI Design", "UX Design", "Wireframing", "Prototyping", "User Research", "Design Systems"],
+            "knowsAbout": ["User Interface Design", "User Experience Design", "UX Research", "Wireframing", "Prototyping", "Design Systems", "Usability Testing", "Interaction Design"],
+            "areaServed": "Worldwide"
+          })}
         </script>
       </Helmet>
-      <div className="bg-white">
+      <article className="bg-white">
         {/* ================= HERO ================= */}
-        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <section itemScope itemType="https://schema.org/WebPage" className="relative h-[50vh] flex items-center justify-center overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover"
             src="/Images/banner.mp4"
@@ -108,15 +160,22 @@ const UiUxDesigner = () => {
           <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
           <div className="relative z-10 text-center text-white px-6">
+            {/* ✅ Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="text-gray-300 text-sm md:text-base mb-4">
+              <a href="/" className="hover:text-[#008300] transition-colors">Home</a>
+              <span className="mx-2 text-[#008300]">/</span>
+             
+              <span className="text-[#008300]">UI/UX Design</span>
+            </nav>
+
             <Reveal>
-              <h1 className="text-4xl md:text-6xl font-extrabold">
-                UI / UX Design Services
+              <h1 itemProp="headline" className="text-4xl md:text-6xl font-extrabold">
+                UI/UX Design Services
               </h1>
             </Reveal>
             <Reveal>
-              <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-                User-centered, visually stunning and conversion-focused UI/UX
-                design solutions.
+              <p itemProp="description" className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
+                User-centered, visually stunning, and conversion-focused UI/UX design solutions that improve engagement and drive business results.
               </p>
             </Reveal>
           </div>
@@ -125,15 +184,15 @@ const UiUxDesigner = () => {
         {/* ================= INTRO ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circles */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* LEFT */}
             <div>
               <Reveal>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-                  UI / UX Design
+                <h2 itemProp="name" className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
+                  Professional UI/UX Design Solutions
                 </h2>
               </Reveal>
 
@@ -159,15 +218,26 @@ const UiUxDesigner = () => {
 
             {/* RIGHT IMAGE (CIRCLE) */}
             <Reveal>
-              <div className="flex justify-center md:justify-end">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+              <figure className="flex justify-center md:justify-end">
+  <div
+    className="
+      w-72 h-72
+      md:w-96 md:h-96
+      aspect-square
+      rounded-full
+      overflow-hidden
+      shadow-2xl
+      border-8 border-white
+      shrink-0
+    "
+  >
                   <img
                     src="/Images/s-uiux1.png"
-                    alt="UI UX Design"
+                    alt="Professional UI/UX Design Solutions and Services"
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </div>
+              </figure>
             </Reveal>
           </div>
         </section>
@@ -175,7 +245,7 @@ const UiUxDesigner = () => {
         {/* ================= DESCRIPTION ================= */}
         <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circle */}
-          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             <Reveal>
@@ -256,22 +326,22 @@ const UiUxDesigner = () => {
         {/* ================= FAQ ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* IMAGE */}
             <Reveal>
-              <div className="relative max-w-md mx-auto md:max-w-none">
+              <figure className="relative max-w-md mx-auto md:max-w-none">
                 {/* BACK LAYER */}
-                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3"></div>
+                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] rotate-3" aria-hidden="true"></div>
 
                 <img
                   src="/Images/s-uiux2.png"
-                  alt="UI UX FAQ"
+                  alt="UI UX Design FAQ Section - Common Questions About Design Services"
                   className="
             relative z-10
             w-full
@@ -279,14 +349,14 @@ const UiUxDesigner = () => {
             shadow-2xl
           "
                 />
-              </div>
+              </figure>
             </Reveal>
 
             {/* FAQ CONTENT */}
             <div>
               <Reveal>
-                <h2 className="text-3xl font-bold text-[#008300] mb-8">
-                  UI / UX FAQs
+                <h2 itemProp="name" className="text-3xl font-bold text-[#008300] mb-8">
+                  Frequently Asked Questions
                 </h2>
               </Reveal>
 
@@ -327,9 +397,9 @@ const UiUxDesigner = () => {
         {/* ================= UI UX DESIGN SEO INTRO ================= */}
         <section className="bg-white py-16 px-6">
           <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-              UI & UX Design Services{" "}
-              <span className="text-[#008300]">by Novarsis Technology</span>
+            <h2 itemProp="name" className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              Why Choose{" "}
+              <span className="text-[#008300]">Novarsis Technology</span> for UI/UX Design
             </h2>
 
             <p className="mb-4">
@@ -358,7 +428,7 @@ const UiUxDesigner = () => {
             </p>
           </div>
         </section>
-      </div>{" "}
+      </article>{" "}
     </>
   );
 };
@@ -375,11 +445,12 @@ const SkillSection = ({ title, desc, skills, bg }) => (
         bg-[size:64px_64px]
         pointer-events-none
       "
+      aria-hidden="true"
     ></div>
 
     <div className="max-w-7xl mx-auto relative z-10">
       <Reveal>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
+        <h2 itemProp="name" className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
           {title}
         </h2>
       </Reveal>
@@ -394,6 +465,7 @@ const SkillSection = ({ title, desc, skills, bg }) => (
         {skills.map((skill, i) => (
           <Reveal key={i}>
             <div
+              itemProp="about"
               className="
                 relative bg-white
                 p-8 text-center
@@ -403,7 +475,7 @@ const SkillSection = ({ title, desc, skills, bg }) => (
               "
             >
               {/* TOP STRAIGHT ACCENT */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#008300]"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#008300]" aria-hidden="true"></div>
 
               {/* ICON (SQUARE – NO CIRCLE) */}
               <div
@@ -413,11 +485,12 @@ const SkillSection = ({ title, desc, skills, bg }) => (
                   bg-[#008300]/10
                   text-[#008300] text-3xl
                 "
+                aria-hidden="true"
               >
                 {skill.icon}
               </div>
 
-              <h4 className="font-semibold text-gray-800 text-lg">
+              <h4 itemProp="name" className="font-semibold text-gray-800 text-lg">
                 {skill.name}
               </h4>
             </div>
@@ -430,8 +503,8 @@ const SkillSection = ({ title, desc, skills, bg }) => (
 
 const Stat = ({ icon, value, label }) => (
   <Reveal>
-    <div className="p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition">
-      <div className="text-4xl mb-4">{icon}</div>
+    <div itemProp="name" className="p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition">
+      <div className="text-4xl mb-4" aria-hidden="true">{icon}</div>
       <h3 className="text-3xl font-bold">{value}</h3>
       <p className="mt-2 text-sm">{label}</p>
     </div>

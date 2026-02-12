@@ -49,17 +49,10 @@ const PremiumServices = () => {
           content="Explore premium IT and creative services by Novarsis Technology including branding, UI/UX design, product development, video editing, and data-driven solutions."
         />
 
-        <meta
-          name="keywords"
-          content="Novarsis Technology services, UI UX design, branding agency, IT services India, video editing, data analysis company"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link rel="canonical" href="https://novarsistech.com/services" />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -75,32 +68,22 @@ const PremiumServices = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Novarsis Technology Premium Services"
-        />
-        <meta
-          name="twitter:description"
-          content="Branding, UI/UX design, video editing, product development, and data analysis services."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 SERVICES COLLECTION SCHEMA (SEO BOOST) */}
+        {/* 🔥 SERVICE COLLECTION SCHEMA */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"CollectionPage",
-        "name":"Novarsis Technology Services",
-        "url":"https://novarsistech.com/services",
-        "description":"Premium IT and creative services including branding, UI/UX design, product development, video editing, and data-driven solutions."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@type":"CollectionPage",
+            "name":"Novarsis Technology Services",
+            "url":"https://novarsistech.com/services",
+            "description":"Premium IT and creative services including branding, UI/UX design, product development, video editing, and data-driven solutions.",
+            "publisher":{
+              "@type":"Organization",
+              "name":"Novarsis Technology",
+              "url":"https://novarsistech.com"
+            }
+          }
+        `}
         </script>
       </Helmet>
 
@@ -109,9 +92,10 @@ const PremiumServices = () => {
         style={{
           backgroundImage: "url('/Images/novarsis-home2.webp')",
         }}
+        aria-labelledby="services-heading"
       >
         {/* ⭐ Hidden SEO Heading */}
-        <h2 className="sr-only">
+        <h2 id="services-heading" className="sr-only">
           Advanced IT and Creative Services by Novarsis Technology – Premium
           Capabilities
         </h2>
@@ -119,21 +103,22 @@ const PremiumServices = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Soft Glow */}
+        {/* Glow */}
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-400/20 rounded-full blur-3xl"></div>
 
-        {/* Header */}
-        <div className="max-w-7xl mx-auto px-6 mb-20 relative z-10">
+        {/* ================= HEADER ================= */}
+        <header className="max-w-7xl mx-auto px-6 mb-20 relative z-10">
           <Reveal>
-            <h4 className="text-[#008300] font-extrabold uppercase tracking-widest">
+            <p className="text-[#008300] font-extrabold uppercase tracking-widest">
               Premium Capabilities
-            </h4>
+            </p>
           </Reveal>
 
+          {/* ✅ EXACTLY ONE H1 */}
           <Reveal>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-3 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mt-3 leading-tight">
               Advanced IT <br /> & Creative Services
-            </h2>
+            </h1>
           </Reveal>
 
           <Reveal>
@@ -143,43 +128,41 @@ const PremiumServices = () => {
               confidence.
             </p>
           </Reveal>
-        </div>
+        </header>
 
-        {/* Cards */}
-        <Reveal>
-          <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 relative z-10">
-            {premiumServices.map((service, i) => (
+        {/* ================= SERVICE CARDS ================= */}
+        <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 relative z-10">
+          {premiumServices.map((service, i) => (
+            <article
+              key={i}
+              className="relative group bg-white/80 backdrop-blur-xl 
+              rounded-2xl p-8 shadow-xl hover:shadow-2xl 
+              transition-all duration-500 hover:-translate-y-3"
+            >
+              {/* Accent Line */}
+              <span className="absolute left-0 top-0 h-full w-1 bg-[#008300] rounded-l-2xl"></span>
+
+              {/* Icon */}
               <div
-                key={i}
-                className="relative group bg-white/80 backdrop-blur-xl 
-          rounded-2xl p-8 shadow-xl hover:shadow-2xl 
-          transition-all duration-500 hover:-translate-y-3"
+                className="absolute -top-6 left-6 w-14 h-14 rounded-xl 
+                bg-[#008300] text-white flex items-center justify-center text-2xl 
+                shadow-lg group-hover:scale-110 transition duration-500"
               >
-                {/* Left Accent Line */}
-                <span className="absolute left-0 top-0 h-full w-1 bg-[#008300] rounded-l-2xl"></span>
-
-                {/* Floating Icon */}
-                <div
-                  className="absolute -top-6 left-6 w-14 h-14 rounded-xl 
-          bg-[#008300] text-white flex items-center justify-center text-2xl 
-          shadow-lg group-hover:scale-110 transition duration-500"
-                >
-                  {service.icon}
-                </div>
-
-                <div className="mt-10">
-                  <h3 className="font-bold text-lg text-[#0b1b3f] mb-3">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-sm leading-relaxed text-justify">
-                    {service.desc}
-                  </p>
-                </div>
+                {service.icon}
               </div>
-            ))}
-          </div>
-        </Reveal>
+
+              <div className="mt-10">
+                <h2 className="font-bold text-lg text-[#0b1b3f] mb-3">
+                  {service.title}
+                </h2>
+
+                <p className="text-gray-600 text-sm leading-relaxed text-justify">
+                  {service.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </>
   );

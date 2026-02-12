@@ -14,7 +14,6 @@ const BlogDetails = () => {
 
   useEffect(() => {
     if (!id || id === "undefined") return;
-
     dispatch(fetchBlogById(id));
     return () => dispatch(clearSingleBlog());
   }, [dispatch, id]);
@@ -37,12 +36,18 @@ const BlogDetails = () => {
     );
   }
 
+  const blogUrl = `https://novarsistech.com/blog/${singleBlog?._id || id}`;
+  const blogImage =
+    singleBlog?.image ||
+    "https://novarsistech.com/Images/novarsis-og-image.jpg";
+
   return (
     <>
       <Helmet>
+        {/* ================= BASIC SEO ================= */}
         <title>
           {singleBlog?.title
-            ? `${singleBlog.title} | Novarsis Technology Blog`
+            ? `${singleBlog.title} | Software Development Blog | Novarsis Technology`
             : "Blog Details | Novarsis Technology"}
         </title>
 
@@ -50,150 +55,110 @@ const BlogDetails = () => {
           name="description"
           content={
             singleBlog?.description ||
-            "Read detailed technology insights, development knowledge, and digital growth strategies from the Novarsis Technology blog."
+            "Novarsis Technology software development blog shares web development, SEO strategies, and digital marketing insights."
           }
         />
 
         <meta
           name="keywords"
-          content="Novarsis Technology blog, tech article, software development insights, digital marketing tips, SEO knowledge"
+          content="software development blog, Novarsis Technology article, web development insights, SEO tips India, digital marketing knowledge"
         />
 
-        {/* ✅ Updated Canonical */}
-        <link
-          rel="canonical"
-          href={`https://novarsistech.com/blog/${singleBlog?._id || id}`}
-        />
-
+        <link rel="canonical" href={blogUrl} />
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* ================= OPEN GRAPH ================= */}
         <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content={
-            singleBlog?.title
-              ? `${singleBlog.title} | Novarsis Technology`
-              : "Novarsis Technology Blog"
-          }
-        />
-        <meta
-          property="og:description"
-          content={
-            singleBlog?.description ||
-            "Explore detailed blog content and expert insights from Novarsis Technology."
-          }
-        />
-        <meta
-          property="og:url"
-          content={`https://novarsistech.com/blog/${singleBlog?._id || id}`}
-        />
-        <meta
-          property="og:image"
-          content={
-            singleBlog?.image
-              ? singleBlog.image
-              : "https://novarsistech.com/Images/novarsis-og-image.jpg"
-          }
-        />
+        <meta property="og:title" content={singleBlog.title} />
+        <meta property="og:description" content={singleBlog.description} />
+        <meta property="og:url" content={blogUrl} />
+        <meta property="og:image" content={blogImage} />
 
-        {/* ✅ Twitter */}
+        {/* ================= TWITTER ================= */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={
-            singleBlog?.title
-              ? `${singleBlog.title} | Novarsis Technology`
-              : "Novarsis Technology Blog"
-          }
-        />
-        <meta
-          name="twitter:description"
-          content={
-            singleBlog?.description ||
-            "Read expert insights and technology articles from Novarsis Technology."
-          }
-        />
-        <meta
-          name="twitter:image"
-          content={
-            singleBlog?.image
-              ? singleBlog.image
-              : "https://novarsistech.com/Images/novarsis-og-image.jpg"
-          }
-        />
+        <meta name="twitter:title" content={singleBlog.title} />
+        <meta name="twitter:description" content={singleBlog.description} />
+        <meta name="twitter:image" content={blogImage} />
 
-        {/* ✅🔥 ARTICLE SCHEMA (VERY STRONG BLOG SEO BOOST) */}
-        {singleBlog?.title && (
-          <script type="application/ld+json">
-            {`
-        {
-          "@context":"https://schema.org",
-          "@type":"Article",
-          "headline":"${singleBlog.title}",
-          "description":"${singleBlog.description || ""}",
-          "image":"${
-            singleBlog?.image
-              ? singleBlog.image
-              : "https://novarsistech.com/Images/novarsis-og-image.jpg"
-          }",
-          "author":{
-            "@type":"Organization",
-            "name":"Novarsis Technology"
-          },
-          "publisher":{
-            "@type":"Organization",
-            "name":"Novarsis Technology",
-            "logo":{
-              "@type":"ImageObject",
-              "url":"https://novarsistech.com/logo.png"
+        {/* ================= ARTICLE SCHEMA (VERY STRONG SEO) ================= */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context":"https://schema.org",
+            "@type":"Article",
+            "headline":"${singleBlog.title}",
+            "image":"${blogImage}",
+            "author":{
+              "@type":"Organization",
+              "name":"Novarsis Technology"
+            },
+            "publisher":{
+              "@type":"Organization",
+              "name":"Novarsis Technology",
+              "logo":{
+                "@type":"ImageObject",
+                "url":"https://novarsistech.com/logo.png"
+              }
+            },
+            "mainEntityOfPage":{
+              "@type":"WebPage",
+              "@id":"${blogUrl}"
             }
-          },
-          "mainEntityOfPage":{
-            "@type":"WebPage",
-            "@id":"https://novarsistech.com/blog/${singleBlog?._id || id}"
           }
-        }
-      `}
-          </script>
-        )}
+        `}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://novarsistech.com"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://novarsistech.com/blog"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${singleBlog.title}",
+              "item": "${blogUrl}"
+            }]
+          }
+        `}
+        </script>
       </Helmet>
 
+      {/* ================= BLOG DETAILS SECTION ================= */}
       <section className="relative bg-white min-h-screen py-24 px-4 md:px-20 overflow-hidden">
-        {/* ⭐ Hidden SEO Support Heading */}
-        <h2 className="sr-only">
-          Novarsis Technology Blog Article – Software, IT Solutions and Digital
-          Insights
-        </h2>
 
-        {/* ===== Decorative Green Circles ===== */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#008300]/10 rounded-full"></div>
+        {/* Hidden SEO Heading */}
+        <h2 className="sr-only">
+          Software Development Blog Article by Novarsis Technology
+        </h2>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="
-      relative z-10
-      max-w-4xl mx-auto
-      bg-white rounded-2xl
-      shadow-xl overflow-hidden
-      border border-[#008300]/10
-    "
+          className="relative z-10 max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-[#008300]/10"
         >
-          {/* IMAGE */}
+          {/* BLOG IMAGE */}
           <img
             src={singleBlog.image}
-            alt={`${singleBlog.title} – Novarsis Technology Blog`}
+            alt={`${singleBlog.title} software development blog by Novarsis Technology`}
             className="w-full h-[280px] sm:h-[360px] md:h-[420px] object-cover"
           />
 
-          {/* CONTENT */}
-          <div className="p-6 sm:p-8 space-y-5">
-            {/* Meta */}
+          <div className="p-6 sm:p-8 space-y-6">
+
+            {/* Meta Info */}
             <div className="flex flex-wrap gap-4 text-sm text-gray-500">
               {singleBlog.date && (
                 <span>
@@ -205,16 +170,21 @@ const BlogDetails = () => {
               )}
             </div>
 
-            {/* ⭐ MAIN BLOG HEADING (Correct H1) */}
+            {/* ⭐ MAIN H1 */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black leading-tight">
               {singleBlog.title}
             </h1>
 
-            {/* Short Description */}
+            {/* Description */}
             {singleBlog.description && (
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                {singleBlog.description}
-              </p>
+              <>
+                <h2 className="text-xl font-bold text-black">
+                  Overview of This Software Development Article
+                </h2>
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                  {singleBlog.description}
+                </p>
+              </>
             )}
 
             {/* Blog Content */}
@@ -222,9 +192,18 @@ const BlogDetails = () => {
               {singleBlog.content}
             </div>
 
+            {/* Internal SEO Link */}
+            <p className="text-sm text-gray-600 pt-4">
+              Explore more{" "}
+              <Link to="/services" className="text-[#008300] font-semibold">
+                software development services
+              </Link>{" "}
+              offered by Novarsis Technology.
+            </p>
+
             {/* Created Date */}
             {singleBlog.createdAt && (
-              <p className="text-xs text-gray-400 pt-4">
+              <p className="text-xs text-gray-400">
                 Posted on{" "}
                 {new Date(singleBlog.createdAt).toLocaleString("en-GB")}
               </p>
@@ -233,18 +212,14 @@ const BlogDetails = () => {
             {/* Back Button */}
             <Link
               to="/blog"
-              className="
-          inline-flex items-center gap-2
-          text-[#008300] font-semibold
-          hover:gap-3 transition-all
-          pt-6
-        "
+              className="inline-flex items-center gap-2 text-[#008300] font-semibold hover:gap-3 transition-all pt-6"
             >
               ← Back to Blogs
             </Link>
           </div>
         </motion.div>
       </section>
+
       <AutoInternalLinks />
     </>
   );

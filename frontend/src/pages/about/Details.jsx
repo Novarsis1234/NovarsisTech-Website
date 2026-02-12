@@ -13,17 +13,14 @@ const Details = () => {
 
   const stats = [
     { icon: <FaUserTie size={34} />, number: 50, label: "Active Clients" },
-    {
-      icon: <FaThumbsUp size={34} />,
-      number: 200,
-      label: "Projects Completed",
-    },
+    { icon: <FaThumbsUp size={34} />, number: 200, label: "Projects Completed" },
     { icon: <FaCalendarAlt size={34} />, number: 8, label: "Glorious Years" },
     { icon: <FaSmile size={34} />, number: 50, label: "Professional Team" },
   ];
 
   return (
     <>
+      {/* ================= ADVANCED SEO HELMET ================= */}
       <Helmet>
         <title>Company Growth & Achievements | Novarsis Technology</title>
 
@@ -32,88 +29,89 @@ const Details = () => {
           content="Explore Novarsis Technology's growth journey with active clients, completed projects, expert team, and years of experience delivering reliable IT solutions."
         />
 
-        <meta
-          name="keywords"
-          content="Novarsis Technology achievements, IT company growth stats, software company experience, digital solutions company India"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link rel="canonical" href="https://novarsistech.com/company-growth" />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Novarsis Technology Growth & Results"
-        />
+        <meta property="og:title" content="Novarsis Technology Growth & Results" />
         <meta
           property="og:description"
           content="Our experience, results, and milestones showcase the trust clients place in Novarsis Technology."
         />
-        <meta
-          property="og:url"
-          content="https://novarsistech.com/company-growth"
-        />
+        <meta property="og:url" content="https://novarsistech.com/company-growth" />
         <meta
           property="og:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Novarsis Technology Company Insights"
-        />
-        <meta
-          name="twitter:description"
-          content="Discover the numbers behind our success and dedication to digital innovation."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 COMPANY GROWTH PAGE SCHEMA */}
+        {/* 🔥 WebPage + Organization + Breadcrumb Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"WebPage",
-        "name":"Company Growth & Achievements",
-        "url":"https://novarsistech.com/company-growth",
-        "description":"Company growth journey, achievements, and milestones of Novarsis Technology."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@graph":[
+              {
+                "@type":"WebPage",
+                "name":"Company Growth & Achievements",
+                "url":"https://novarsistech.com/company-growth"
+              },
+              {
+                "@type":"Organization",
+                "name":"Novarsis Technology",
+                "url":"https://novarsistech.com"
+              },
+              {
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                  {
+                    "@type":"ListItem",
+                    "position":1,
+                    "name":"Home",
+                    "item":"https://novarsistech.com"
+                  },
+                  {
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"Company Growth",
+                    "item":"https://novarsistech.com/company-growth"
+                  }
+                ]
+              }
+            ]
+          }
+        `}
         </script>
       </Helmet>
+
       <section
         ref={ref}
         className="relative bg-white py-20 px-6 sm:px-10 overflow-hidden"
+        aria-labelledby="company-growth-heading"
       >
-        {/* ⭐ Hidden SEO Heading */}
-        <h2 className="sr-only">
-          Novarsis Technology Company Insights and Growth Statistics in IT
-          Solutions
-        </h2>
+        {/* ✅ EXACTLY ONE H1 (Hidden for global SEO safety) */}
+        <header className="sr-only">
+          <h1>Novarsis Technology Company Growth and Achievements</h1>
+        </header>
 
-        {/* Decorative Circles */}
+        {/* Decorative Background */}
         <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
-          {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          {/* ================= HEADING ================= */}
+          <header className="text-center max-w-3xl mx-auto mb-16">
             <Reveal>
-              <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+              <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
                 Company Insights
-              </h4>
+              </p>
             </Reveal>
 
             <Reveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3">
+              <h2
+                id="company-growth-heading"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mt-3"
+              >
                 Our Growth in <span className="text-[#008300]">Results</span>
               </h2>
             </Reveal>
@@ -125,15 +123,15 @@ const Details = () => {
                 and succeed in the digital era.
               </p>
             </Reveal>
-          </div>
+          </header>
 
-          {/* Stats Grid */}
+          {/* ================= STATS GRID ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {stats.map((item, index) => (
-              <div
+              <article
                 key={index}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl
-          transition-all duration-500 p-8 flex flex-col items-center"
+                transition-all duration-500 p-8 flex flex-col items-center"
               >
                 <Reveal>
                   <div className="bg-[#008300]/10 text-[#008300] rounded-full p-6 mb-5">
@@ -144,12 +142,7 @@ const Details = () => {
                 <Reveal>
                   <h3 className="text-4xl font-extrabold text-black">
                     {inView ? (
-                      <CountUp
-                        start={0}
-                        end={item.number}
-                        duration={2.5}
-                        suffix="+"
-                      />
+                      <CountUp start={0} end={item.number} duration={2.5} suffix="+" />
                     ) : (
                       "0+"
                     )}
@@ -161,11 +154,11 @@ const Details = () => {
                     {item.label}
                   </p>
                 </Reveal>
-              </div>
+              </article>
             ))}
           </div>
         </div>
-      </section>{" "}
+      </section>
     </>
   );
 };

@@ -7,70 +7,78 @@ import AutoInternalLinks from "../../components/AutoInternalLinks";
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
 
+  /* ================= SCHEMA DATA ================= */
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Novarsis Technology Portfolio Projects & Case Studies",
+    description:
+      "Explore Novarsis Technology portfolio featuring web development, app development, UI/UX design and digital marketing projects.",
+    author: {
+      "@type": "Organization",
+      name: "Novarsis Technology",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Novarsis Technology",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://novarsistech.com/logo.png",
+      },
+    },
+    mainEntityOfPage: "https://novarsistech.com/portfolio",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://novarsistech.com/" },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://novarsistech.com/portfolio" },
+    ],
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Novarsis Technology",
+    url: "https://novarsistech.com",
+    logo: "https://novarsistech.com/logo.png",
+  };
+
   return (
     <>
       <Helmet>
         <title>
-          Our Portfolio | Novarsis Technology Projects & Case Studies
+          Novarsis Technology Portfolio | IT Projects & Case Studies
         </title>
 
         <meta
           name="description"
-          content="Explore the Novarsis Technology portfolio showcasing web development, app development, UI/UX design, digital marketing, and innovative IT projects delivered for clients worldwide."
+          content="Novarsis Technology portfolio showcasing web development, mobile app development, UI/UX design and digital marketing projects with real business results."
         />
 
-        <meta
-          name="keywords"
-          content="Novarsis Technology portfolio, IT company projects, web development portfolio India, software company case studies, digital agency work"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link rel="canonical" href="https://novarsistech.com/portfolio" />
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Novarsis Technology Portfolio" />
-        <meta
-          property="og:description"
-          content="Discover our latest projects, creative solutions, and successful IT implementations."
-        />
-        <meta property="og:url" content="https://novarsistech.com/portfolio" />
-        <meta
-          property="og:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
+        <link rel="preload" as="image" href="/Images/bannerImage.png" />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Novarsis Technology Portfolio & Projects"
-        />
-        <meta
-          name="twitter:description"
-          content="See how Novarsis Technology delivers modern digital solutions through real client projects."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 PORTFOLIO SCHEMA (SEO BOOST) */}
+        {/* SCHEMAS */}
         <script type="application/ld+json">
-          {`
-      {
-        "@context":"https://schema.org",
-        "@type":"CollectionPage",
-        "name":"Novarsis Technology Portfolio",
-        "url":"https://novarsistech.com/portfolio",
-        "description":"Portfolio of web development, app development, UI/UX design, and digital marketing projects by Novarsis Technology."
-      }
-    `}
+          {JSON.stringify(articleSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
         </script>
       </Helmet>
 
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO ================= */}
       <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -81,7 +89,6 @@ const Portfolio = () => {
           playsInline
           poster="/Images/bannerImage.png"
         />
-
         <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 
         <div className="relative z-10 text-center text-white px-4">
@@ -94,6 +101,7 @@ const Portfolio = () => {
             </p>
           </Reveal>
 
+          {/* ✅ ONLY 1 H1 */}
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-bold">
               Novarsis Technology Portfolio
@@ -102,80 +110,69 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ================= VISIBLE SEO INTRO SECTION ================= */}
-      <section className="bg-white py-14 px-4">
-        <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-        <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-            IT Projects & Case{" "}
-            <span className="text-[#008300]">
-              {" "}
-              Studies by Novarsis Technology
-            </span>
+      {/* ================= ARTICLE CONTENT ================= */}
+      <article>
+        {/* INTRO */}
+        <section className="bg-white py-10 px-4">
+          <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-black">
+              IT Projects & Case{" "}
+              <span className="text-[#008300]">
+                Studies by Novarsis Technology
+              </span>
+            </h2>
+
+            <p className="mb-3">
+              Novarsis Technology portfolio highlights modern web development,
+              mobile app solutions, UI/UX design, and digital marketing
+              projects created for startups and enterprise businesses.
+            </p>
+
+            <p className="mb-3">
+              Our team focuses on SEO-friendly architecture, responsive design,
+              and high-performance coding standards to deliver measurable
+              business growth.
+            </p>
+
+            <p>
+              Each project demonstrates our commitment to innovation, scalable
+              software development, and long-term digital transformation.
+            </p>
+          </div>
+        </section>
+
+        {/* PORTFOLIO SECTION */}
+        <section className="relative bg-white overflow-hidden py-14 px-4">
+          <h2 className="sr-only">
+            Novarsis Technology Company Portfolio PDF Showcase
           </h2>
 
-          <p className="mb-4">
-            The Novarsis Technology portfolio highlights our journey in
-            delivering innovative digital solutions for startups, enterprises,
-            and growing brands. Our team specializes in modern web development,
-            scalable mobile applications, UI/UX design, branding strategies, and
-            result-driven digital marketing services tailored to real business
-            goals.
-          </p>
+          <div className="relative z-10 max-w-6xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                Our <span className="text-[#008300]">Company Portfolio</span>
+              </h2>
+            </Reveal>
 
-          <p className="mb-4">
-            Every project showcased in our portfolio represents our focus on
-            performance, creativity, and long-term value. We design platforms
-            that not only look visually appealing but also follow advanced SEO
-            practices, responsive layouts, and user-friendly experiences to
-            maximize online growth.
-          </p>
+            <Reveal>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Explore our professional company profile showcasing successful
+                IT solutions, real client collaborations, and innovative digital
+                transformation projects built by Novarsis Technology.
+              </p>
+            </Reveal>
 
-          <p>
-            By combining technology with strategic thinking, Novarsis Technology
-            builds digital products that help companies stand out in competitive
-            markets. Explore our latest work to understand how we transform
-            ideas into powerful digital solutions that drive measurable success.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= PORTFOLIO CONTENT ================= */}
-      <section className="relative bg-white overflow-hidden py-24 px-4">
-        <h2 className="sr-only">
-          Novarsis Technology Company Portfolio PDF – IT Services and Project
-          Showcase
-        </h2>
-
-        <div className="absolute top-40 right-[-120px] w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#008300]/10 rounded-full"></div>
-
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <Reveal>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
-              Our <span className="text-[#008300]">Company Portfolio</span>
-            </h2>
-          </Reveal>
-
-          <Reveal>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed text-base sm:text-lg text-justify">
-              Our comprehensive portfolio PDF presents a detailed overview of
-              our professional journey, showcasing creative projects, technical
-              expertise, and successful collaborations across multiple
-              industries.
-            </p>
-          </Reveal>
-
-          <Reveal>
-            <button
-              onClick={() => setOpen(true)}
-              className="bg-[#008300] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            >
-              View Portfolio PDF
-            </button>
-          </Reveal>
-        </div>
-      </section>
+            <Reveal>
+              <button
+                onClick={() => setOpen(true)}
+                className="bg-[#008300] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                View Portfolio PDF
+              </button>
+            </Reveal>
+          </div>
+        </section>
+      </article>
 
       {/* ================= PDF MODAL ================= */}
       {open && (

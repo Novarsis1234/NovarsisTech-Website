@@ -9,72 +9,156 @@ const Project = () => {
     <>
       <Helmet>
         <title>
-          Portfolio & Projects | Software Development Case Studies - Novarsis
-          Technology
+          Software Development Portfolio & Projects - Novarsis Technology
         </title>
 
         <meta
           name="description"
-          content="Explore Novarsis Technology portfolio including SEO tools, School Management, Hotel Management, and Tour & Travel systems. Real-world web and software development projects built with modern technologies."
+          content="Explore Novarsis Technology's software development portfolio: AI-powered SEO tools, School ERP systems, Hotel Management platforms, and Tour & Travel management solutions. Real-world case studies built with modern web technologies."
         />
 
         <meta
           name="keywords"
-          content="Novarsis Projects, Software Development Portfolio, Web Development Case Studies, SEO Tool Project, School ERP System, Hotel Management Software, Travel Management System"
+          content="software development portfolio, web development case studies, SEO tool, school management system, hotel management software, travel management platform, ERP solution, Novarsis projects"
         />
 
-        {/* ✅ Updated Canonical */}
+        {/* ✅ Dynamic Canonical */}
         <link rel="canonical" href="https://novarsistech.com/projects" />
 
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
 
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Our Projects & Portfolio - Novarsis Technology"
+          content="Software Development Portfolio - Novarsis Technology Projects"
         />
         <meta
           property="og:description"
-          content="Discover real software projects built by Novarsis Technology including AI-powered SEO tools, ERP platforms, hotel automation, and travel management solutions."
+          content="Discover real software projects: AI-powered SEO automation, School ERP, Hotel Management, and Tour & Travel platforms built by Novarsis Technology."
         />
         <meta property="og:url" content="https://novarsistech.com/projects" />
         <meta
           property="og:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
+        <meta property="og:site_name" content="Novarsis Technology" />
 
         {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Novarsis Technology Portfolio & Projects"
+          content="Software Development Portfolio - Novarsis Technology"
         />
         <meta
           name="twitter:description"
-          content="View modern web development and software projects showcasing real business solutions and scalable platforms."
+          content="Explore our portfolio: SEO tools, School ERP, Hotel Management, and Tour & Travel management systems."
         />
         <meta
           name="twitter:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅🔥 PROJECTS / CASE STUDIES SCHEMA */}
+        {/* ✅ BreadcrumbList Schema */}
         <script type="application/ld+json">
-          {`
-      {
-        "@context":"https://schema.org",
-        "@type":"CollectionPage",
-        "name":"Novarsis Technology Projects & Portfolio",
-        "url":"https://novarsistech.com/projects",
-        "description":"Software development case studies including SEO tools, ERP systems, hotel automation, and travel management platforms built by Novarsis Technology."
-      }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://novarsistech.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Projects",
+                "item": "https://novarsistech.com/projects"
+              }
+            ]
+          })}
+        </script>
+
+        {/* ✅ Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Novarsis Technology",
+            "url": "https://novarsistech.com",
+            "logo": "https://novarsistech.com/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/novarsis",
+              "https://twitter.com/novarsis",
+              "https://www.linkedin.com/company/novarsis"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "url": "https://novarsistech.com/contact"
+            }
+          })}
+        </script>
+
+        {/* ✅ CollectionPage + Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Novarsis Technology Software Development Projects & Portfolio",
+            "description": "Portfolio of software development projects including SEO automation, school management, hotel booking systems, and travel management platforms.",
+            "url": "https://novarsistech.com/projects",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "Novarsis SEO Tool",
+                  "description": "AI-powered WordPress SEO automation platform for intelligent optimization and organic growth.",
+                  "url": "https://novarsis.ai/",
+                  "applicationCategory": "SEO Software"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "School Management Solution",
+                  "description": "Complete school ERP platform for academics, administration, and communication.",
+                  "url": "https://school-website-rho-five.vercel.app/",
+                  "applicationCategory": "Educational Management Software"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "Hotel Management System",
+                  "description": "All-in-one hotel automation platform for bookings, restaurant, and banquet operations.",
+                  "url": "https://hotel-management-website-gilt.vercel.app/",
+                  "applicationCategory": "Hotel Management Software"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "Smart Tour & Travel System",
+                  "description": "Complete tour and travel management platform for agencies and operators.",
+                  "url": "https://maxholiday1.vercel.app/",
+                  "applicationCategory": "Travel Management Software"
+                }
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Novarsis Technology",
+              "logo": "https://novarsistech.com/logo.png"
+            },
+            "datePublished": "2024-01-01",
+            "dateModified": new Date().toISOString().split('T')[0]
+          })}
         </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Breadcrumb */}
+      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden" itemScope itemType="https://schema.org/WebPage">
+        <meta itemProp="name" content="Software Development Projects" />
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/Images/banner.mp4"
@@ -83,20 +167,27 @@ const Project = () => {
           muted
           playsInline
           poster="/Images/bannerImage.png"
+          alt="Project showcase banner"
         />
         <div className="absolute inset-0 bg-[#0a0f1a]/70"></div>
 
         <div className="relative z-10 text-center text-white px-4">
           <Reveal>
-            <p className="text-gray-300 text-lg md:text-xl mb-2">
-              <Link to="/" className="hover:text-[#008300]">
+            <nav aria-label="Breadcrumb" className="text-gray-300 text-lg md:text-xl mb-2">
+              <Link to="/" className="hover:text-[#008300] transition-colors">
                 Home
               </Link>
-              <span className="mx-2 text-[#008300]">/</span> Projects
-            </p>
+              <span className="mx-2 text-[#008300]">/</span>
+              <span className="text-[#008300]">Projects</span>
+            </nav>
           </Reveal>
           <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold">Our Projects</h1>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Software Development Portfolio & Projects</h1>
+          </Reveal>
+          <Reveal>
+            <p className="text-gray-200 text-lg mt-4 max-w-2xl mx-auto">
+              Discover our case studies in web development, ERP systems, hotel automation, and travel management solutions
+            </p>
           </Reveal>
         </div>
       </section>
@@ -104,51 +195,64 @@ const Project = () => {
       {/* Projects Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 space-y-28">
-          <div className="text-center mb-20">
+          {/* Projects Introduction */}
+          <article className="text-center space-y-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#008300]">
-              Project:1
+              Our Software Development Projects & Case Studies
             </h2>
+            <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
+              Explore our portfolio of successful software development projects built with modern technologies. Each project demonstrates our expertise in creating scalable, secure, and user-friendly solutions.
+            </p>
             <div className="mt-3 mx-auto w-20 h-1 bg-[#008300] rounded-full"></div>
-          </div>
+          </article>
           {/* PROJECT 1– SEO & DIGITAL MARKETING */}
-          <section className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-4 overflow-hidden">
+          <article 
+            className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-4 overflow-hidden"
+            itemScope 
+            itemType="https://schema.org/SoftwareApplication"
+          >
+            <meta itemProp="name" content="Novarsis SEO Tool" />
+            <meta itemProp="description" content="AI-powered WordPress SEO automation platform for intelligent optimization and organic growth." />
+            <meta itemProp="applicationCategory" content="SEO Software" />
+            <meta itemProp="url" content="https://novarsis.ai/" />
+            
             {/* ===== Decorative Green Circles ===== */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#008300]/10 rounded-full"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
 
             <div className="relative z-10 max-w-[1440px] mx-auto">
               {/* ================= HEADER ================= */}
               <div className="text-center mb-16 flex flex-col items-center gap-5">
                 <img
                   src="/Images/SEO LOGO11.png"
-                  alt="Novarsis SEO Tool Logo"
+                  alt="Novarsis SEO Tool - AI-powered WordPress optimization"
                   className="h-14 sm:h-16 md:h-20 object-contain"
+                  itemProp="image"
                 />
 
                 <span className="inline-block bg-[#008300]/10 text-[#008300] px-4 py-1 rounded-full text-sm font-semibold">
                   AI POWERED SEO PLATFORM
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]" itemProp="name">
                   Novarsis SEO Tool
                 </h2>
 
-                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify">
+                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify" itemProp="description">
                   AI-powered WordPress SEO automation platform built to simplify
                   optimization and accelerate organic growth.
                 </p>
               </div>
 
               {/* ================= HERO IMAGE ================= */}
-              <div className="relative w-full h-[220px] sm:h-[320px] md:h-[580px] rounded-3xl overflow-hidden shadow-2xl mb-28">
+              <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl mb-16">
                 <img
                   src="/Images/SEO-banner.png"
-                  alt="SEO Dashboard Preview"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  alt="Novarsis SEO Tool dashboard interface showing AI-powered optimization metrics"
+                  className="w-full h-full object-cover"
                 />
-                {/* <div className="absolute inset-0 bg-black/20"></div> */}
               </div>
 
               {/* ================= CONTENT + AUTO SCROLL PREVIEW ================= */}
@@ -188,6 +292,18 @@ const Project = () => {
                     digital marketers, and businesses managing multiple
                     WordPress websites.
                   </p>
+                  <a
+                    href="https://novarsis.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#008300]
+                hover:bg-[#007000] text-white font-semibold
+                px-8 py-4 rounded-xl shadow-lg
+                transition-all hover:scale-105 w-fit"
+                    aria-label="View Novarsis SEO Tool project"
+                  >
+                    View Project <span className="text-xl">↗</span>
+                  </a>
                 </div>
 
                 {/* ===== RIGHT AUTO SCROLL WEBSITE PREVIEW ===== */}
@@ -201,15 +317,15 @@ const Project = () => {
                       <div className="absolute inset-0 scroll-animation group-hover:paused">
                         <img
                           src="/Images/seo-pdf.png"
-                          alt="SEO Tool Preview"
+                          alt="Novarsis SEO Tool dashboard live preview showing real-time metrics"
                           className="w-full select-none"
                           draggable={false}
                         />
                       </div>
 
                       {/* Gradient Overlays */}
-                      <div className="pointer-events-none absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/70 to-transparent" />
-                      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent" />
+                      <div className="pointer-events-none absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/70 to-transparent" aria-hidden="true" />
+                      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true" />
                     </div>
                   </div>
                 </div>
@@ -218,24 +334,24 @@ const Project = () => {
               {/* ================= FEATURE GRID ================= */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  "/Images/SEO2.png",
-                  "/Images/SEO4.png",
-                  "/Images/SEO5.png",
-                  "/Images/SEO6.png",
+                  { src: "/Images/SEO2.png", alt: "SEO Tool AI optimization feature" },
+                  { src: "/Images/SEO4.png", alt: "SEO Tool WordPress integration feature" },
+                  { src: "/Images/SEO5.png", alt: "SEO Tool analytics and reporting feature" },
+                  { src: "/Images/SEO6.png", alt: "SEO Tool real-time monitoring feature" },
                 ].map((img, i) => (
-                  <div
+                  <figure
                     key={i}
                     className="group relative h-[170px] sm:h-[200px] md:h-[220px]
               rounded-2xl overflow-hidden shadow-lg bg-white"
                   >
                     <img
-                      src={img}
-                      alt="SEO Feature Preview"
+                      src={img.src}
+                      alt={img.alt}
                       className="absolute inset-0 w-full h-full object-contain
                 group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" aria-hidden="true"></div>
+                  </figure>
                 ))}
               </div>
             </div>
@@ -260,28 +376,29 @@ const Project = () => {
     }
   }
 `}</style>
-          </section>
+          </article>
 
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#008300]">
-              Project:2
-            </h2>
-            <div className="mt-3 mx-auto w-20 h-1 bg-[#008300] rounded-full"></div>
-          </div>
           {/* PROJECT 2 – SCHOOL MANAGEMENT */}
-          <section className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <article 
+            className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+            itemScope 
+            itemType="https://schema.org/SoftwareApplication"
+          >
+            <meta itemProp="name" content="School Management Solution" />
+            <meta itemProp="description" content="Complete school ERP platform for academics, administration, and parent-teacher communication." />
+            <meta itemProp="applicationCategory" content="Educational Management Software" />
             {/* ===== Decorative Green Circles ===== */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
 
             <div className="relative z-10 max-w-[1440px] mx-auto">
               {/* ================= HEADER ================= */}
               <div className="text-center mb-16 flex flex-col items-center gap-5">
                 <img
                   src="/Images/school-logo-pic.png"
-                  alt="School Management Logo"
+                  alt="School Management Solution - Complete ERP platform logo"
                   className="h-14 sm:h-16 md:h-20 object-contain drop-shadow-md"
                 />
 
@@ -289,22 +406,23 @@ const Project = () => {
                   SCHOOL ERP PLATFORM
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]" itemProp="name">
                   School Management Solution
                 </h2>
 
-                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify">
+                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify" itemProp="description">
                   One powerful platform to manage academics, administration,
                   communication & daily school operations seamlessly.
                 </p>
               </div>
 
               {/* ================= COVER IMAGE ================= */}
-              <div className="relative w-full h-[240px] sm:h-[340px] md:h-[440px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl mb-28">
+
+              <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl mb-16">
                 <img
                   src="/Images/school-banner.png"
-                  alt="School Platform Preview"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  alt="School Management Solution interface showing student enrollment, class management, and academic dashboard"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -366,7 +484,7 @@ const Project = () => {
                         <div className="absolute inset-0 scroll-animation group-hover:paused">
                           <img
                             src="/Images/school-pdf.png"
-                            alt="School Website Preview"
+                          alt="School Management website live preview showing dashboard and student portal"
                             className="w-full select-none"
                             draggable={false}
                           />
@@ -384,24 +502,24 @@ const Project = () => {
               {/* ================= FEATURE GRID ================= */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  "/Images/p-school3.png",
-                  "/Images/p-school4.png",
-                  "/Images/p-school5.png",
-                  "/Images/p-school6.png",
+                  { src: "/Images/p-school3.png", alt: "School Management student information system" },
+                  { src: "/Images/p-school4.png", alt: "School Management academic and grading module" },
+                  { src: "/Images/p-school5.png", alt: "School Management attendance and communication feature" },
+                  { src: "/Images/p-school6.png", alt: "School Management reporting and analytics dashboard" },
                 ].map((img, i) => (
-                  <div
+                  <figure
                     key={i}
                     className="group relative h-[170px] sm:h-[200px] md:h-[220px]
               rounded-2xl overflow-hidden shadow-lg bg-white"
                   >
                     <img
-                      src={img}
-                      alt="School Feature Preview"
+                      src={img.src}
+                      alt={img.alt}
                       className="absolute inset-0 w-full h-full object-contain
                 group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" aria-hidden="true"></div>
+                  </figure>
                 ))}
               </div>
             </div>
@@ -426,27 +544,28 @@ const Project = () => {
     }
   }
 `}</style>
-          </section>
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#008300]">
-              Project:3
-            </h2>
-            <div className="mt-3 mx-auto w-20 h-1 bg-[#008300] rounded-full"></div>
-          </div>
+          </article>
           {/* PROJECT 3 – HOTEL MANAGEMENT */}
-          <section className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <article 
+            className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+            itemScope 
+            itemType="https://schema.org/SoftwareApplication"
+          >
+            <meta itemProp="name" content="Smart Hotel Management System" />
+            <meta itemProp="description" content="All-in-one hotel automation platform for bookings, restaurant, banquet operations, and guest management." />
+            <meta itemProp="applicationCategory" content="Hotel Management Software" />
             {/* ===== Decorative Green Circles ===== */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
 
             <div className="relative z-10 max-w-[1440px] mx-auto">
               {/* ================= HEADER ================= */}
               <div className="text-center mb-16 flex flex-col items-center gap-5">
                 <img
                   src="/Images/hotel-logo-pic.jpg"
-                  alt="Hotel Management Logo"
+                  alt="Smart Hotel Management System - Complete automation platform logo"
                   className="h-14 sm:h-16 md:h-20 object-contain drop-shadow-md"
                 />
 
@@ -454,22 +573,23 @@ const Project = () => {
                   HOTEL AUTOMATION PLATFORM
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]" itemProp="name">
                   Smart Hotel Management System
                 </h2>
 
-                <p className="max-w-3xl mx-auto text-gray-700 text-lg">
+                <p className="max-w-3xl mx-auto text-gray-700 text-lg" itemProp="description">
                   Complete digital solution for hotels, restaurants & banquet
                   halls
                 </p>
               </div>
 
               {/* ================= COVER IMAGE ================= */}
-              <div className="relative w-full h-[240px] sm:h-[340px] md:h-[440px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl mb-28">
+
+              <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl mb-16">
                 <img
                   src="/Images/hotel-banner.png"
-                  alt="Hotel Management Preview"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  alt="Hotel Management System interface showing room booking, reservation management, and operations dashboard"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -527,7 +647,7 @@ const Project = () => {
                         <div className="absolute inset-0 scroll-animation group-hover:paused">
                           <img
                             src="/Images/hotel-pdf.png"
-                            alt="Hotel Website Preview"
+                          alt="Hotel Management website live preview showing booking interface and admin panel"
                             className="w-full select-none"
                             draggable={false}
                           />
@@ -545,24 +665,24 @@ const Project = () => {
               {/* ================= FEATURE GRID ================= */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  "/Images/hotel-p3.png",
-                  "/Images/hotel-p4.png",
-                  "/Images/hotel-p5.png",
-                  "/Images/hotel-p6.png",
+                  { src: "/Images/hotel-p3.png", alt: "Hotel Management room booking and reservation feature" },
+                  { src: "/Images/hotel-p4.png", alt: "Hotel Management guest registration and check-in system" },
+                  { src: "/Images/hotel-p5.png", alt: "Hotel Management restaurant and dining operations feature" },
+                  { src: "/Images/hotel-p6.png", alt: "Hotel Management payment and billing dashboard" },
                 ].map((img, i) => (
-                  <div
+                  <figure
                     key={i}
                     className="group relative h-[170px] sm:h-[200px] md:h-[220px]
               rounded-2xl overflow-hidden shadow-lg bg-white"
                   >
                     <img
-                      src={img}
-                      alt="Hotel Feature"
+                      src={img.src}
+                      alt={img.alt}
                       className="absolute inset-0 w-full h-full object-contain
                 group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" aria-hidden="true"></div>
+                  </figure>
                 ))}
               </div>
             </div>
@@ -587,28 +707,29 @@ const Project = () => {
     }
   }
 `}</style>
-          </section>
+          </article>
 
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#008300]">
-              Project:4
-            </h2>
-            <div className="mt-3 mx-auto w-20 h-1 bg-[#008300] rounded-full"></div>
-          </div>
-          {/* PROJECT 4 – Tour & Travel Management  */}
-          <section className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* PROJECT 4 – Tour & Travel Management */}
+          <article 
+            className="relative bg-[#fffaf3] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+            itemScope 
+            itemType="https://schema.org/SoftwareApplication"
+          >
+            <meta itemProp="name" content="Smart Tour & Travel System" />
+            <meta itemProp="description" content="Complete tour and travel management platform for agencies with package management, bookings, and vehicle operations." />
+            <meta itemProp="applicationCategory" content="Travel Management Software" />
             {/* ===== Decorative Green Circles ===== */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute top-48 right-[-160px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
+            <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-[#008300]/10 rounded-full" aria-hidden="true"></div>
 
             <div className="relative z-10 max-w-[1440px] mx-auto">
               {/* ================= HEADER ================= */}
               <div className="text-center mb-16 flex flex-col items-center gap-5">
                 <img
                   src="/Images/travel-logo.jpg"
-                  alt="Tour & Travel Logo"
+                  alt="Smart Tour & Travel System - Complete travel management platform logo"
                   className="h-14 sm:h-16 md:h-20 object-contain drop-shadow-md"
                 />
 
@@ -616,22 +737,23 @@ const Project = () => {
                   TOUR & TRAVEL PLATFORM
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]" itemProp="name">
                   Smart Tour & Travel System
                 </h2>
 
-                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify">
+                <p className="max-w-3xl mx-auto text-gray-700 text-lg text-justify" itemProp="description">
                   Complete digital solution for tours, travel & vehicle
                   management
                 </p>
               </div>
 
               {/* ================= COVER IMAGE ================= */}
-              <div className="relative w-full h-[240px] sm:h-[340px] md:h-[440px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl mb-28">
+
+              <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl mb-16">
                 <img
                   src="/Images/travelling-banner.png"
-                  alt="Tour & Travel Platform Preview"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  alt="Tour & Travel System interface showing tour packages, booking calendar, and destination management"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -691,7 +813,7 @@ const Project = () => {
                         <div className="absolute inset-0 scroll-animation group-hover:paused">
                           <img
                             src="/Images/travelling-pdf.png"
-                            alt="Tour Website Preview"
+                          alt="Tour & Travel website live preview showing package listings and booking interface"
                             className="w-full select-none"
                             draggable={false}
                           />
@@ -709,24 +831,24 @@ const Project = () => {
               {/* ================= FEATURE GRID ================= */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  "/Images/tour3.png",
-                  "/Images/tour4.png",
-                  "/Images/tour5.png",
-                  "/Images/tour6.png",
+                  { src: "/Images/tour3.png", alt: "Tour & Travel tour packages and itinerary builder" },
+                  { src: "/Images/tour4.png", alt: "Tour & Travel booking and reservation management" },
+                  { src: "/Images/tour5.png", alt: "Tour & Travel vehicle and driver management system" },
+                  { src: "/Images/tour6.png", alt: "Tour & Travel customer reviews and testimonials showcase" },
                 ].map((img, i) => (
-                  <div
+                  <figure
                     key={i}
                     className="group relative h-[170px] sm:h-[200px] md:h-[220px]
               rounded-2xl overflow-hidden shadow-lg bg-white"
                   >
                     <img
-                      src={img}
-                      alt="Tour Feature Preview"
+                      src={img.src}
+                      alt={img.alt}
                       className="absolute inset-0 w-full h-full object-contain
                 group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition"></div>
-                  </div>
+                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" aria-hidden="true"></div>
+                  </figure>
                 ))}
               </div>
             </div>
@@ -751,7 +873,7 @@ const Project = () => {
     }
   }
 `}</style>
-          </section>
+          </article>
         </div>
       </section>
       <AutoInternalLinks />

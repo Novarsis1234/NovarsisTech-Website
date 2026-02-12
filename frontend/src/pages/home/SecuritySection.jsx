@@ -13,20 +13,20 @@ import Reveal from "../../components/Reveal";
 import { Helmet } from "react-helmet-async";
 
 const SecuritySection = () => {
- const services = [
-  { icon: <FaLaptop />, label: "Web Consulting" },
-  { icon: <FaTrophy />, label: "Security Boost" },
-  { icon: <FaLock />, label: "Data Protection" },
-  { icon: <FaEye />, label: "Smart Insights" },
-  { icon: <FaBolt />, label: "Fast Service" },
-  { icon: <FaCode />, label: "Dev Friendly" },
-  { icon: <FaSitemap />, label: "Easy Structure" },
-  { icon: <FaPenNib />, label: "Clean UI Design" },
-];
-
+  const services = [
+    { icon: <FaLaptop />, label: "Web Consulting" },
+    { icon: <FaTrophy />, label: "Security Boost" },
+    { icon: <FaLock />, label: "Data Protection" },
+    { icon: <FaEye />, label: "Smart Insights" },
+    { icon: <FaBolt />, label: "Fast Service" },
+    { icon: <FaCode />, label: "Dev Friendly" },
+    { icon: <FaSitemap />, label: "Easy Structure" },
+    { icon: <FaPenNib />, label: "Clean UI Design" },
+  ];
 
   return (
     <>
+      {/* ================= ADVANCED HELMET SEO ================= */}
       <Helmet>
         <title>
           Advanced Cyber Security & IT Protection | Novarsis Technology
@@ -37,20 +37,13 @@ const SecuritySection = () => {
           content="Protect your digital presence with Novarsis Technology. Advanced cyber security, operational protection, web consultation, and performance-focused IT solutions."
         />
 
-        <meta
-          name="keywords"
-          content="cyber security services India, IT protection, web security optimization, operational security, Novarsis Technology security solutions"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link
           rel="canonical"
           href="https://novarsistech.com/security-solutions"
         />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -69,80 +62,71 @@ const SecuritySection = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Cyber Security Services - Novarsis Technology"
-        />
-        <meta
-          name="twitter:description"
-          content="Robust cyber security and IT protection solutions designed for performance and reliability."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 CYBER SECURITY SERVICE SCHEMA (SEO BOOST) */}
+        {/* 🔥 Service + Organization Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "serviceType":"Cyber Security & IT Protection",
-        "provider":{
-          "@type":"Organization",
-          "name":"Novarsis Technology",
-          "url":"https://novarsistech.com"
-        },
-        "areaServed":"Worldwide",
-        "url":"https://novarsistech.com/security-solutions",
-        "description":"Advanced cyber security, IT protection, operational security, and performance-focused IT solutions provided by Novarsis Technology."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@type":"Service",
+            "serviceType":"Cyber Security & IT Protection",
+            "provider":{
+              "@type":"Organization",
+              "name":"Novarsis Technology",
+              "url":"https://novarsistech.com"
+            },
+            "areaServed":"Worldwide",
+            "url":"https://novarsistech.com/security-solutions"
+          }
+        `}
         </script>
       </Helmet>
 
-      <section className="relative bg-[#f9fbff] py-14 md:py-20 px-4 sm:px-6 md:px-12 overflow-hidden">
-        
+      <section
+        className="relative bg-[#f9fbff] py-14 md:py-20 px-4 sm:px-6 md:px-12 overflow-hidden"
+        aria-labelledby="security-heading"
+      >
+        {/* ✅ Hidden Main H1 (Homepage Conflict Safe) */}
+        <header className="sr-only">
+          <h1>Cyber Security and IT Protection Solutions</h1>
+        </header>
+
         {/* Decorative Background */}
         <div className="absolute -top-16 -left-16 w-40 h-40 md:w-72 md:h-72 bg-[#008300]/10 rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-52 h-52 md:w-80 md:h-80 bg-[#008300]/10 rounded-full"></div>
 
-        {/* Left Accent Border (Desktop only) */}
+        {/* Left Accent Border */}
         <div className="absolute left-0 top-0 h-full w-1 bg-[#008300] hidden md:block"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
           {/* ================= LEFT IMAGE ================= */}
-          <div className="flex justify-center md:justify-start">
+          <figure className="flex justify-center md:justify-start">
             <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg">
-              
-              {/* Glow */}
               <div className="absolute -inset-4 bg-[#008300]/10 blur-3xl rounded-3xl opacity-70"></div>
 
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/Images/HomeSecurity.png"
-                  alt="Cyber Security IT Protection Services"
+                  alt="Cyber Security IT Protection Services by Novarsis Technology"
+                  loading="lazy"
                   className="w-full h-auto object-cover"
                 />
               </div>
             </div>
-          </div>
+          </figure>
 
           {/* ================= RIGHT CONTENT ================= */}
-          <div className="text-center md:text-left">
-
+          <article className="text-center md:text-left">
             <Reveal>
-              <h4 className="text-[#008300] font-extrabold mb-2 uppercase tracking-widest text-xs sm:text-sm">
+              <p className="text-[#008300] font-extrabold mb-2 uppercase tracking-widest text-xs sm:text-sm">
                 Advance Protect
-              </h4>
+              </p>
             </Reveal>
 
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-5 leading-tight">
+              <h2
+                id="security-heading"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-5 leading-tight"
+              >
                 Empowering Your Online <br className="hidden sm:block" />
                 <span className="text-[#008300]">
                   Security is Our Priority
@@ -161,7 +145,7 @@ const SecuritySection = () => {
             {/* ================= SERVICES GRID ================= */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {services.map((service, index) => (
-                <div
+                <article
                   key={index}
                   className="flex items-center bg-white border border-gray-200
                   rounded-xl px-4 py-4 shadow-md
@@ -178,11 +162,10 @@ const SecuritySection = () => {
                   <h3 className="font-semibold text-gray-800 text-sm sm:text-base">
                     {service.label}
                   </h3>
-                </div>
+                </article>
               ))}
             </div>
-
-          </div>
+          </article>
         </div>
       </section>
     </>

@@ -28,7 +28,7 @@ const AboutSection = () => {
           setAnimateHeading(true);
         }
       },
-      { threshold: 0.35 },
+      { threshold: 0.35 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -48,7 +48,6 @@ const AboutSection = () => {
     return () => clearInterval(interval);
   }, [startCount]);
 
-  /* Mouse Parallax */
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setCirclePos({
@@ -60,7 +59,7 @@ const AboutSection = () => {
 
   return (
     <>
-      {/* ================= ADVANCED HELMET SEO ================= */}
+      {/* ================= ADVANCED SEO HELMET ================= */}
       <Helmet>
         <title>
           About Novarsis Technology | Software Development & IT Solutions
@@ -71,17 +70,10 @@ const AboutSection = () => {
           content="Learn about Novarsis Technology — a leading software development and IT solutions company delivering web development, branding, and digital growth services."
         />
 
-        <meta
-          name="keywords"
-          content="Novarsis Technology, IT company, software development company, web development experts, digital solutions company"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link rel="canonical" href="https://novarsistech.com/about" />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About Novarsis Technology" />
         <meta
@@ -94,43 +86,33 @@ const AboutSection = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Novarsis Technology" />
-        <meta
-          name="twitter:description"
-          content="Discover our mission, expertise, and experience in delivering modern IT solutions."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 ABOUT PAGE SCHEMA (SEO BOOST) */}
+        {/* About + Organization Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"AboutPage",
-        "name":"About Novarsis Technology",
-        "url":"https://novarsistech.com/about",
-        "description":"Learn about Novarsis Technology — a leading software development and IT solutions company."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@type":"AboutPage",
+            "name":"About Novarsis Technology",
+            "url":"https://novarsistech.com/about",
+            "description":"Learn about Novarsis Technology — a leading software development and IT solutions company.",
+            "mainEntity":{
+              "@type":"Organization",
+              "name":"Novarsis Technology",
+              "url":"https://novarsistech.com",
+              "logo":"https://novarsistech.com/Images/logo.png"
+            }
+          }
+        `}
         </script>
       </Helmet>
 
       <section
         ref={sectionRef}
         className="relative overflow-hidden py-20 sm:py-28 px-4 sm:px-6 lg:px-20 bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/Images/parallex4.jpg')",
-        }}
+        style={{ backgroundImage: "url('/Images/parallex4.jpg')" }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/65"></div>
 
-        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* LEFT IMAGE */}
           <div
@@ -138,34 +120,29 @@ const AboutSection = () => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Glow */}
             <div
               className="absolute w-40 sm:w-52 h-40 sm:h-52 bg-[#008300]/25 blur-3xl rounded-full transition-transform duration-500"
               style={{
-                transform: `translate(${circlePos.x}px, ${circlePos.y - offsetY * 0.1}px)`,
+                transform: `translate(${circlePos.x}px, ${
+                  circlePos.y - offsetY * 0.1
+                }px)`,
               }}
             />
 
             <img
               src="/Images/HomeAbout.png"
               alt="Novarsis Technology IT Company Team Working Office"
-              className="relative z-10 w-[260px] sm:w-[340px] md:w-[380px] lg:w-[420px]
-        rounded-3xl shadow-2xl object-cover
-        border border-white/20 transition-transform duration-700"
+              className="relative z-10 w-[260px] sm:w-[340px] md:w-[380px] lg:w-[420px] rounded-3xl shadow-2xl object-cover border border-white/20 transition-transform duration-700"
               style={{
                 transform: `translateY(${offsetY * 0.15}px) scale(${scale})`,
               }}
+              loading="lazy"
             />
 
-            {/* Experience Badge */}
-            <div
-              className="absolute top-4 left-4 sm:top-6 sm:left-6 
-      bg-white/90 backdrop-blur-xl rounded-2xl px-4 sm:px-6 py-3 sm:py-4 
-      flex items-center space-x-3 shadow-xl z-20"
-            >
-              <h3 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/90 backdrop-blur-xl rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center space-x-3 shadow-xl z-20">
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-[#008300]">
                 {years}
-              </h3>
+              </h2>
               <div className="text-black text-xs sm:text-sm font-semibold leading-tight">
                 <p>Years</p>
                 <p>Experience</p>
@@ -175,15 +152,14 @@ const AboutSection = () => {
 
           {/* RIGHT CONTENT */}
           <div className="text-white text-center lg:text-left">
-            {/* Section Label */}
             <Reveal>
-              <h4 className="uppercase text-xs sm:text-sm font-extrabold tracking-widest text-[#008300] mb-3">
+              <p className="uppercase text-xs sm:text-sm font-extrabold tracking-widest text-[#008300] mb-3">
                 About Our Company
-              </h4>
+              </p>
             </Reveal>
 
-            {/* MAIN SEO HEADING */}
-            <h2
+            {/* ✅ EXACTLY ONE H1 (MAIN SEO HEADING) */}
+            <h1
               className={`text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-snug ${
                 animateHeading
                   ? "animate-reveal"
@@ -192,7 +168,7 @@ const AboutSection = () => {
             >
               Novarsis Technology – Your Trusted IT Partner for{" "}
               <span className="text-[#008300]">Digital Success</span>
-            </h2>
+            </h1>
 
             <Reveal>
               <p className="text-gray-300 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -216,20 +192,18 @@ const AboutSection = () => {
                   text: "Faster Execution",
                 },
               ].map((item, i) => (
-                <div
+                <article
                   key={i}
-                  className="flex items-center bg-white/90 backdrop-blur-xl
-          px-5 py-4 rounded-2xl w-full sm:w-[240px]
-          hover:scale-105 transition"
+                  className="flex items-center bg-white/90 backdrop-blur-xl px-5 py-4 rounded-2xl w-full sm:w-[240px] hover:scale-105 transition"
                 >
                   <div className="text-[#008300] text-3xl mr-3">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-black">{item.title}</h3>
+                    <h2 className="font-bold text-black">{item.title}</h2>
                     <p className="text-black text-sm">{item.text}</p>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
 
@@ -249,7 +223,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Animation */}
         <style jsx>{`
           @keyframes reveal {
             from {

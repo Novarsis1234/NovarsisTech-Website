@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaPhoneAlt,
   FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -138,6 +139,15 @@ const Sidebar = ({ isOpen, onClose }) => {
             >
               <FaInstagram />
             </a>
+
+              <a
+    href="https://wa.me/919111720303"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-500 text-white p-2 rounded hover:bg-green-600 transition-transform transform hover:scale-110"
+  >
+    <FaWhatsapp />
+  </a>
           </div>
         </div>
 

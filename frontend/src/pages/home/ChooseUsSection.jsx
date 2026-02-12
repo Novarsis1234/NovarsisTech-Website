@@ -17,17 +17,10 @@ const ChooseUsSection = () => {
           content="Discover why businesses choose Novarsis Technology for reliable, scalable, and innovative IT solutions. Expert team delivering real digital growth."
         />
 
-        <meta
-          name="keywords"
-          content="Why choose Novarsis Technology, IT company benefits, software development experts, digital solutions company India"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link rel="canonical" href="https://novarsistech.com/why-choose-us" />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Why Choose Novarsis Technology" />
         <meta
@@ -43,35 +36,43 @@ const ChooseUsSection = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Why Choose Novarsis Technology" />
         <meta
           name="twitter:description"
           content="Learn why companies trust Novarsis Technology for innovative software and IT services."
         />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
 
-        {/* ✅🔥 WEBPAGE SCHEMA (BRAND AUTHORITY BOOST) */}
+        {/* 🔥 SEO Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"WebPage",
-        "name":"Why Choose Novarsis Technology",
-        "url":"https://novarsistech.com/why-choose-us",
-        "description":"Reasons why businesses trust Novarsis Technology for scalable software development and IT solutions."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@type":"WebPage",
+            "name":"Why Choose Novarsis Technology",
+            "url":"https://novarsistech.com/why-choose-us",
+            "description":"Reasons why businesses trust Novarsis Technology for scalable software development and IT solutions.",
+            "publisher":{
+              "@type":"Organization",
+              "name":"Novarsis Technology",
+              "url":"https://novarsistech.com",
+              "logo":{
+                "@type":"ImageObject",
+                "url":"https://novarsistech.com/Images/logo.png"
+              }
+            }
+          }
+          `}
         </script>
       </Helmet>
 
-      <section className="relative bg-white py-20 px-6 md:px-16 overflow-hidden">
+      <section
+        className="relative bg-white py-20 px-6 md:px-16 overflow-hidden"
+        aria-labelledby="choose-us-heading"
+      >
         {/* ⭐ Hidden SEO Heading */}
-        <h2 className="sr-only">
+        <h2 id="choose-us-heading" className="sr-only">
           Why Choose Novarsis Technology – Company Benefits and Digital
           Solutions Expertise
         </h2>
@@ -83,19 +84,18 @@ const ChooseUsSection = () => {
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-14">
           {/* LEFT IMAGE */}
           <div className="md:w-1/2 w-full flex justify-center relative group">
-            {/* Glow Card */}
             <div className="absolute -inset-4 bg-[#008300]/10 rounded-3xl blur-2xl opacity-70"></div>
 
-            {/* Accent Border */}
             <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-[#008300] to-[#0B1B3F] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-700"></div>
 
             <Reveal>
               <img
                 src="/Images/AboutPic3.png"
                 alt="Novarsis Technology Company Benefits and IT Solutions Team"
+                loading="lazy"
                 className="relative rounded-3xl shadow-2xl w-full max-w-[500px] object-cover
-          transform transition-all duration-700
-          group-hover:scale-105 group-hover:rotate-1"
+                transform transition-all duration-700
+                group-hover:scale-105 group-hover:rotate-1"
               />
             </Reveal>
           </div>
@@ -103,11 +103,12 @@ const ChooseUsSection = () => {
           {/* RIGHT CONTENT */}
           <div className="md:w-1/2 w-full space-y-6 text-center md:text-left">
             <Reveal>
-              <h4 className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
+              <p className="text-[#008300] font-extrabold uppercase tracking-widest text-sm">
                 Company Benefits
-              </h4>
+              </p>
             </Reveal>
 
+            {/* MAIN HEADING */}
             <Reveal>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight">
                 Why You Should <br />
@@ -125,7 +126,7 @@ const ChooseUsSection = () => {
             {/* BENEFITS */}
             <div className="space-y-6 mt-10">
               {/* Benefit 1 */}
-              <div className="flex items-start gap-4 group hover:translate-x-2 transition-all duration-500">
+              <article className="flex items-start gap-4 group hover:translate-x-2 transition-all duration-500">
                 <div className="bg-[#008300]/10 p-4 rounded-full group-hover:scale-110 transition">
                   <Server className="text-[#008300] w-6 h-6" />
                 </div>
@@ -142,10 +143,10 @@ const ChooseUsSection = () => {
                     </p>
                   </Reveal>
                 </div>
-              </div>
+              </article>
 
               {/* Benefit 2 */}
-              <div className="flex items-start gap-4 group hover:translate-x-2 transition-all duration-500">
+              <article className="flex items-start gap-4 group hover:translate-x-2 transition-all duration-500">
                 <div className="bg-[#008300]/10 p-4 rounded-full group-hover:scale-110 transition">
                   <Users className="text-[#008300] w-6 h-6" />
                 </div>
@@ -162,7 +163,7 @@ const ChooseUsSection = () => {
                     </p>
                   </Reveal>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>

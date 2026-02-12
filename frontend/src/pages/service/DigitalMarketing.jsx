@@ -24,84 +24,133 @@ const DigitalMarketing = () => {
     <>
       <Helmet>
         <title>
-          Digital Marketing Services | SEO, Social Media & Online Growth -
-          Novarsis Technology
+          Digital Marketing Services | SEO, Paid Ads & Social Media - Novarsis Technology
         </title>
 
         <meta
           name="description"
-          content="Result-driven Digital Marketing Services by Novarsis Technology. We help businesses grow with SEO, social media marketing, paid ads, content marketing, and data-driven online strategies."
+          content="Professional Digital Marketing Services by Novarsis Technology. Expert SEO, paid ads, social media marketing, content strategy, and data-driven digital solutions for business growth."
         />
 
         <meta
           name="keywords"
-          content="Digital Marketing Services, SEO Services, Social Media Marketing, PPC Ads, Online Marketing Agency, Lead Generation, Novarsis Technology"
+          content="Digital Marketing Services, SEO, Social Media Marketing, PPC Ads, Google Ads, Content Marketing, Email Marketing, Lead Generation, Online Marketing, Digital Marketing Agency"
         />
 
-        {/* ✅ Updated Canonical */}
+        {/* ✅ Dynamic Canonical */}
         <link
           rel="canonical"
-          href="https://novarsistech.com/digitalmarketing"
+          href={`https://novarsistech.com/services/digital-marketing`}
         />
 
-        <meta name="robots" content="index, follow" />
+        {/* ✅ RankMath Friendly Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Novarsis Technology" />
 
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Digital Marketing Services - Novarsis Technology"
+          content="Digital Marketing Services | SEO, Paid Ads & Social Media - Novarsis Technology"
         />
         <meta
           property="og:description"
-          content="Boost your online presence with expert digital marketing strategies including SEO, paid advertising, content marketing, and social media growth."
+          content="Expert Digital Marketing Services including SEO, paid advertising, social media marketing, and data-driven strategies to grow your business online."
         />
         <meta
           property="og:url"
-          content="https://novarsistech.com/digitalmarketing"
+          content="https://novarsistech.com/services/digital-marketing"
         />
         <meta
           property="og:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
+        <meta property="og:site_name" content="Novarsis Technology" />
 
-        {/* ✅ Twitter */}
+        {/* ✅ Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Digital Marketing Services | Novarsis Technology"
+          content="Digital Marketing Services | SEO, Paid Ads & Social Media"
         />
         <meta
           name="twitter:description"
-          content="Grow your business with powerful digital marketing services designed for performance, visibility, and long-term success."
+          content="Expert digital marketing strategies including SEO, paid ads, social media marketing, and content marketing for business growth."
         />
         <meta
           name="twitter:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅🔥 SERVICE SCHEMA (DIGITAL MARKETING SEO BOOST) */}
+        {/* ✅ BreadcrumbList Schema */}
         <script type="application/ld+json">
-          {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "serviceType":"Digital Marketing Services",
-        "provider":{
-          "@type":"Organization",
-          "name":"Novarsis Technology",
-          "url":"https://novarsistech.com"
-        },
-        "areaServed":"Worldwide",
-        "url":"https://novarsistech.com/digitalmarketing",
-        "description":"SEO, social media marketing, paid ads, content marketing, and data-driven digital marketing services by Novarsis Technology."
-      }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://novarsistech.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://novarsistech.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Digital Marketing",
+                "item": "https://novarsistech.com/services/digital-marketing"
+              }
+            ]
+          })}
+        </script>
+
+        {/* ✅ Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Novarsis Technology",
+            "url": "https://novarsistech.com",
+            "logo": "https://novarsistech.com/Images/logo.png",
+            "description": "Professional Digital Marketing Services including SEO, paid ads, social media marketing, and content strategy.",
+            "sameAs": [
+              "https://facebook.com/novarsistech",
+              "https://twitter.com/novarsistech",
+              "https://linkedin.com/company/novarsistech"
+            ]
+          })}
+        </script>
+
+        {/* ✅ ProfessionalService Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Digital Marketing Services",
+            "url": "https://novarsistech.com/services/digital-marketing",
+            "description": "Expert digital marketing services including SEO, paid advertising, social media marketing, content marketing, and email campaigns.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Novarsis Technology",
+              "url": "https://novarsistech.com"
+            },
+            "serviceType": ["SEO Services", "PPC Advertising", "Social Media Marketing", "Content Marketing", "Email Marketing", "Digital Strategy"],
+            "knowsAbout": ["Search Engine Optimization", "Google Ads", "Facebook Ads", "Social Media Strategy", "Email Marketing", "Analytics", "Conversion Optimization"],
+            "areaServed": "Worldwide"
+          })}
         </script>
       </Helmet>
-      <div className="bg-white">
+      <article className="bg-white">
         {/* ================= HERO ================= */}
-        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <section itemScope itemType="https://schema.org/WebPage" className="relative h-[50vh] flex items-center justify-center overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover"
             src="/Images/banner.mp4"
@@ -113,15 +162,22 @@ const DigitalMarketing = () => {
           <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
 
           <div className="relative z-10 text-center text-white px-6">
+            {/* ✅ Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="text-gray-300 text-sm md:text-base mb-4">
+              <a href="/" className="hover:text-[#008300] transition-colors">Home</a>
+              <span className="mx-2 text-[#008300]">/</span>
+            
+              <span className="text-[#008300]">Digital Marketing</span>
+            </nav>
+
             <Reveal>
-              <h1 className="text-4xl md:text-6xl font-extrabold">
+              <h1 itemProp="headline" className="text-4xl md:text-6xl font-extrabold">
                 Digital Marketing Services
               </h1>
             </Reveal>
             <Reveal>
-              <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-                Data-driven digital marketing strategies that increase traffic,
-                leads, and conversions.
+              <p itemProp="description" className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
+                Expert digital marketing strategies including SEO, paid ads, social media marketing, and content-driven solutions that increase traffic, leads, and conversions.
               </p>
             </Reveal>
           </div>
@@ -130,15 +186,15 @@ const DigitalMarketing = () => {
         {/* ================= INTRO ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circles */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* LEFT */}
             <div>
               <Reveal>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-                  Digital Marketing
+                <h2 itemProp="name" className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
+                  Comprehensive Digital Marketing Solutions
                 </h2>
               </Reveal>
 
@@ -164,15 +220,26 @@ const DigitalMarketing = () => {
 
             {/* RIGHT IMAGE (CIRCLE) */}
             <Reveal>
-              <div className="flex justify-center md:justify-end">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+              <figure className="flex justify-center md:justify-end">
+  <div
+    className="
+      w-72 h-72
+      md:w-96 md:h-96
+      aspect-square
+      rounded-full
+      overflow-hidden
+      shadow-2xl
+      border-8 border-white
+      shrink-0
+    "
+  >
                   <img
                     src="/Images/s-dm1.png"
-                    alt="Digital Marketing"
+                    alt="Comprehensive Digital Marketing Solutions and Strategies"
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </div>
+              </figure>
             </Reveal>
           </div>
         </section>
@@ -180,7 +247,7 @@ const DigitalMarketing = () => {
         {/* ================= DESCRIPTION ================= */}
         <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circle */}
-          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             <Reveal>
@@ -260,22 +327,22 @@ const DigitalMarketing = () => {
         {/* ================= FAQ ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* DECORATIVE LAYERED SQUARES (RESPONSIVE SAFE) */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* IMAGE */}
             <Reveal>
-              <div className="relative max-w-md mx-auto md:max-w-none">
+              <figure className="relative max-w-md mx-auto md:max-w-none">
                 {/* BACK LAYER */}
-                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] -rotate-3"></div>
+                <div className="absolute inset-0 bg-[#008300]/10 rounded-[36px] -rotate-3" aria-hidden="true"></div>
 
                 <img
                   src="/Images/s-dm2.png"
-                  alt="Digital Marketing FAQ"
+                  alt="Digital Marketing FAQ Section - Common Questions About Marketing Services"
                   className="
             relative z-10
             w-full
@@ -283,14 +350,14 @@ const DigitalMarketing = () => {
             shadow-2xl
           "
                 />
-              </div>
+              </figure>
             </Reveal>
 
             {/* FAQ CONTENT */}
             <div>
               <Reveal>
-                <h2 className="text-3xl font-bold text-[#008300] mb-8">
-                  Digital Marketing FAQs
+                <h2 itemProp="name" className="text-3xl font-bold text-[#008300] mb-8">
+                  Frequently Asked Questions
                 </h2>
               </Reveal>
 
@@ -331,9 +398,9 @@ const DigitalMarketing = () => {
         {/* ================= DIGITAL MARKETING SEO INTRO ================= */}
         <section className="bg-white py-16 px-6">
           <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-              Digital Marketing Services{" "}
-              <span className="text-[#008300]">by Novarsis Technology</span>
+            <h2 itemProp="name" className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+              Why Choose{" "}
+              <span className="text-[#008300]">Novarsis Technology</span> for Digital Marketing
             </h2>
 
             <p className="mb-4">
@@ -360,7 +427,7 @@ const DigitalMarketing = () => {
             </p>
           </div>
         </section>
-      </div>{" "}
+      </article>{" "}
     </>
   );
 };
@@ -378,11 +445,12 @@ const SkillSection = ({ title, desc, skills, bg }) => (
         bg-[size:64px_64px]
         pointer-events-none
       "
+      aria-hidden="true"
     ></div>
 
     <div className="max-w-7xl mx-auto relative z-10">
       <Reveal>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
+        <h2 itemProp="name" className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
           {title}
         </h2>
       </Reveal>
@@ -397,6 +465,7 @@ const SkillSection = ({ title, desc, skills, bg }) => (
         {skills.map((skill, i) => (
           <Reveal key={i}>
             <div
+              itemProp="about"
               className="
                 relative bg-white
                 p-8 text-center
@@ -406,7 +475,7 @@ const SkillSection = ({ title, desc, skills, bg }) => (
               "
             >
               {/* TOP STRAIGHT ACCENT */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#008300]"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#008300]" aria-hidden="true"></div>
 
               {/* ICON (SQUARE – NO CIRCLE) */}
               <div
@@ -416,11 +485,12 @@ const SkillSection = ({ title, desc, skills, bg }) => (
                   bg-[#008300]/10
                   text-[#008300] text-3xl
                 "
+                aria-hidden="true"
               >
                 {skill.icon}
               </div>
 
-              <h4 className="font-semibold text-gray-800 text-lg">
+              <h4 itemProp="name" className="font-semibold text-gray-800 text-lg">
                 {skill.name}
               </h4>
             </div>
@@ -433,8 +503,8 @@ const SkillSection = ({ title, desc, skills, bg }) => (
 
 const Stat = ({ icon, value, label }) => (
   <Reveal>
-    <div className="p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition">
-      <div className="text-4xl mb-4">{icon}</div>
+    <div itemProp="name" className="p-8 rounded-2xl bg-white/10 hover:bg-white/20 transition">
+      <div className="text-4xl mb-4" aria-hidden="true">{icon}</div>
       <h3 className="text-3xl font-bold">{value}</h3>
       <p className="mt-2 text-sm">{label}</p>
     </div>

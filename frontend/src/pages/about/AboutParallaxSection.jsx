@@ -14,6 +14,7 @@ const services = [
 const AboutParallaxSection = () => {
   return (
     <>
+      {/* ================= ADVANCED SEO HELMET ================= */}
       <Helmet>
         <title>
           Software Solutions & Digital Services | Novarsis Technology
@@ -24,20 +25,13 @@ const AboutParallaxSection = () => {
           content="Novarsis Technology provides scalable software solutions including web development, app development, UI/UX design, CMS, digital marketing, and graphic designing services."
         />
 
-        <meta
-          name="keywords"
-          content="software solutions company India, web development services, UI UX design agency, digital marketing company, CMS development WordPress, Novarsis Technology"
-        />
-
-        {/* ✅ Updated Canonical */}
         <link
           rel="canonical"
           href="https://novarsistech.com/software-solutions"
         />
-
         <meta name="robots" content="index, follow" />
 
-        {/* ✅ Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -56,63 +50,75 @@ const AboutParallaxSection = () => {
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅ Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Novarsis Technology Software Services"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore web development, UI/UX design, CMS, and digital marketing services by Novarsis Technology."
-        />
-        <meta
-          name="twitter:image"
-          content="https://novarsistech.com/Images/novarsis-og-image.jpg"
-        />
-
-        {/* ✅🔥 SOFTWARE SOLUTIONS SERVICE SCHEMA */}
+        {/* 🔥 Service + Organization + Breadcrumb Schema */}
         <script type="application/ld+json">
           {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "serviceType":"Software Solutions & Digital Services",
-        "provider":{
-          "@type":"Organization",
-          "name":"Novarsis Technology",
-          "url":"https://novarsistech.com"
-        },
-        "areaServed":"Worldwide",
-        "url":"https://novarsistech.com/software-solutions",
-        "description":"Web development, app development, UI/UX design, CMS solutions, digital marketing, and graphic designing services by Novarsis Technology."
-      }
-    `}
+          {
+            "@context":"https://schema.org",
+            "@graph":[
+              {
+                "@type":"Service",
+                "serviceType":"Software Solutions & Digital Services",
+                "provider":{
+                  "@type":"Organization",
+                  "name":"Novarsis Technology",
+                  "url":"https://novarsistech.com"
+                },
+                "areaServed":"Worldwide",
+                "url":"https://novarsistech.com/software-solutions"
+              },
+              {
+                "@type":"Organization",
+                "name":"Novarsis Technology",
+                "url":"https://novarsistech.com"
+              },
+              {
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                  {
+                    "@type":"ListItem",
+                    "position":1,
+                    "name":"Home",
+                    "item":"https://novarsistech.com"
+                  },
+                  {
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"Software Solutions",
+                    "item":"https://novarsistech.com/software-solutions"
+                  }
+                ]
+              }
+            ]
+          }
+        `}
         </script>
       </Helmet>
 
       <section
         className="relative bg-fixed bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('/Images/parallex8.jpg')" }}
+        aria-labelledby="software-solutions-heading"
       >
-        {/* ⭐ Hidden SEO Heading */}
-        <h2 className="sr-only">
-          Novarsis Technology Software Solutions and Digital Business Scaling
-          Services
-        </h2>
+        {/* ✅ EXACTLY ONE H1 (Hidden for global SEO safety) */}
+        <header className="sr-only">
+          <h1>Software Solutions and Digital Services by Novarsis Technology</h1>
+        </header>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
 
-        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 py-28">
-          {/* ===== HEADER ===== */}
-          <div className="max-w-3xl mb-20">
-            <h4 className="text-[#008300] uppercase tracking-[0.3em] text-xs font-extrabold mb-5">
+          {/* ================= HEADER ================= */}
+          <header className="max-w-3xl mb-20">
+            <p className="text-[#008300] uppercase tracking-[0.3em] text-xs font-extrabold mb-5">
               About Novarsis Technology
-            </h4>
+            </p>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8">
+            <h2
+              id="software-solutions-heading"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8"
+            >
               Software Solutions That
               <span className="block text-[#008300]">
                 Scale Digital Businesses
@@ -125,43 +131,47 @@ const AboutParallaxSection = () => {
               platforms, and performance-focused online solutions using modern
               technologies.
             </p>
-          </div>
+          </header>
 
-          {/* ===== SERVICES GRID ===== */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* ================= SERVICES GRID ================= */}
+          <nav
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            aria-label="Software Services Links"
+          >
             {services.map((service, index) => (
-              <Link
-                key={index}
-                to={service.path}
-                className="group relative bg-white/10 backdrop-blur-xl
-          border border-white/15 rounded-3xl p-8
-          transition-all duration-500
-          hover:bg-white/15 hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
-              >
-                {/* Accent Dot */}
-                <div className="w-12 h-12 rounded-full bg-[#008300]/20 flex items-center justify-center mb-6">
-                  <span className="w-3 h-3 bg-[#008300] rounded-full"></span>
-                </div>
+              <article key={index}>
+                <Link
+                  to={service.path}
+                  className="group relative block bg-white/10 backdrop-blur-xl
+                  border border-white/15 rounded-3xl p-8
+                  transition-all duration-500
+                  hover:bg-white/15 hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+                >
+                  {/* Accent Dot */}
+                  <div className="w-12 h-12 rounded-full bg-[#008300]/20 flex items-center justify-center mb-6">
+                    <span className="w-3 h-3 bg-[#008300] rounded-full"></span>
+                  </div>
 
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {service.name}
-                </h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {service.name}
+                  </h3>
 
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                  Custom {service.name.toLowerCase()} services crafted to
-                  deliver performance, scalability, security, and long-term
-                  business growth.
-                </p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                    Custom {service.name.toLowerCase()} services crafted to
+                    deliver performance, scalability, security, and long-term
+                    business growth.
+                  </p>
 
-                <div className="flex items-center gap-2 text-[#008300] font-semibold">
-                  <span>View Details</span>
-                  <span className="transform transition group-hover:translate-x-2">
-                    →
-                  </span>
-                </div>
-              </Link>
+                  <div className="flex items-center gap-2 text-[#008300] font-semibold">
+                    <span>View Details</span>
+                    <span className="transform transition group-hover:translate-x-2">
+                      →
+                    </span>
+                  </div>
+                </Link>
+              </article>
             ))}
-          </div>
+          </nav>
         </div>
       </section>
     </>

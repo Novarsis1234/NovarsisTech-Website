@@ -35,34 +35,35 @@ const AppDeveloper = () => {
     <>
       <Helmet>
         <title>
-          App Development Services | Android, iOS & Flutter Apps - Novarsis
-          Technology
+          Mobile App Development Services | Android, iOS, Flutter & React Native - Novarsis Technology
         </title>
 
         <meta
           name="description"
-          content="Professional mobile app development services by Novarsis Technology. We build high-performance Android, iOS, Flutter, and React Native apps with scalable backend and cloud integration."
+          content="Professional mobile app development services by Novarsis Technology. Expert developers build high-performance Android, iOS, Flutter, and React Native applications with scalable backend, cloud integration, and native-level performance."
         />
 
         <meta
           name="keywords"
-          content="app development company India, Android app development, iOS app development, Flutter developers, React Native apps, mobile app agency Novarsis Technology"
+          content="mobile app development, app development services, Android app developers, iOS app development, Flutter development, React Native, app development company, scalable mobile apps, Novarsis Technology"
         />
 
-        {/* ✅ Updated Canonical */}
+        {/* ✅ Dynamic Canonical */}
         <link rel="canonical" href="https://novarsistech.com/appdevelopment" />
 
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
 
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="App Development Services - Novarsis Technology"
+          content="Mobile App Development Services - Professional Android, iOS & Flutter Apps"
         />
         <meta
           property="og:description"
-          content="Scalable Android & iOS apps built with modern technologies, secure backend systems, and performance-focused UI/UX."
+          content="Build scalable, high-performance mobile apps with Novarsis Technology. Android, iOS, Flutter, React Native with secure backend and cloud integration."
         />
         <meta
           property="og:url"
@@ -72,81 +73,141 @@ const AppDeveloper = () => {
           property="og:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
+        <meta property="og:site_name" content="Novarsis Technology" />
 
         {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Mobile App Development | Novarsis Technology"
+          content="Mobile App Development Services - Novarsis Technology"
         />
         <meta
           name="twitter:description"
-          content="Build powerful mobile apps with expert Android, iOS, Flutter & React Native developers."
+          content="Expert mobile app developers for Android, iOS, Flutter & React Native. Scalable apps with modern technologies."
         />
         <meta
           name="twitter:image"
           content="https://novarsistech.com/Images/novarsis-og-image.jpg"
         />
 
-        {/* ✅🔥 SERVICE SCHEMA (SEO BOOST) */}
+        {/* ✅ BreadcrumbList Schema */}
         <script type="application/ld+json">
-          {`
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "serviceType":"Mobile App Development",
-        "provider":{
-          "@type":"Organization",
-          "name":"Novarsis Technology",
-          "url":"https://novarsistech.com"
-        },
-        "areaServed":"Worldwide",
-        "url":"https://novarsistech.com/appdevelopment",
-        "description":"Android, iOS, Flutter, and React Native mobile app development services with scalable backend integration."
-      }
-    `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://novarsistech.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://novarsistech.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "App Development",
+                "item": "https://novarsistech.com/appdevelopment"
+              }
+            ]
+          })}
+        </script>
+
+        {/* ✅ Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Novarsis Technology",
+            "url": "https://novarsistech.com",
+            "logo": "https://novarsistech.com/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/novarsis",
+              "https://twitter.com/novarsis",
+              "https://www.linkedin.com/company/novarsis"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "url": "https://novarsistech.com/contact"
+            }
+          })}
+        </script>
+
+        {/* ✅ Service + ProfessionalService Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Mobile App Development Services",
+            "description": "Professional mobile app development services including Android, iOS, Flutter, and React Native applications with scalable backend, cloud integration, and modern technologies.",
+            "url": "https://novarsistech.com/appdevelopment",
+            "provider": {
+              "@type": "Organization",
+              "name": "Novarsis Technology",
+              "url": "https://novarsistech.com"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": ["Android App Development", "iOS App Development", "Flutter Development", "React Native Development", "Cross-platform Mobile Apps"],
+            "knowsAbout": ["Android", "iOS", "Flutter", "React Native", "Mobile App Architecture", "Cloud Integration", "API Development"]
+          })}
         </script>
       </Helmet>
       <div className="bg-white">
         {/* ================= HERO ================= */}
-        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden" itemScope itemType="https://schema.org/WebPage">
+          <meta itemProp="name" content="Mobile App Development Services" />
           <video
             className="absolute inset-0 w-full h-full object-cover"
             src="/Images/banner.mp4"
             autoPlay
             loop
             muted
+            playsInline
             poster="/Images/bannerImage.png"
+            alt="Mobile app development services showcase"
           />
-          <div className="absolute inset-0 bg-[#0a0f1a]/80"></div>
+          <div className="absolute inset-0 bg-[#0a0f1a]/80" aria-hidden="true"></div>
 
           <div className="relative z-10 text-center text-white px-6">
             <Reveal>
-              <h1 className="text-4xl md:text-6xl font-extrabold">
-                App Development Services
+              <nav aria-label="Breadcrumb" className="text-gray-300 text-sm md:text-base mb-4">
+                <a href="/" className="hover:text-[#008300] transition-colors">Home</a>
+                <span className="mx-2 text-[#008300]">/</span>
+              
+                <span className="text-[#008300]">App Development</span>
+              </nav>
+            </Reveal>
+            <Reveal>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+                Mobile App Development Services
               </h1>
             </Reveal>
             <Reveal>
               <p className="mt-6 max-w-3xl mx-auto text-gray-200 text-lg">
-                High-performance Android, iOS & cross-platform mobile
-                applications built for scalability and growth.
+                Professional Android, iOS, Flutter & React Native development. High-performance mobile applications built for scalability, security, and growth.
               </p>
             </Reveal>
           </div>
         </section>
 
         {/* ================= INTRO ================= */}
-        <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
+        <article className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circles */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* LEFT */}
             <div>
               <Reveal>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#008300] mb-6">
-                  Mobile App Development
+                  Professional Mobile App Development
                 </h2>
               </Reveal>
 
@@ -172,23 +233,34 @@ const AppDeveloper = () => {
 
             {/* RIGHT IMAGE (CIRCLE) */}
             <Reveal>
-              <div className="flex justify-center md:justify-end">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+              <figure className="flex justify-center md:justify-end">
+  <div
+    className="
+      w-72 h-72
+      md:w-96 md:h-96
+      aspect-square
+      rounded-full
+      overflow-hidden
+      shadow-2xl
+      border-8 border-white
+      shrink-0
+    "
+  >
                   <img
                     src="/Images/s-appdevelopment3.png"
-                    alt="App Development"
+                    alt="Mobile app development team working on Android, iOS and Flutter applications"
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </div>
+              </figure>
             </Reveal>
           </div>
-        </section>
+        </article>
 
         {/* ================= DESCRIPTION ================= */}
-        <section className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
+        <article className="relative py-16 px-6 bg-[#fffaf2] overflow-hidden">
           {/* Decorative Circle */}
-          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block"></div>
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             <Reveal>
@@ -222,7 +294,7 @@ const AppDeveloper = () => {
               </div>
             </Reveal>
           </div>
-        </section>
+        </article>
 
         {/* ================= STATS ================= */}
         <section className="py-20 px-6 bg-[#008300] text-white">
@@ -285,24 +357,25 @@ const AppDeveloper = () => {
         {/* ================= FAQ ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
           {/* DECORATIVE LAYERED SQUARES (Responsive Safe) */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute -top-16 -left-16 w-72 h-72 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#008300]/10 hidden md:block" aria-hidden="true"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-[#008300]/20 hidden md:block" aria-hidden="true"></div>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             {/* IMAGE */}
             <Reveal>
-              <div className="relative max-w-md mx-auto md:max-w-none">
+              <figure className="relative max-w-md mx-auto md:max-w-none">
                 <div
                   className="absolute inset-0 bg-[#008300]/10 
                         rounded-[40px] -rotate-3"
+                  aria-hidden="true"
                 ></div>
 
                 <img
                   src="/Images/s-appdevelopment2.png"
-                  alt="FAQ"
+                  alt="Mobile app development FAQ - timeline, deployment, and maintenance support"
                   className="
             relative z-10
             w-full
@@ -310,7 +383,7 @@ const AppDeveloper = () => {
             shadow-2xl
           "
                 />
-              </div>
+              </figure>
             </Reveal>
 
             {/* FAQ CONTENT */}
@@ -355,11 +428,11 @@ const AppDeveloper = () => {
           </div>
         </section>
 
-        {/* ================= MOBILE APP SEO INTRO ================= */}
-        <section className="bg-white py-16 px-6">
+        {/* ================= MOBILE APP DEVELOPMENT DETAILS ================= */}
+        <article className="bg-white py-16 px-6">
           <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
-              Mobile App Development Services{" "}
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">
+              Expert Mobile App Development Solutions{" "}
               <span className="text-[#008300]">by Novarsis Technology</span>
             </h2>
 
@@ -387,8 +460,8 @@ const AppDeveloper = () => {
               drive measurable results.
             </p>
           </div>
-        </section>
-      </div>{" "}
+        </article>
+      </div>
     </>
   );
 };
@@ -406,11 +479,12 @@ const SkillSection = ({ title, desc, skills, bg }) => (
         bg-[size:56px_56px]
         pointer-events-none
       "
+      aria-hidden="true"
     ></div>
 
     <div className="max-w-7xl mx-auto relative z-10">
       <Reveal>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#008300] mb-6 text-center" itemProp="name">
           {title}
         </h2>
       </Reveal>
