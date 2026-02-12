@@ -105,30 +105,7 @@ const UiUxDesigner = () => {
         </div>
       </section> 
 
-          <section className="sr-only"> <p>
-Our UI and UX design services focus on creating visually engaging and highly
-intuitive digital experiences that improve user satisfaction and brand
-perception. At Novarsis Technology, we believe that design is more than just
-appearance — it is about usability, accessibility, and seamless interaction.
-Our designers research user behavior, analyze business goals, and craft
-interfaces that deliver clarity and efficiency across web and mobile platforms.
-
-We create wireframes, prototypes, and design systems that ensure consistency
-throughout your product. Every element, from typography and color palettes to
-navigation structure and animations, is carefully planned to enhance user
-journeys. Our designs are optimized for speed, responsiveness, and conversion,
-helping businesses turn visitors into loyal customers.
-
-By combining creativity with data-driven insights, we develop UI/UX solutions
-that align with modern trends while maintaining strong usability standards.
-Whether you need a complete product redesign or a new digital interface,
-Novarsis Technology ensures your platform delivers a smooth and memorable
-experience.
-</p>
-
-
-
-</section>
+         
 
       {/* ================= INTRO ================= */}
     <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
@@ -326,7 +303,42 @@ experience.
     </div>
 
   </div>
+</section> 
+
+
+{/* ================= UI UX DESIGN SEO INTRO ================= */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+      UI & UX Design Services <span className="text-[#008300]">by Novarsis Technology</span> 
+    </h2>
+
+    <p className="mb-4">
+      Our UI and UX design services focus on creating visually engaging and
+      highly intuitive digital experiences that improve user satisfaction and
+      strengthen brand perception. At Novarsis Technology, we believe design is
+      not just about appearance but also usability, accessibility, and seamless
+      interaction across web and mobile platforms.
+    </p>
+
+    <p className="mb-4">
+      We create wireframes, prototypes, and design systems that ensure
+      consistency throughout your product. From typography and color palettes
+      to navigation structure and animations, every element is carefully
+      planned to enhance user journeys and optimize conversion rates.
+    </p>
+
+    <p>
+      By combining creativity with data-driven insights, Novarsis Technology
+      develops UI/UX solutions aligned with modern design trends while
+      maintaining strong usability standards. Our goal is to help businesses
+      deliver smooth, engaging, and memorable digital experiences.
+    </p>
+
+  </div>
 </section>
+
 
 
     </div> </>

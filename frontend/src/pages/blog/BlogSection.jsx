@@ -112,109 +112,122 @@ const BlogSection = () => {
         </div>
       </section>
      
-     <section className="sr-only">
-          {" "}
-<p>
-The Novarsis Technology blog shares valuable insights, industry trends, and
-practical knowledge related to web development, mobile applications, digital
-marketing, and modern design practices. Our articles are created to help
-businesses stay updated with the latest technology advancements and make
-better decisions for their digital strategies.
+    <section>
 
-Through detailed guides and expert perspectives, we aim to simplify complex
-technical topics and provide actionable information that businesses can apply
-immediately. Whether you are looking to improve website performance, enhance
-SEO rankings, or explore new digital opportunities, our blog serves as a
-reliable source of knowledge designed to support your growth journey.
-</p>
+  {/* ================= VISIBLE SEO INTRO ================= */}
+  <section className="bg-white py-14 px-4">
+    <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
+       <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
 
+      <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+        Novarsis Technology Blog <span className="text-[#008300]"> – Digital Insights & Industry Trends</span>
+      </h2>
 
+      <p className="mb-4">
+        The Novarsis Technology blog shares valuable insights, industry trends,
+        and practical knowledge related to web development, mobile applications,
+        digital marketing, and modern UI/UX design practices. Our articles help
+        businesses stay updated with the latest technology advancements and make
+        better strategic decisions for long-term digital growth.
+      </p>
 
+      <p className="mb-4">
+        Through detailed guides and expert perspectives, we simplify complex
+        technical topics and provide actionable solutions that companies can
+        apply immediately. From improving website performance to enhancing SEO
+        strategies, our blog content focuses on real-world business challenges
+        and innovative solutions.
+      </p>
 
+      <p>
+        Whether you are a startup, entrepreneur, or enterprise brand, our blog
+        serves as a reliable resource to explore new digital opportunities,
+        improve online presence, and understand modern technology trends shaping
+        the future of digital transformation.
+      </p>
 
-        </section>
-
-     
-      {/* ================= BLOG LIST SECTION ================= */}
-      <section className="relative bg-white min-h-screen py-24 px-4 md:px-16 overflow-hidden">
-
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Latest Technology Blogs and Insights by Novarsis Technology Team
-  </h2>
-
-  {/* ===== Decorative Green Circles ===== */}
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-  <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
-  <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
-  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#008300]/10 rounded-full"></div>
-
-  <div className="relative z-10 max-w-7xl mx-auto">
-
-    {/* Section Heading */}
-    <div className="text-center mb-16">
-      <Reveal>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
-          Latest <span className="text-[#008300]">Insights</span>
-        </h2>
-      </Reveal>
-
-      <Reveal>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-          Explore expert insights, technology trends, and practical
-          knowledge curated by the Novarsis Technology team.
-        </p>
-      </Reveal>
     </div>
+  </section>
 
-    {/* Blog Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      {blogs.map((blog) => {
-        const blogId = blog?._id || blog?.id;
-        if (!blogId) return null;
 
-        return (
-          <motion.div
-            key={blogId}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="
-              bg-white rounded-2xl overflow-hidden
-              shadow-lg hover:shadow-2xl
-              transition-all duration-500
-              border border-[#008300]/10
-              hover:-translate-y-2
-            "
-          >
-            <Link to={`/blog/${blogId}`}>
-              <img
-                src={blog.image}
-                alt={`${blog.title} – Novarsis Technology Blog Insight`}
-                className="w-full h-60 object-cover"
-              />
-            </Link>
+  {/* ================= BLOG LIST SECTION ================= */}
+  <section className="relative bg-white min-h-screen py-24 px-4 md:px-16 overflow-hidden">
 
-            <div className="p-6 space-y-4">
+    {/* Hidden SEO Heading OK */}
+    <h2 className="sr-only">
+      Latest Technology Blogs and Insights by Novarsis Technology Team
+    </h2>
+
+    {/* Decorative Circles */}
+    <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute top-40 right-[-140px] w-[420px] h-[420px] bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute bottom-24 left-1/4 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#008300]/10 rounded-full"></div>
+
+    <div className="relative z-10 max-w-7xl mx-auto">
+
+      {/* Heading */}
+      <div className="text-center mb-16">
+        <Reveal>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4">
+            Latest <span className="text-[#008300]">Insights</span>
+          </h2>
+        </Reveal>
+
+        <Reveal>
+          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+            Explore expert insights, technology trends, and practical
+            knowledge curated by the Novarsis Technology team.
+          </p>
+        </Reveal>
+      </div>
+
+      {/* Blog Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {blogs.map((blog) => {
+          const blogId = blog?._id || blog?.id;
+          if (!blogId) return null;
+
+          return (
+            <motion.div
+              key={blogId}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#008300]/10 hover:-translate-y-2"
+            >
               <Link to={`/blog/${blogId}`}>
-                <h3 className="text-xl font-bold text-black hover:text-[#008300] transition">
-                  {blog.title}
-                </h3>
+                <img
+                  src={blog.image}
+                  alt={`${blog.title} – Novarsis Technology Blog Insight`}
+                  className="w-full h-60 object-cover"
+                />
               </Link>
 
-              <Link to={`/blog/${blogId}`}>
-                <span className="inline-flex items-center gap-2 text-[#008300] font-semibold hover:gap-3 transition-all">
-                  View More <span>→</span>
-                </span>
-              </Link>
-            </div>
-          </motion.div>
-        );
-      })}
+              <div className="p-6 space-y-4">
+                <Link to={`/blog/${blogId}`}>
+                  <h3 className="text-xl font-bold text-black hover:text-[#008300] transition">
+                    {blog.title}
+                  </h3>
+                </Link>
+
+                <Link to={`/blog/${blogId}`}>
+                  <span className="inline-flex items-center gap-2 text-[#008300] font-semibold hover:gap-3 transition-all">
+                    View More →
+                  </span>
+                </Link>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
-  </div>
+  </section>
+
 </section>
+
 <AutoInternalLinks/>
 
     </>

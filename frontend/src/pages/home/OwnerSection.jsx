@@ -80,7 +80,7 @@ const OwnerSection = () => {
       </h1>
 
       {/* DESCRIPTION */}
-      <p className="text-gray-700 mb-8 text-base sm:text-lg leading-relaxed italic font-serif max-w-xl mx-auto md:mx-0">
+      <p className="text-gray-700 mb-8 text-base sm:text-lg leading-relaxed text-justify italic font-serif max-w-xl mx-auto md:mx-0">
         NovarsisTech is an innovative IT company dedicated to delivering
         modern web development solutions, scalable applications, and
         cutting-edge digital services. We believe in quality, performance,

@@ -136,123 +136,132 @@ const FAQSection = () => {
     </div>
   </section>
   
-  <section className="sr-only">
-          {" "}
-   <p>
-Our Frequently Asked Questions section helps visitors understand how Novarsis
-Technology delivers reliable IT services and digital solutions. We address
-common queries related to web development, app development, design services,
-SEO strategies, and project timelines. These answers are designed to provide
-clarity about our process, pricing approach, and long-term support services.
-By sharing transparent information, we aim to build trust and help businesses
-make informed decisions before starting their digital journey with us.
-
-Each FAQ reflects real challenges faced by modern businesses and highlights
-how our team provides efficient solutions using advanced technologies and
-creative strategies. Whether you are planning a new website, launching a
-mobile app, or improving your online marketing performance, our FAQ section
-serves as a helpful resource to guide you through every step.
-</p>
+  <section>
 
 
-        </section>
-   
 
   {/* ================= FAQ + IMAGE SECTION ================= */}
   <section className="relative bg-white overflow-hidden">
 
-  {/* ⭐ Hidden SEO Heading */}
-  <h2 className="sr-only">
-    Frequently Asked Questions about Novarsis Technology IT Services and Support
-  </h2>
-  
-  {/* ===== BACKGROUND CIRCLES (4) ===== */}
-  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+    {/* Hidden SEO Heading OK */}
+    <h2 className="sr-only">
+      Frequently Asked Questions about Novarsis Technology IT Services and Support
+    </h2>
 
-  <div className="absolute top-40 right-[-100px] w-80 h-80 bg-[#008300]/10 rounded-full"></div>
+    {/* BACKGROUND CIRCLES */}
+    <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute top-40 right-[-100px] w-80 h-80 bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute bottom-20 left-1/4 w-56 h-56 bg-[#008300]/10 rounded-full"></div>
+    <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
 
-  <div className="absolute bottom-20 left-1/4 w-56 h-56 bg-[#008300]/10 rounded-full"></div>
+    <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
 
-  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#008300]/10 rounded-full"></div>
-
-  {/* ===== CONTENT ===== */}
-  <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
-
-    {/* ⭐ SECTION HEADING (Important for SEO) */}
-    <div className="text-center mb-14">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black">
-        Frequently Asked <span className="text-[#008300]">Questions</span>
-      </h2>
-    </div>
-
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-      
-      {/* ===== LEFT: FAQs ===== */}
-      <div className="space-y-6">
-        {faqs.map((faq, index) => (
-          <Reveal key={faq.id}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="
-                bg-white rounded-2xl shadow-lg
-                border-l-4 border-[#008300]
-                p-6 cursor-pointer
-                hover:shadow-2xl transition-all duration-300
-              "
-              onClick={() => toggleFAQ(index)}
-            >
-              <div className="flex justify-between items-center gap-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {faq.question}
-                </h3>
-
-                {openIndex === index ? (
-                  <ChevronUp className="text-[#008300] shrink-0" />
-                ) : (
-                  <ChevronDown className="text-[#008300] shrink-0" />
-                )}
-              </div>
-
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.p
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="mt-4 text-gray-600 text-justify leading-relaxed"
-                  >
-                    {faq.answer}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          </Reveal>
-        ))}
+      {/* SECTION HEADING */}
+      <div className="text-center mb-14">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black">
+          Frequently Asked <span className="text-[#008300]">Questions</span>
+        </h2>
       </div>
 
-      {/* ===== RIGHT: IMAGE ===== */}
-      <div className="relative">
-        <Reveal>
-          <img
-            src="/Images/FAQ-Model-Pic-scaled.webp"
-            alt="Novarsis Technology Frequently Asked Questions Support Section"
-            className="w-full rounded-3xl shadow-2xl object-cover"
-          />
-        </Reveal>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-        {/* Decorative Badge */}
-        <div className="absolute -bottom-6 -left-6 bg-[#008300] text-white px-6 py-4 rounded-2xl shadow-xl hidden md:block">
-          <p className="text-lg font-bold">24/7 Support</p>
-          <p className="text-sm opacity-90">We’re here to help</p>
+        {/* LEFT FAQ */}
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <Reveal key={faq.id}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="bg-white rounded-2xl shadow-lg border-l-4 border-[#008300] p-6 cursor-pointer hover:shadow-2xl transition-all duration-300"
+                onClick={() => toggleFAQ(index)}
+              >
+                <div className="flex justify-between items-center gap-4">
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {faq.question}
+                  </h3>
+
+                  {openIndex === index ? (
+                    <ChevronUp className="text-[#008300] shrink-0" />
+                  ) : (
+                    <ChevronDown className="text-[#008300] shrink-0" />
+                  )}
+                </div>
+
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.p
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-4 text-gray-600 text-justify leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </Reveal>
+          ))}
         </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="relative">
+          <Reveal>
+            <img
+              src="/Images/FAQ-Model-Pic-scaled.webp"
+              alt="Novarsis Technology Frequently Asked Questions Support Section"
+              className="w-full rounded-3xl shadow-2xl object-cover"
+            />
+          </Reveal>
+
+          <div className="absolute -bottom-6 -left-6 bg-[#008300] text-white px-6 py-4 rounded-2xl shadow-xl hidden md:block">
+            <p className="text-lg font-bold">24/7 Support</p>
+            <p className="text-sm opacity-90">We’re here to help</p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
+  </section> 
+
+    {/* ================= VISIBLE SEO INTRO ================= */}
+  <section className="bg-white py-12 px-4">
+    <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed text-justify">
+
+      <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+        Frequently Asked Questions <span className="text-[#008300]">by Novarsis Technology</span>
+      </h2>
+
+      <p className="mb-4">
+        Our Frequently Asked Questions section helps visitors understand how
+        Novarsis Technology delivers reliable IT services and modern digital
+        solutions. We address common queries related to web development, mobile
+        app development, UI/UX design, SEO strategies, and project timelines to
+        provide complete transparency about our workflow.
+      </p>
+
+      <p className="mb-4">
+        These FAQs are designed to give businesses clarity about pricing
+        structure, development process, and long-term support services. Our goal
+        is to build trust by sharing real information that helps clients make
+        confident decisions before starting their digital journey with us.
+      </p>
+
+      <p>
+        Whether you are planning a new website, launching a mobile application,
+        or improving your online marketing performance, our FAQ section provides
+        helpful insights into how our team uses innovative technologies and
+        creative strategies to deliver high-quality results.
+      </p>
+
+    </div>
+  </section>
+
 </section>
+
 <AutoInternalLinks/>
 </>
 

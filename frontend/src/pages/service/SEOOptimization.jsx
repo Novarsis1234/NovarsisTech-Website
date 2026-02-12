@@ -103,29 +103,7 @@ const SEOOptimization = () => {
       </section> 
 
       
-           <section className="sr-only"> <p>
-Our SEO optimization services are designed to improve your website’s visibility
-on search engines and attract high-quality organic traffic. At Novarsis
-Technology, we use modern SEO techniques that combine technical optimization,
-content strategy, and performance analysis to help your business rank higher
-in search results. Our approach focuses on long-term growth rather than short-
-term tactics.
-
-We conduct in-depth keyword research, optimize website structure, improve page
-speed, and enhance on-page elements such as headings, meta tags, and internal
-linking. Our team also works on content optimization and backlink strategies
-to strengthen your website’s authority and relevance. By monitoring analytics
-and search trends, we continuously refine strategies to deliver consistent
-improvement.
-
-With a focus on user experience and search engine guidelines, our SEO services
-help businesses increase visibility, generate leads, and build a strong
-digital foundation that supports sustainable growth.
-</p>
-
-
-
-</section>
+    
 
       {/* ================= INTRO ================= */}
      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
@@ -320,7 +298,41 @@ digital foundation that supports sustainable growth.
     </div>
 
   </div>
+</section>  
+
+{/* ================= SEO SERVICES INTRO ================= */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+      SEO Optimization Services <span className="text-[#008300]">by Novarsis Technology</span> </h2>
+
+    <p className="mb-4">
+      Our SEO optimization services are designed to improve your website’s
+      visibility on search engines and attract high-quality organic traffic.
+      At Novarsis Technology, we use modern SEO techniques that combine
+      technical optimization, content strategy, and performance analysis
+      to help businesses achieve higher search rankings.
+    </p>
+
+    <p className="mb-4">
+      We conduct detailed keyword research, optimize website structure,
+      enhance page speed, and improve on-page elements such as headings,
+      meta tags, and internal linking. Our team also focuses on content
+      optimization and backlink strategies to strengthen domain authority
+      and search relevance.
+    </p>
+
+    <p>
+      By following search engine guidelines and improving user experience,
+      Novarsis Technology helps businesses increase visibility, generate
+      leads, and build a strong digital presence that supports long-term
+      growth.
+    </p>
+
+  </div>
 </section>
+
 
     </div> </>
   );

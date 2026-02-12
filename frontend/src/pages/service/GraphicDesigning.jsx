@@ -96,26 +96,7 @@ const GraphicDesigning = () => {
         </div>
       </section> 
 
-   <section className="sr-only">   <p>
-Novarsis Technology offers professional graphic designing services that help
-brands communicate their message through visually compelling designs. Our
-creative team develops logos, marketing creatives, social media graphics,
-branding materials, and digital assets that reflect your company’s identity
-and values. Every design is crafted to enhance brand recognition while
-maintaining a modern and professional look.
-
-We focus on combining creativity with strategy to produce designs that not
-only look attractive but also serve a clear business purpose. From concept
-development and color selection to typography and layout design, every detail
-is carefully planned to create impactful visuals. Our designs are optimized
-for both digital and print platforms, ensuring consistency across all brand
-touchpoints.
-
-By blending innovation with market trends, Novarsis Technology helps businesses
-build strong visual identities that attract attention and leave lasting
-impressions on their audience.
-</p></section>
-
+  
 
       {/* ================= INTRO ================= */}
      <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
@@ -297,7 +278,41 @@ impressions on their audience.
     </div>
 
   </div>
+</section> 
+
+{/* ================= GRAPHIC DESIGN SEO INTRO ================= */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+      Graphic Designing Services <span className="text-[#008300]">by Novarsis Technology</span>
+    </h2>
+
+    <p className="mb-4">
+      Novarsis Technology offers professional graphic designing services that
+      help brands communicate their message through visually compelling designs.
+      Our creative team develops logos, marketing creatives, social media
+      graphics, branding materials, and digital assets that reflect your
+      company’s identity and values.
+    </p>
+
+    <p className="mb-4">
+      We combine creativity with strategic thinking to produce designs that not
+      only look attractive but also support business goals. From concept
+      development and color selection to typography and layout design, every
+      detail is carefully planned to create impactful visuals across digital and
+      print platforms.
+    </p>
+
+    <p>
+      By blending innovation with modern design trends, Novarsis Technology helps
+      businesses build strong visual identities that attract attention, improve
+      brand recognition, and leave lasting impressions on their audience.
+    </p>
+
+  </div>
 </section>
+
 
 
     </div> </>

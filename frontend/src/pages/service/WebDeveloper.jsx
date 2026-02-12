@@ -112,30 +112,7 @@ const WebDeveloper = () => {
           </div>
         </section>
 
-        <section className="sr-only">
-          {" "}
-          <p>
-            Novarsis Technology provides professional web development services
-            designed to help businesses create fast, secure, and scalable
-            digital platforms. Our expert developers build modern websites using
-            advanced technologies that deliver high performance, responsive
-            design, and seamless user experiences across all devices. From
-            corporate websites and custom web applications to eCommerce
-            platforms and dynamic portals, we focus on building solutions that
-            support long-term business growth. Our web development process
-            begins with understanding your goals, target audience, and brand
-            identity. We then design intuitive interfaces combined with powerful
-            backend systems that ensure speed, stability, and scalability.
-            Security is a key priority, which is why we integrate secure APIs,
-            optimized databases, and performance-focused architecture into every
-            project. We also provide ongoing maintenance, updates, and technical
-            support to keep your website running smoothly as your business
-            grows. With a strong focus on SEO-friendly structure, mobile
-            responsiveness, and user-centric design, Novarsis Technology helps
-            companies build digital platforms that attract visitors, improve
-            engagement, and convert traffic into real business results.
-          </p>
-        </section>
+  
 
         {/* ================= INTRO ================= */}
         <section className="relative py-24 px-6 bg-[#fffaf2] overflow-hidden">
@@ -239,7 +216,8 @@ const WebDeveloper = () => {
             <Stat icon={<FaClock />} value="8+" label="Years Experience" />
             <Stat icon={<FaStar />} value="4.9/5" label="Client Rating" />
           </div>
-        </section>
+        </section> 
+
 
         {/* ================= FRONTEND ================= */}
         <SkillSection
@@ -375,7 +353,42 @@ const WebDeveloper = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> 
+
+         {/* ================= SEO INTRO (VISIBLE) ================= */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-justify">
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+      Custom Web Development Services <span className="text-[#008300]">by Novarsis Technology</span>
+    </h2>
+
+    <p className="mb-4">
+      Novarsis Technology provides professional web development services designed
+      to help businesses create fast, secure, and scalable digital platforms.
+      Our expert developers build modern websites using advanced technologies
+      that deliver high performance, responsive design, and seamless user
+      experiences across all devices.
+    </p>
+
+    <p className="mb-4">
+      From corporate websites and custom web applications to eCommerce platforms
+      and dynamic portals, we focus on building solutions that support long-term
+      business growth. Our development process combines strategic planning,
+      modern UI/UX design, and powerful backend architecture to ensure stability
+      and performance.
+    </p>
+
+    <p>
+      With a strong focus on SEO-friendly structure, mobile responsiveness, and
+      optimized performance, Novarsis Technology helps companies build digital
+      platforms that attract visitors, improve engagement, and convert traffic
+      into real business results.
+    </p>
+
+  </div>
+</section>
+
       </div>{" "}
     </>
   );
