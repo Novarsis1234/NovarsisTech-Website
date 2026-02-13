@@ -172,10 +172,6 @@ const ServiceItems = () => {
         className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center"
         style={{ backgroundImage: "url('/Images/parallex5.jpg')" }}
       >
-        <h2 className="sr-only">
-          Professional IT Services by Novarsis Technology – Web Development, Branding, SEO Solutions
-        </h2>
-
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative z-10">
@@ -195,30 +191,48 @@ const ServiceItems = () => {
 
           <div className="relative max-w-7xl mx-auto px-6">
 
-            {/* ✅ LEFT BUTTON MOBILE+TABLET+DESKTOP */}
+            {/* ✅ LEFT BUTTON RESPONSIVE */}
             <button
               onClick={prevSlide}
               disabled={index === 0}
-              className="flex absolute left-2 sm:left-0 md:-left-10 lg:-left-14
-              top-1/2 -translate-y-1/2
-              w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12
+              className="
+              flex items-center justify-center
+              absolute 
+              
+              /* 📱 MOBILE + TABLET → bottom */
+              bottom-[-60px] left-[40%] -translate-x-1/2
+              
+              /* 💻 DESKTOP → side */
+              lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 
+              lg:left-0 lg:-translate-x-0
+              
+              w-10 h-10 md:w-12 md:h-12
               rounded-full bg-[#008300] text-white
-              items-center justify-center shadow-lg
-              hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
+              shadow-lg hover:bg-[#009e3c] transition
+              disabled:opacity-40 z-20"
             >
               <FaChevronLeft />
             </button>
 
-            {/* ✅ RIGHT BUTTON MOBILE+TABLET+DESKTOP */}
+            {/* ✅ RIGHT BUTTON RESPONSIVE */}
             <button
               onClick={nextSlide}
               disabled={index + visibleCards >= services.length}
-              className="flex absolute right-2 sm:right-0 md:-right-10 lg:-right-14
-              top-1/2 -translate-y-1/2
-              w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12
+              className="
+              flex items-center justify-center
+              absolute 
+              
+              /* 📱 MOBILE + TABLET → bottom */
+              bottom-[-60px] left-[60%] -translate-x-1/2
+              
+              /* 💻 DESKTOP → side */
+              lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 
+              lg:right-0 lg:left-auto lg:-translate-x-0
+              
+              w-10 h-10 md:w-12 md:h-12
               rounded-full bg-[#008300] text-white
-              items-center justify-center shadow-lg
-              hover:bg-[#009e3c] transition disabled:opacity-40 z-20"
+              shadow-lg hover:bg-[#009e3c] transition
+              disabled:opacity-40 z-20"
             >
               <FaChevronRight />
             </button>
@@ -227,8 +241,6 @@ const ServiceItems = () => {
               {services.slice(index, index + visibleCards).map((service, i) => (
                 <article
                   key={i}
-                  itemScope
-                  itemType="https://schema.org/Service"
                   className="group bg-white rounded-2xl shadow-md 
                   hover:shadow-2xl transition-all duration-500 
                   transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
@@ -236,7 +248,7 @@ const ServiceItems = () => {
                   <figure className="relative">
                     <img
                       src={service.img}
-                      alt={`${service.title} - Professional ${service.title} Services by Novarsis Technology`}
+                      alt={service.title}
                       className="w-full h-52 object-cover"
                     />
 

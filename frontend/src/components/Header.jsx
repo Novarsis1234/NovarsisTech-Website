@@ -82,7 +82,7 @@ const Header = () => {
       {/* ================= TOP BAR ================= */}
       <div className="bg-[#008300] text-white text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
-
+         <span></span> <span></span><span></span><span></span> <span></span> <span></span> <span></span> <span></span>
           <div className="flex items-center space-x-6">
             <a
               href="mailto:info@novarsistech.com"
